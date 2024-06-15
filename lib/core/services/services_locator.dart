@@ -4,14 +4,18 @@ import 'package:movies_app/movies/data/data_sources/movies_remote_data_source.da
 import 'package:movies_app/movies/data/repos/movies_repo.dart';
 import 'package:movies_app/movies/domain/repos/base_movies_repo.dart';
 import 'package:movies_app/movies/domain/use_cases/get_now_playing_movies_use_case.dart';
+import 'package:movies_app/movies/presentation/controller/movie_bloc/movie_bloc.dart';
 
 final sl = GetIt.instance;
 
 class ServicesLocator {
   void init() {
-    /// DATA SOURCES
-    sl.registerLazySingleton<BaseMoviesRemoteDataSource>(
-      () => MoviesRemoteDataSource(),
+    /// Blocs
+    sl.registerFactory(() => MovieBloc(sl()));
+
+    /// USE CASES
+    sl.registerLazySingleton(
+      () => GetNowPlayingMoviesUseCase(sl()),
     );
 
     /// REPOS
@@ -19,9 +23,9 @@ class ServicesLocator {
       () => MoviesRepo(sl()),
     );
 
-    /// USE CASES
-    sl.registerLazySingleton<GetNowPlayingMoviesUseCase>(
-      () => sl(),
+    /// DATA SOURCES
+    sl.registerLazySingleton<BaseMoviesRemoteDataSource>(
+      () => MoviesRemoteDataSource(),
     );
   }
 }
