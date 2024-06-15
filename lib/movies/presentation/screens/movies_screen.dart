@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:movies_app/movies/data/data_sources/movies_remote_data_source.dart';
