@@ -4,16 +4,16 @@ class MovieEntity extends Equatable {
   final int id;
   final String title;
   final String backdropPath;
-  final List<int> genreIds;
+  // final dynamic genreIds;
   final String overview;
-  final double voteAverage;
+  final num voteAverage;
   final String releaseDate;
 
   const MovieEntity({
     required this.id,
     required this.title,
     required this.backdropPath,
-    required this.genreIds,
+    // required this.genreIds,
     required this.overview,
     required this.voteAverage,
     required this.releaseDate,
@@ -25,7 +25,7 @@ class MovieEntity extends Equatable {
       id,
       title,
       backdropPath,
-      genreIds,
+      // genreIds,
       overview,
       voteAverage,
       releaseDate,
