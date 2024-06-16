@@ -4,10 +4,10 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_app/core/utils/enums.dart';
+import 'package:shimmer/shimmer.dart';
 
 import '../../../core/utils/constants.dart';
 import '../controller/movie_bloc/movie_bloc.dart';
-import '../screens/dummy.dart';
 
 class NowPlayingComponents extends StatelessWidget {
   const NowPlayingComponents({super.key});
@@ -68,6 +68,18 @@ class NowPlayingComponents extends StatelessWidget {
                               imageUrl:
                                   AppConstants.imageUrl(item.backdropPath),
                               fit: BoxFit.fill,
+                              placeholder: (context, url) => Shimmer.fromColors(
+                                baseColor: Colors.grey[850]!,
+                                highlightColor: Colors.grey[800]!,
+                                child: Container(
+                                  height: 170.0,
+                                  width: 120.0,
+                                  decoration: BoxDecoration(
+                                    color: Colors.black,
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                ),
+                              ),
                             ),
                           ),
                           Align(
