@@ -6,6 +6,8 @@ class AppConstants {
   static const String popularBaseUrl = "$baseUrl/movie/popular?api_key=$apiKey";
   static const String topRatedBaseUrl =
       "$baseUrl/movie/top_rated?api_key=$apiKey";
-}
 
-// https://api.themoviedb.org/3/movie/now_playing?
+  static const String baseImageUrl = "http://image.tmdb.org/t/p/w500";
+
+  static String imageUrl(String path) => "$baseImageUrl$path";
+}
