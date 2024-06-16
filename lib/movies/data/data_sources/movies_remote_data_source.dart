@@ -1,7 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:movies_app/core/error/exceptions.dart';
 import 'package:movies_app/core/utils/constants.dart';
+import 'package:movies_app/movies/data/models/movie_details_model.dart';
 import 'package:movies_app/movies/data/models/movie_model.dart';
+import 'package:movies_app/movies/domain/use_cases/get_movie_details_use_case.dart';
 
 import '../../../core/network/error_message_model.dart';
 import 'base_movies_remote_data_source.dart';
@@ -27,6 +29,20 @@ class MoviesRemoteDataSource extends BaseMoviesRemoteDataSource {
   Future<List<MovieModel>> getTopRatedMovies() async {
     final response = await Dio().get(AppConstants.topRatedBaseUrl);
     return getDataResponse(response);
+  }
+
+  // get movie details
+  @override
+  Future<MovieDetailsModel> getMovieDetails(MovieDetailsParams params) async {
+    final response =
+        await Dio().get(AppConstants.movieDetailsBaseUrl(params.movieId));
+    if (response.statusCode == 200) {
+      return MovieDetailsModel.fromJson(response.data);
+    } else {
+      throw ServerException(
+        errorMessageModel: ErrorMessageModel.fromJson(response.data),
+      );
+    }
   }
 
   // get data response method
