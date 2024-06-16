@@ -66,7 +66,7 @@ class NowPlayingComponents extends StatelessWidget {
                               width: double.infinity,
                               height: size.height * 0.5,
                               imageUrl:
-                                  AppConstants.imageUrl(item.backdropPath),
+                                  AppConstants.imageUrl(item.posterPath),
                               fit: BoxFit.fill,
                               placeholder: (context, url) => Shimmer.fromColors(
                                 baseColor: Colors.grey[850]!,

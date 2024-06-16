@@ -1,4 +1,3 @@
-
 import 'package:dio/dio.dart';
 import 'package:movies_app/core/error/exceptions.dart';
 import 'package:movies_app/core/utils/constants.dart';
@@ -26,7 +25,7 @@ class MoviesRemoteDataSource extends BaseMoviesRemoteDataSource {
   // get top rated movies
   @override
   Future<List<MovieModel>> getTopRatedMovies() async {
-    final response = await Dio().get(AppConstants.popularBaseUrl);
+    final response = await Dio().get(AppConstants.topRatedBaseUrl);
     return getDataResponse(response);
   }
 

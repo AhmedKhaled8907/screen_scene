@@ -17,7 +17,12 @@ class PopularComponents extends StatelessWidget {
       builder: (context, state) {
         switch (state.popularState) {
           case RequestState.loading:
-            return const SizedBox();
+            return const SizedBox(
+              height: 170,
+              child: Center(
+                child: CircularProgressIndicator(),
+              ),
+            );
 
           case RequestState.loaded:
             return FadeIn(
@@ -43,7 +48,7 @@ class PopularComponents extends StatelessWidget {
                           child: CachedNetworkImage(
                             width: 120.0,
                             fit: BoxFit.cover,
-                            imageUrl: AppConstants.imageUrl(movie.backdropPath),
+                            imageUrl: AppConstants.imageUrl(movie.posterPath),
                             placeholder: (context, url) => Shimmer.fromColors(
                               baseColor: Colors.grey[850]!,
                               highlightColor: Colors.grey[800]!,

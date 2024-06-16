@@ -5,6 +5,7 @@ class MovieModel extends MovieEntity {
     required super.id,
     required super.title,
     required super.backdropPath,
+    required super.posterPath,
     // required super.genreIds,
     required super.overview,
     required super.voteAverage,
@@ -15,11 +16,12 @@ class MovieModel extends MovieEntity {
     return MovieModel(
       id: json['id'],
       title: json['title'],
-      backdropPath: json['poster_path'] ?? '',
+      backdropPath: json['backdrop_path'] ?? '',
+      posterPath: json['poster_path'] ?? '',
       // genreIds: List<int>.from(json['genreIds'].map((e) => e)) ?? [],
+      releaseDate: json['release_date'], 
       overview: json['overview'],
       voteAverage: json['vote_average'],
-      releaseDate: json['release_date'],
     );
   }
 }
