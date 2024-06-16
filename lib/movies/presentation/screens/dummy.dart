@@ -2,7 +2,7 @@ import 'package:movies_app/movies/domain/entities/movie_entity.dart';
 
 List<MovieEntity> moviesList = [
   const MovieEntity(
-    backdropPath: "/nmGWzTLMXy9x7mKd8NKPLmHtWGa.jpg",
+    backdropPath: "/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg",
     // genreIds: [
     //   14,
     //   28,
@@ -16,7 +16,7 @@ List<MovieEntity> moviesList = [
     voteAverage: 5.0,
   ),
   const MovieEntity(
-    backdropPath: "/nmGWzTLMXy9x7mKd8NKPLmHtWGa.jpg",
+    backdropPath: "/gKkl37BQuKTanygYQG1pyYgLVgf.jpg",
     // genreIds: const [
     //   14,
     //   28,
@@ -30,7 +30,7 @@ List<MovieEntity> moviesList = [
     voteAverage: 5.0,
   ),
   const MovieEntity(
-    backdropPath: "/nmGWzTLMXy9x7mKd8NKPLmHtWGa.jpg",
+    backdropPath: "/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg",
     // genreIds: [
     //   14,
     //   28,
@@ -44,7 +44,7 @@ List<MovieEntity> moviesList = [
     voteAverage: 5.0,
   ),
   const MovieEntity(
-    backdropPath: "/nmGWzTLMXy9x7mKd8NKPLmHtWGa.jpg",
+    backdropPath: "/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg",
     // genreIds: [
     //   14,
     //   28,
@@ -58,7 +58,7 @@ List<MovieEntity> moviesList = [
     voteAverage: 5.0,
   ),
   const MovieEntity(
-    backdropPath: "/nmGWzTLMXy9x7mKd8NKPLmHtWGa.jpg",
+    backdropPath: "/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg",
     // genreIds: [
     //   14,
     //   28,
@@ -72,7 +72,7 @@ List<MovieEntity> moviesList = [
     voteAverage: 5.0,
   ),
   const MovieEntity(
-    backdropPath: "/nmGWzTLMXy9x7mKd8NKPLmHtWGa.jpg",
+    backdropPath: "/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg",
     // genreIds: [
     //   14,
     //   28,
