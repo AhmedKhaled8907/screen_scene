@@ -1,3 +1,4 @@
+
 import 'package:animate_do/animate_do.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -14,9 +15,11 @@ class TopRatedComponents extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<MovieBloc, MovieState>(
+        buildWhen: (previous, current) => previous.topRatedState != current.topRatedState,
       builder: (context, state) {
         switch (state.topRatedState) {
           case RequestState.loading:
+           
             return const SizedBox(
               height: 170,
               child: Center(

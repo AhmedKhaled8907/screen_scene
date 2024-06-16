@@ -16,6 +16,8 @@ class NowPlayingComponents extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return BlocBuilder<MovieBloc, MovieState>(
+      buildWhen: (previous, current) =>
+          previous.nowPlayingState != current.nowPlayingState,
       builder: (context, state) {
         switch (state.nowPlayingState) {
           case RequestState.loading:
@@ -65,8 +67,7 @@ class NowPlayingComponents extends StatelessWidget {
                             child: CachedNetworkImage(
                               width: double.infinity,
                               height: size.height * 0.5,
-                              imageUrl:
-                                  AppConstants.imageUrl(item.posterPath),
+                              imageUrl: AppConstants.imageUrl(item.posterPath),
                               fit: BoxFit.fill,
                               placeholder: (context, url) => Shimmer.fromColors(
                                 baseColor: Colors.grey[850]!,
