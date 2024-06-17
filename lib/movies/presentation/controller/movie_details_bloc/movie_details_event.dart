@@ -11,11 +11,3 @@ class GetMovieDetailsEvent extends MovieDetailsEvent {
   @override
   List<Object?> get props => [movieId];
 }
-
-class GetSimilarMoviesEvent extends MovieDetailsEvent {
-  final int movieId;
-  const GetSimilarMoviesEvent({required this.movieId});
-
-  @override
-  List<Object?> get props => [movieId];
-}

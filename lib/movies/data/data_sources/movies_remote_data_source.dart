@@ -3,7 +3,10 @@ import 'package:movies_app/core/error/exceptions.dart';
 import 'package:movies_app/core/utils/constants.dart';
 import 'package:movies_app/movies/data/models/movie_details_model.dart';
 import 'package:movies_app/movies/data/models/movie_model.dart';
+import 'package:movies_app/movies/data/models/similar_movies_model.dart';
+import 'package:movies_app/movies/domain/entities/similar_movies_entity.dart';
 import 'package:movies_app/movies/domain/use_cases/get_movie_details_use_case.dart';
+import 'package:movies_app/movies/domain/use_cases/get_similar_movies_use_case.dart';
 
 import '../../../core/network/error_message_model.dart';
 import 'base_movies_remote_data_source.dart';
@@ -38,6 +41,24 @@ class MoviesRemoteDataSource extends BaseMoviesRemoteDataSource {
         await Dio().get(AppConstants.movieDetailsBaseUrl(params.movieId));
     if (response.statusCode == 200) {
       return MovieDetailsModel.fromJson(response.data);
+    } else {
+      throw ServerException(
+        errorMessageModel: ErrorMessageModel.fromJson(response.data),
+      );
+    }
+  }
+
+  // get similar movie 
+  @override
+  Future<List<SimilarMoviesEntity>> getSimilarMovies(
+      SimilarMoviesParams params) async {
+    final response =
+        await Dio().get(AppConstants.similarMoviesBaseUrl(params.movieId));
+    if (response.statusCode == 200) {
+      return List<SimilarMoviesModel>.from(
+          (response.data['results'] as List).map(
+        (e) => SimilarMoviesModel.fromJson(e),
+      ));
     } else {
       throw ServerException(
         errorMessageModel: ErrorMessageModel.fromJson(response.data),
