@@ -23,7 +23,6 @@ class SimilarMoviesBloc extends Bloc<SimilarMoviesEvent, SimilarMoviesState> {
     final result = await getSimilarMoviesUseCase(SimilarMoviesParams(
       movieId: event.movieId,
     ));
-    print(result);
     result.fold(
       (l) => emit(
         state.copyWith(

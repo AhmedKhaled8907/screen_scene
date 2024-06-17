@@ -4,8 +4,8 @@ import '../../domain/entities/movie_details_entity.dart';
 
 class MovieDetailsModel extends MovieDetailsEntity {
   const MovieDetailsModel({
-    required super.backdropPath,
-    required super.genres,
+    super.backdropPath,
+    super.genres,
     required super.id,
     required super.overview,
     required super.releaseDate,
@@ -16,7 +16,9 @@ class MovieDetailsModel extends MovieDetailsEntity {
 
   factory MovieDetailsModel.fromJson(Map<String, dynamic> json) =>
       MovieDetailsModel(
-        backdropPath: json["backdrop_path"],
+        /// TODO: check if this is correct
+        backdropPath:
+            json["backdrop_path"] ?? '/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg',
         genres: List<GenresModel>.from(
           json['genres'].map((x) => GenresModel.fromJson(x)),
         ),

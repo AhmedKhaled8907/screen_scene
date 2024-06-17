@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_app/core/utils/enums.dart';
 import 'package:movies_app/movies/presentation/controller/movie_bloc/movie_bloc.dart';
+import 'package:movies_app/movies/presentation/screens/movie_detail_screen.dart';
 import 'package:shimmer/shimmer.dart';
 
 import '../../../core/utils/constants.dart';
@@ -42,7 +43,10 @@ class PopularComponents extends StatelessWidget {
                       padding: const EdgeInsets.only(right: 8.0),
                       child: InkWell(
                         onTap: () {
-                          /// TODO : NAVIGATE TO  MOVIE DETAILS
+                          Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) =>
+                                MovieDetailScreen(id: movie.id),
+                          ));
                         },
                         child: ClipRRect(
                           borderRadius:

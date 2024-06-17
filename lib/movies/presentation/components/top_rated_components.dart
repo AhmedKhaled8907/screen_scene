@@ -1,4 +1,3 @@
-
 import 'package:animate_do/animate_do.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +7,7 @@ import 'package:shimmer/shimmer.dart';
 
 import '../../../core/utils/constants.dart';
 import '../controller/movie_bloc/movie_bloc.dart';
+import '../screens/movie_detail_screen.dart';
 
 class TopRatedComponents extends StatelessWidget {
   const TopRatedComponents({super.key});
@@ -15,11 +15,11 @@ class TopRatedComponents extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<MovieBloc, MovieState>(
-        buildWhen: (previous, current) => previous.topRatedState != current.topRatedState,
+      buildWhen: (previous, current) =>
+          previous.topRatedState != current.topRatedState,
       builder: (context, state) {
         switch (state.topRatedState) {
           case RequestState.loading:
-           
             return const SizedBox(
               height: 170,
               child: Center(
@@ -42,7 +42,10 @@ class TopRatedComponents extends StatelessWidget {
                       padding: const EdgeInsets.only(right: 8.0),
                       child: InkWell(
                         onTap: () {
-                          /// TODO : NAVIGATE TO  MOVIE DETAILS
+                          Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) =>
+                                MovieDetailScreen(id: movie.id),
+                          ));
                         },
                         child: ClipRRect(
                           borderRadius:

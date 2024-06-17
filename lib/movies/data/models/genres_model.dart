@@ -2,12 +2,12 @@ import '../../domain/entities/genres_entity.dart';
 
 class GenresModel extends GenresEntity {
   const GenresModel({
-    required super.id,
+    super.movieId,
     required super.name,
   });
 
   factory GenresModel.fromJson(Map<String, dynamic> json) => GenresModel(
-        id: json['id'],
+        movieId: json['movie_id'] ?? 0,
         name: json['name'],
       );
 }

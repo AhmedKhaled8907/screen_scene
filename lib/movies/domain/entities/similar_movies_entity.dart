@@ -2,16 +2,16 @@ import 'package:equatable/equatable.dart';
 
 class SimilarMoviesEntity extends Equatable {
   final int movieId;
-  final String backdropPath;
+  final String? posterPath;
 
   const SimilarMoviesEntity({
     required this.movieId,
-    required this.backdropPath,
+    this.posterPath,
   });
 
   @override
-  List<Object> get props => [
+  List<Object?> get props => [
         movieId,
-        backdropPath,
+        posterPath,
       ];
 }

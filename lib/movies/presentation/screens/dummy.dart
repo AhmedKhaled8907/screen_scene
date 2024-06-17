@@ -1,88 +1,68 @@
-// import 'package:movies_app/movies/domain/entities/movie_entity.dart';
+// import 'package:movies_app/movies/domain/entities/genres_entity.dart';
+// import 'package:movies_app/movies/domain/entities/movie_details_entity.dart';
+// import 'package:movies_app/movies/domain/entities/similar_movies_entity.dart';
 
-// List<MovieEntity> moviesList = [
-//   const MovieEntity(
-//     backdropPath: "/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg",
-//     // genreIds: [
-//     //   14,
-//     //   28,
-//     //   12,
-//     // ],
-//     id: 453395,
-//     overview:
-//         "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
-//     releaseDate: "2022-05-04",
-//     title: "Movie Title",
-//     voteAverage: 5.0,
+// MovieDetailsEntity movieDetailDummy = const MovieDetailsEntity(
+//   id: 438148,
+//   backdropPath: "/nmGWzTLMXy9x7mKd8NKPLmHtWGa.jpg",
+//   genres: [
+//     GenresEntity(name: 'Family', movieId: 10751),
+//   ],
+//   overview:
+//       "A fanboy of a super villain super group known as the Vicious 6, Gru hatches a plan to become evil enough to join them, with the backup of his followers, the Minions.",
+//   releaseDate: "2022-06-29",
+//   runtime: 87,
+//   title: "Minions: The Rise of Gru",
+//   voteAverage: 7.8,
+// );
+
+// List<SimilarMoviesEntity> similarMoviesDummy = [
+//   const SimilarMoviesEntity(
+//     backdropPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg",
+//     movieId: 924482,
 //   ),
-//   const MovieEntity(
-//     backdropPath: "/gKkl37BQuKTanygYQG1pyYgLVgf.jpg",
-//     // genreIds: const [
-//     //   14,
-//     //   28,
-//     //   12,
-//     // ],
-//     id: 453395,
-//     overview:
-//         "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
-//     releaseDate: "2022-05-04",
-//     title: "Movie Title",
-//     voteAverage: 5.0,
+//   const SimilarMoviesEntity(
+//     backdropPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg",
+//     movieId: 924482,
 //   ),
-//   const MovieEntity(
-//     backdropPath: "/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg",
-//     // genreIds: [
-//     //   14,
-//     //   28,
-//     //   12,
-//     // ],
-//     id: 453395,
-//     overview:
-//         "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
-//     releaseDate: "2022-05-04",
-//     title: "Movie Title",
-//     voteAverage: 5.0,
+//   const SimilarMoviesEntity(
+//     backdropPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg",
+//     movieId: 924482,
 //   ),
-//   const MovieEntity(
-//     backdropPath: "/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg",
-//     // genreIds: [
-//     //   14,
-//     //   28,
-//     //   12,
-//     // ],
-//     id: 453395,
-//     overview:
-//         "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
-//     releaseDate: "2022-05-04",
-//     title: "Movie Title",
-//     voteAverage: 5.0,
+//   const SimilarMoviesEntity(
+//     backdropPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg",
+//     movieId: 924482,
 //   ),
-//   const MovieEntity(
-//     backdropPath: "/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg",
-//     // genreIds: [
-//     //   14,
-//     //   28,
-//     //   12,
-//     // ],
-//     id: 453395,
-//     overview:
-//         "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
-//     releaseDate: "2022-05-04",
-//     title: "Movie Title",
-//     voteAverage: 5.0,
+//   const SimilarMoviesEntity(
+//     backdropPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg",
+//     movieId: 924482,
 //   ),
-//   const MovieEntity(
-//     backdropPath: "/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg",
-//     // genreIds: [
-//     //   14,
-//     //   28,
-//     //   12,
-//     // ],
-//     id: 453395,
-//     overview:
-//         "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
-//     releaseDate: "2022-05-04",
-//     title: "Movie Title",
-//     voteAverage: 5.0,
+//   const SimilarMoviesEntity(
+//     backdropPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg",
+//     movieId: 924482,
+//   ),
+//   const SimilarMoviesEntity(
+//     backdropPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg",
+//     movieId: 924482,
+//   ),
+//   const SimilarMoviesEntity(
+//     backdropPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg",
+//     movieId: 924482,
+//   ),
+//   const SimilarMoviesEntity(
+//     backdropPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg",
+//     movieId: 924482,
+//   ),
+//   const SimilarMoviesEntity(
+//     backdropPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg",
+//     movieId: 924482,
+//   ),
+//   const SimilarMoviesEntity(
+//     backdropPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg",
+//     movieId: 924482,
+//   ),
+//   const SimilarMoviesEntity(
+//     backdropPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg",
+//     movieId: 924482,
 //   ),
 // ];

@@ -11,7 +11,7 @@ class AppConstants {
       "$baseUrl/movie/$movieId?api_key=$apiKey";
 
   static String similarMoviesBaseUrl(int movieId) =>
-      "$baseUrl/movie/$movieId/similar?api_key=$apiKey";
+      "$baseUrl/movie/$movieId/recommendations?api_key=$apiKey";
 
   static const String baseImageUrl = "https://image.tmdb.org/t/p/w500";
 
