@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:movies_app/core/services/services_locator.dart';
+import 'package:movies_app/core/utils/app_string.dart';
 import 'package:movies_app/movies/presentation/components/now_playing_components.dart';
 import 'package:movies_app/movies/presentation/components/top_rated_components.dart';
 import 'package:movies_app/movies/presentation/controller/movie_bloc/movie_bloc.dart';
@@ -34,7 +35,7 @@ class MoviesScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Popular",
+                      AppString.popular,
                       style: GoogleFonts.poppins(
                         fontSize: 19,
                         fontWeight: FontWeight.w500,
@@ -49,7 +50,7 @@ class MoviesScreen extends StatelessWidget {
                         padding: EdgeInsets.all(8.0),
                         child: Row(
                           children: [
-                            Text('See More'),
+                            Text(AppString.seeMore),
                             Icon(
                               Icons.arrow_forward_ios,
                               size: 16.0,
@@ -70,7 +71,7 @@ class MoviesScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Top Rated",
+                      AppString.topRated,
                       style: GoogleFonts.poppins(
                         fontSize: 19,
                         fontWeight: FontWeight.w500,
@@ -85,7 +86,7 @@ class MoviesScreen extends StatelessWidget {
                         padding: EdgeInsets.all(8.0),
                         child: Row(
                           children: [
-                            Text('See More'),
+                            Text(AppString.seeMore),
                             Icon(
                               Icons.arrow_forward_ios,
                               size: 16.0,
