@@ -7,6 +7,7 @@ import 'package:movies_app/movies/presentation/components/now_playing_components
 import 'package:movies_app/movies/presentation/components/top_rated_components.dart';
 import 'package:movies_app/movies/presentation/controller/movie_bloc/movie_bloc.dart';
 
+import '../../../core/global/theme/theme_bloc/theme_bloc.dart';
 import '../components/popular_components.dart';
 
 class MoviesScreen extends StatelessWidget {
@@ -37,7 +38,7 @@ class MoviesScreen extends StatelessWidget {
                     Text(
                       AppString.popular,
                       style: GoogleFonts.poppins(
-                        fontSize: 19,
+                        fontSize: 20,
                         fontWeight: FontWeight.w500,
                         letterSpacing: 0.15,
                       ),
