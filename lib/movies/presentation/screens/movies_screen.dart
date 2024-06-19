@@ -7,7 +7,6 @@ import 'package:movies_app/movies/presentation/components/now_playing_components
 import 'package:movies_app/movies/presentation/components/top_rated_components.dart';
 import 'package:movies_app/movies/presentation/controller/movie_bloc/movie_bloc.dart';
 
-import '../../../core/global/theme/theme_bloc/theme_bloc.dart';
 import '../components/popular_components.dart';
 
 class MoviesScreen extends StatelessWidget {
@@ -21,6 +20,22 @@ class MoviesScreen extends StatelessWidget {
         ..add(GetPopularMoviesEvent())
         ..add(GetTopRatedMoviesEvent()),
       child: Scaffold(
+        // appBar: AppBar(),
+        // drawer: Drawer(
+        //   child: Column(
+        //     mainAxisAlignment: MainAxisAlignment.center,
+        //     children: [
+        //       Center(
+        //         child: ElevatedButton(
+        //           onPressed: () {
+        //             context.read<ThemeBloc>().add(ToggleThemeEvent());
+        //           },
+        //           child: const Text('Toggle Theme'),
+        //         ),
+        //       ),
+        //     ],
+        //   ),
+        // ),
         body: SingleChildScrollView(
           key: const Key('movieScrollView'),
           child: Column(

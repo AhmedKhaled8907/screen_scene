@@ -102,12 +102,14 @@ class MovieDetailContent extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(movie.title,
-                              style: GoogleFonts.poppins(
-                                fontSize: 23,
-                                fontWeight: FontWeight.w700,
-                                letterSpacing: 1.2,
-                              )),
+                          Text(
+                            movie.title,
+                            style: GoogleFonts.poppins(
+                              fontSize: 23,
+                              fontWeight: FontWeight.w700,
+                              letterSpacing: 1.2,
+                            ),
+                          ),
                           const SizedBox(height: 8.0),
                           Row(
                             children: [
@@ -125,6 +127,7 @@ class MovieDetailContent extends StatelessWidget {
                                   style: const TextStyle(
                                     fontSize: 16.0,
                                     fontWeight: FontWeight.w500,
+                                    color: Colors.white,
                                   ),
                                 ),
                               ),
@@ -145,22 +148,13 @@ class MovieDetailContent extends StatelessWidget {
                                       letterSpacing: 1.2,
                                     ),
                                   ),
-                                  const SizedBox(width: 4.0),
-                                  Text(
-                                    '(${movie.voteAverage})',
-                                    style: const TextStyle(
-                                      fontSize: 1.0,
-                                      fontWeight: FontWeight.w500,
-                                      letterSpacing: 1.2,
-                                    ),
-                                  ),
                                 ],
                               ),
                               const SizedBox(width: 16.0),
                               Text(
                                 _showDuration(movie.runtime),
                                 style: const TextStyle(
-                                  color: Colors.white70,
+                                  // color: Colors.white70,
                                   fontSize: 16.0,
                                   fontWeight: FontWeight.w500,
                                   letterSpacing: 1.2,
@@ -177,11 +171,11 @@ class MovieDetailContent extends StatelessWidget {
                               letterSpacing: 1.2,
                             ),
                           ),
-                          const SizedBox(height: 8.0),
+                          const SizedBox(height: 16),
                           Text(
                             '${AppString.genres}: ${_showGenres(movie.genres!)}',
                             style: const TextStyle(
-                              color: Colors.white70,
+                              // color: Colors.white70,
                               fontSize: 12.0,
                               fontWeight: FontWeight.w500,
                               letterSpacing: 1.2,
@@ -268,31 +262,40 @@ class MovieDetailContent extends StatelessWidget {
               delegate: SliverChildBuilderDelegate(
                 (context, index) {
                   final similarMoviesItem = state.similarMovies[index];
-                  return FadeInUp(
-                    from: 20,
-                    duration: const Duration(milliseconds: 500),
-                    child: ClipRRect(
-                      borderRadius:
-                          const BorderRadius.all(Radius.circular(4.0)),
-                      child: CachedNetworkImage(
-                        imageUrl: AppConstants.imageUrl(
-                            similarMoviesItem.posterPath!),
-                        placeholder: (context, url) => Shimmer.fromColors(
-                          baseColor: Colors.grey[850]!,
-                          highlightColor: Colors.grey[800]!,
-                          child: Container(
-                            height: 170.0,
-                            width: 120.0,
-                            decoration: BoxDecoration(
-                              color: Colors.black,
-                              borderRadius: BorderRadius.circular(8.0),
+                  return InkWell(
+                    onTap: () {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (context) =>
+                            MovieDetailScreen(id: similarMoviesItem.movieId),
+                      ));
+                    },
+                    child: FadeInUp(
+                      from: 20,
+                      duration: const Duration(milliseconds: 500),
+                      child: ClipRRect(
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(8)),
+                        child: CachedNetworkImage(
+                          imageUrl: AppConstants.imageUrl(
+                            similarMoviesItem.posterPath!,
+                          ),
+                          placeholder: (context, url) => Shimmer.fromColors(
+                            baseColor: Colors.grey[850]!,
+                            highlightColor: Colors.grey[800]!,
+                            child: Container(
+                              height: 170.0,
+                              width: 120.0,
+                              decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
                             ),
                           ),
+                          errorWidget: (context, url, error) =>
+                              const Icon(Icons.error),
+                          height: 180.0,
+                          fit: BoxFit.cover,
                         ),
-                        errorWidget: (context, url, error) =>
-                            const Icon(Icons.error),
-                        height: 180.0,
-                        fit: BoxFit.cover,
                       ),
                     ),
                   );

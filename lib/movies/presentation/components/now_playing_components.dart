@@ -3,6 +3,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:movies_app/core/utils/enums.dart';
 import 'package:movies_app/movies/presentation/screens/movie_detail_screen.dart';
 import 'package:shimmer/shimmer.dart';
@@ -34,6 +35,7 @@ class NowPlayingComponents extends StatelessWidget {
               duration: const Duration(milliseconds: 500),
               child: CarouselSlider(
                 options: CarouselOptions(
+                  autoPlay: true,
                   height: size.height * 0.5,
                   viewportFraction: 1.0,
                   onPageChanged: (index, reason) {},
@@ -61,7 +63,7 @@ class NowPlayingComponents extends StatelessWidget {
                                   Colors.black,
                                   Colors.transparent,
                                 ],
-                                stops: [0, 0.3, 0.25, 1],
+                                stops: [0, 0.3, 0.5, 1],
                               ).createShader(
                                 Rect.fromLTRB(0, 0, rect.width, rect.height),
                               );
@@ -116,8 +118,10 @@ class NowPlayingComponents extends StatelessWidget {
                                   child: Text(
                                     item.title,
                                     textAlign: TextAlign.center,
-                                    style: const TextStyle(
-                                      fontSize: 24,
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.w600,
+                                      letterSpacing: 1.2,
                                     ),
                                   ),
                                 ),
@@ -133,7 +137,9 @@ class NowPlayingComponents extends StatelessWidget {
             );
 
           case RequestState.error:
-            return Container();
+            return Center(
+              child: Text(state.nowPlayingMessage),
+            );
         }
       },
     );

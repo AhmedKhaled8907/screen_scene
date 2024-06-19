@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
       child: BlocBuilder<ThemeBloc, ThemeState>(
         builder: (context, theme) {
           return MaterialApp(
+            debugShowCheckedModeBanner: false,
             theme: theme.themeData,
             home: const MoviesScreen(),
           );
