@@ -1,13 +1,10 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_app/core/utils/enums.dart';
 import 'package:movies_app/movies/presentation/controller/movie_bloc/movie_bloc.dart';
-import 'package:movies_app/movies/presentation/screens/movie_detail_screen.dart';
-import 'package:shimmer/shimmer.dart';
-
-import '../../../core/utils/constants.dart';
+import 'package:movies_app/movies/presentation/views/custom_widgets/poster_image.dart';
+import 'package:movies_app/movies/presentation/views/movie_details_view/movie_detail_view.dart';
 
 class PopularComponents extends StatelessWidget {
   const PopularComponents({super.key});
@@ -42,35 +39,13 @@ class PopularComponents extends StatelessWidget {
                     return Container(
                       padding: const EdgeInsets.only(right: 8.0),
                       child: InkWell(
+                        /// TODO : NAVIGATE TO MOVIE DETAILS
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) =>
-                                MovieDetailScreen(id: movie.id),
+                            builder: (context) => MovieDetailView(id: movie.id),
                           ));
                         },
-                        child: ClipRRect(
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(8.0)),
-                          child: CachedNetworkImage(
-                            width: 120.0,
-                            fit: BoxFit.cover,
-                            imageUrl: AppConstants.imageUrl(movie.posterPath),
-                            placeholder: (context, url) => Shimmer.fromColors(
-                              baseColor: Colors.grey[850]!,
-                              highlightColor: Colors.grey[800]!,
-                              child: Container(
-                                height: 170.0,
-                                width: 120.0,
-                                decoration: BoxDecoration(
-                                  color: Colors.black,
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                              ),
-                            ),
-                            errorWidget: (context, url, error) =>
-                                const Icon(Icons.error),
-                          ),
-                        ),
+                        child: PosterImage(posterPath: movie.posterPath),
                       ),
                     );
                   },
