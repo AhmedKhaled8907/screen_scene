@@ -3,8 +3,7 @@ import 'package:movies_app/core/global/resources/strings_manager.dart';
 import 'package:movies_app/movies/presentation/views/custom_widgets/title_and_see_more.dart';
 import 'package:movies_app/movies/presentation/views/movie_view/widgets/top_rated/top_rated_components.dart';
 
-
-
+import '../top_rated_see_more/top_rated_see_more_view.dart';
 
 class TopRatedSection extends StatelessWidget {
   const TopRatedSection({
@@ -19,6 +18,11 @@ class TopRatedSection extends StatelessWidget {
           title: AppString.topRated,
           onTap: () {
             /// TODO : NAVIGATION TO TOP RATED SCREEN
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => const TopRatedSeeMoreView(),
+              ),
+            );
           },
         ),
         const TopRatedComponents(),

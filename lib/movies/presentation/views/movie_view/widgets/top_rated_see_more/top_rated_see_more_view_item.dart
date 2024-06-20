@@ -11,8 +11,8 @@ import 'package:movies_app/movies/presentation/views/custom_widgets/see_more_ove
 
 import '../../../../../../core/global/resources/values_manager.dart';
 
-class PopularSeeMoreViewItem extends StatelessWidget {
-  const PopularSeeMoreViewItem({
+class TopRatedSeeMoreViewItem extends StatelessWidget {
+  const TopRatedSeeMoreViewItem({
     super.key,
     required this.model,
   });
