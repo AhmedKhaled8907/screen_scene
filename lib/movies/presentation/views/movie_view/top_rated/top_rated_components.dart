@@ -5,7 +5,7 @@ import 'package:movies_app/core/utils/enums.dart';
 import 'package:movies_app/movies/presentation/views/custom_widgets/poster_image.dart';
 
 import '../../../controller/movie_bloc/movie_bloc.dart';
-import '../../movie_details_view/movie_detail_view.dart';
+import '../../movie_details_view/movie_derails_view.dart';
 
 class TopRatedComponents extends StatelessWidget {
   const TopRatedComponents({super.key});
@@ -18,12 +18,7 @@ class TopRatedComponents extends StatelessWidget {
       builder: (context, state) {
         switch (state.topRatedState) {
           case RequestState.loading:
-            return const SizedBox(
-              height: 170,
-              child: Center(
-                child: CircularProgressIndicator(),
-              ),
-            );
+            return const CustomLoadingIndicator(height: 170);
           case RequestState.loaded:
             return FadeIn(
               duration: const Duration(milliseconds: 500),
@@ -54,6 +49,27 @@ class TopRatedComponents extends StatelessWidget {
             return const SizedBox();
         }
       },
+    );
+  }
+}
+
+class CustomLoadingIndicator extends StatelessWidget {
+  const CustomLoadingIndicator({
+    super.key,
+    required this.height,
+  });
+
+  final double height;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: height,
+      child: const Center(
+        child: CircularProgressIndicator(
+          color: Colors.white,
+        ),
+      ),
     );
   }
 }

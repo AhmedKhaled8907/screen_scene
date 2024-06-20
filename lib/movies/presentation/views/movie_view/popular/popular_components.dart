@@ -4,7 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_app/core/utils/enums.dart';
 import 'package:movies_app/movies/presentation/controller/movie_bloc/movie_bloc.dart';
 import 'package:movies_app/movies/presentation/views/custom_widgets/poster_image.dart';
-import 'package:movies_app/movies/presentation/views/movie_details_view/movie_detail_view.dart';
+import 'package:movies_app/movies/presentation/views/movie_details_view/movie_derails_view.dart';
+
+import 'package:movies_app/movies/presentation/views/movie_view/top_rated/top_rated_components.dart';
 
 class PopularComponents extends StatelessWidget {
   const PopularComponents({super.key});
@@ -17,12 +19,7 @@ class PopularComponents extends StatelessWidget {
       builder: (context, state) {
         switch (state.popularState) {
           case RequestState.loading:
-            return const SizedBox(
-              height: 170,
-              child: Center(
-                child: CircularProgressIndicator(),
-              ),
-            );
+            return const CustomLoadingIndicator(height: 170);
 
           case RequestState.loaded:
             return FadeIn(

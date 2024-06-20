@@ -4,7 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_app/core/utils/enums.dart';
 import 'package:movies_app/movies/presentation/controller/similar_movies_bloc/similar_movies_bloc.dart';
 import 'package:movies_app/movies/presentation/views/custom_widgets/poster_image.dart';
-import 'package:movies_app/movies/presentation/views/movie_details_view/movie_detail_View.dart';
+
+import 'movie_derails_view.dart';
+
 
 class SimilarMoviesSection extends StatelessWidget {
   const SimilarMoviesSection({super.key});

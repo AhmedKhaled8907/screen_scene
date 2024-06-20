@@ -24,7 +24,7 @@ class MovieDetailsViewBody extends StatelessWidget {
         switch (state.movieDetailsState) {
           case RequestState.loading:
             return const Center(
-              child: CircularProgressIndicator(),
+              child: CircularProgressIndicator(color: Colors.white),
             );
 
           case RequestState.loaded:

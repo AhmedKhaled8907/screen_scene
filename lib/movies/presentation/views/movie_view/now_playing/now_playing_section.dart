@@ -3,8 +3,10 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_app/core/utils/enums.dart';
+import 'package:movies_app/movies/presentation/views/movie_details_view/movie_derails_view.dart';
 import 'package:movies_app/movies/presentation/views/movie_view/now_playing/now_playing_text_with_shader.dart';
-import 'package:movies_app/movies/presentation/views/movie_details_view/movie_detail_view.dart';
+
+import 'package:movies_app/movies/presentation/views/movie_view/top_rated/top_rated_components.dart';
 
 import '../../../controller/movie_bloc/movie_bloc.dart';
 
@@ -21,12 +23,7 @@ class NowPlayingSection extends StatelessWidget {
       builder: (context, state) {
         switch (state.nowPlayingState) {
           case RequestState.loading:
-            return SizedBox(
-              height: size.height * 0.5,
-              child: const Center(
-                child: CircularProgressIndicator(),
-              ),
-            );
+            return CustomLoadingIndicator(height: size.height * 0.5);
 
           case RequestState.loaded:
             return FadeIn(
