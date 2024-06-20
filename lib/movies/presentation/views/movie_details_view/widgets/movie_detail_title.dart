@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:movies_app/core/global/resources/styles_manager.dart';
+import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/movies/domain/entities/movie_details_entity.dart';
 
 class MovieDetailsTitle extends StatelessWidget {
@@ -14,10 +15,9 @@ class MovieDetailsTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       movie!.title,
-      style: GoogleFonts.poppins(
-        fontSize: 23,
-        fontWeight: FontWeight.w700,
-        letterSpacing: 1.2,
+      style: getBoldStyle(
+        letterSpacing: AppSize.s1_25,
+        fontSize: AppSize.s24,
       ),
     );
   }

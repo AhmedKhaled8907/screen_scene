@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:movies_app/core/global/resources/colors_manager.dart';
 import 'package:movies_app/core/global/resources/strings_manager.dart';
+import 'package:movies_app/core/global/resources/styles_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
 
 class NowPlayingText extends StatelessWidget {
@@ -32,22 +32,20 @@ class NowPlayingText extends StatelessWidget {
                 const SizedBox(width: AppSize.s4),
                 Text(
                   AppString.nowPlaying.toUpperCase(),
-                  style: const TextStyle(
-                    fontSize: 16.0,
-                  ),
+                  style: getRegularStyle(),
                 ),
               ],
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: AppPadding.p16),
+            padding: const EdgeInsets.only(
+              bottom: AppPadding.p16,
+            ),
             child: Text(
               title,
               textAlign: TextAlign.center,
-              style: GoogleFonts.poppins(
-                fontSize: 22,
-                fontWeight: FontWeight.w600,
-                letterSpacing: 1.2,
+              style: getBoldStyle(
+                letterSpacing: AppSize.s1_25,
               ),
             ),
           ),

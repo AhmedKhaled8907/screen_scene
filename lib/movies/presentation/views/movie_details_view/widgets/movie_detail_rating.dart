@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app/core/global/resources/font_manager.dart';
+import 'package:movies_app/core/global/resources/styles_manager.dart';
+import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/movies/domain/entities/movie_details_entity.dart';
 
 class MovieDetailsRating extends StatelessWidget {
@@ -16,15 +19,14 @@ class MovieDetailsRating extends StatelessWidget {
         const Icon(
           Icons.star,
           color: Colors.amber,
-          size: 20.0,
+          size: AppSize.s20,
         ),
-        const SizedBox(width: 4.0),
+        const SizedBox(width: AppSize.s4),
         Text(
-          (movie!.voteAverage / 2).toStringAsFixed(1),
-          style: const TextStyle(
-            fontSize: 16.0,
-            fontWeight: FontWeight.w500,
-            letterSpacing: 1.2,
+          (movie!.voteAverage / AppSize.s2).toStringAsFixed(1),
+          style: getMediumStyle(
+            fontSize: FontSize.s16,
+            letterSpacing: AppSize.s1_25,
           ),
         ),
       ],

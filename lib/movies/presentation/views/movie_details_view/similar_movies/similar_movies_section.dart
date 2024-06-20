@@ -20,7 +20,10 @@ class SimilarMoviesSection extends StatelessWidget {
         switch (state.similarMoviesState) {
           case RequestState.loading:
             return const SliverToBoxAdapter(
-                child: CustomLoadingIndicator(height: AppSize.s170));
+              child: CustomLoadingIndicator(
+                height: AppSize.s170,
+              ),
+            );
 
           case RequestState.loaded:
             return SliverGrid(
@@ -32,8 +35,9 @@ class SimilarMoviesSection extends StatelessWidget {
                     onTap: () {
                       /// TODO : NAVIGATE TO MOVIE DETAILS
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        builder: (context) =>
-                            MovieDetailView(id: similarMoviesItem.movieId),
+                        builder: (context) => MovieDetailView(
+                          id: similarMoviesItem.movieId,
+                        ),
                       ));
                     },
                     child: FadeInUp(

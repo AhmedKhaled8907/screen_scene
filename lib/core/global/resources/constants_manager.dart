@@ -7,4 +7,7 @@ static const double fromFadeInUp = 20;
   static const double crossAxisSpacing = 8.0;
   static const double childAspectRatio = 0.7;
   static const int crossAxisCount = 3;
+
+  // status code 
+  static const int successCode200 = 200;
 }

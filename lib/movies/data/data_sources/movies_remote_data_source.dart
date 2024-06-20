@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:movies_app/core/error/exceptions.dart';
 import 'package:movies_app/core/global/resources/api_constants_manager.dart';
+import 'package:movies_app/core/global/resources/constants_manager.dart';
 import 'package:movies_app/movies/data/models/movie_details_model.dart';
 import 'package:movies_app/movies/data/models/movie_model.dart';
 import 'package:movies_app/movies/data/models/similar_movies_model.dart';
@@ -16,7 +17,6 @@ class MoviesRemoteDataSource extends BaseMoviesRemoteDataSource {
   @override
   Future<List<MovieModel>> getNowPlayingMovies() async {
     final response = await Dio().get(ApiConstants.nowPlayingBaseUrl);
-    // print(response);
     return getDataResponse(response);
   }
 
@@ -37,9 +37,10 @@ class MoviesRemoteDataSource extends BaseMoviesRemoteDataSource {
   // get movie details
   @override
   Future<MovieDetailsModel> getMovieDetails(MovieDetailsParams params) async {
-    final response =
-        await Dio().get(ApiConstants.movieDetailsBaseUrl(params.movieId));
-    if (response.statusCode == 200) {
+    final response = await Dio().get(
+      ApiConstants.movieDetailsBaseUrl(params.movieId),
+    );
+    if (response.statusCode == AppConstants.successCode200) {
       return MovieDetailsModel.fromJson(response.data);
     } else {
       throw ServerException(
@@ -48,15 +49,16 @@ class MoviesRemoteDataSource extends BaseMoviesRemoteDataSource {
     }
   }
 
-  // get similar movie 
+  // get similar movie
   @override
   Future<List<SimilarMoviesEntity>> getSimilarMovies(
       SimilarMoviesParams params) async {
-    final response =
-        await Dio().get(ApiConstants.similarMoviesBaseUrl(params.movieId));
-    if (response.statusCode == 200) {
+    final response = await Dio().get(
+      ApiConstants.similarMoviesBaseUrl(params.movieId),
+    );
+    if (response.statusCode == AppConstants.successCode200) {
       return List<SimilarMoviesModel>.from(
-          (response.data['results'] as List).map(
+          (response.data[ApiConstants.listName] as List).map(
         (e) => SimilarMoviesModel.fromJson(e),
       ));
     } else {
@@ -68,8 +70,9 @@ class MoviesRemoteDataSource extends BaseMoviesRemoteDataSource {
 
   // get data response method
   List<MovieModel> getDataResponse(Response<dynamic> response) {
-    if (response.statusCode == 200) {
-      return List<MovieModel>.from((response.data['results'] as List).map(
+    if (response.statusCode == AppConstants.successCode200) {
+      return List<MovieModel>.from(
+          (response.data[ApiConstants.listName] as List).map(
         (e) => MovieModel.fromJson(e),
       ));
     } else {

@@ -28,7 +28,9 @@ class MovieDetailsViewBody extends StatelessWidget {
         switch (state.movieDetailsState) {
           case RequestState.loading:
             return Center(
-              child: CircularProgressIndicator(color: AppColors.white),
+              child: CircularProgressIndicator(
+                color: AppColors.white,
+              ),
             );
 
           case RequestState.loaded:
@@ -68,9 +70,7 @@ class MovieDetailsViewBody extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SliverToBoxAdapter(
-                  child: MoreLikeThisText(),
-                ),
+                const MoreLikeThisText(),
                 const SliverPadding(
                   padding: EdgeInsets.fromLTRB(
                     AppSize.s16,
@@ -78,9 +78,7 @@ class MovieDetailsViewBody extends StatelessWidget {
                     AppSize.s16,
                     AppSize.s24,
                   ),
-                  sliver: SliverToBoxAdapter(
-                    child: SimilarMoviesSection(),
-                  ),
+                  sliver: SimilarMoviesSection(),
                 ),
               ],
             );

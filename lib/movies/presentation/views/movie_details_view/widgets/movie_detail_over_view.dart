@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app/core/global/resources/font_manager.dart';
+import 'package:movies_app/core/global/resources/styles_manager.dart';
+import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/movies/domain/entities/movie_details_entity.dart';
 
 class MovieDetailsOverView extends StatelessWidget {
@@ -13,10 +16,9 @@ class MovieDetailsOverView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       movie!.overview,
-      style: const TextStyle(
-        fontSize: 14.0,
-        fontWeight: FontWeight.w400,
-        letterSpacing: 1.2,
+      style: getRegularStyle(
+        letterSpacing: AppSize.s1_25,
+        fontSize: FontSize.s14,
       ),
     );
   }

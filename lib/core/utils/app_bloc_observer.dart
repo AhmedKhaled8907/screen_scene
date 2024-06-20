@@ -15,17 +15,17 @@ class AppBlocObserver extends BlocObserver {
     super.onError(bloc, error, stackTrace);
   }
 
-  // @override
-  // void onChange(BlocBase bloc, Change change) {
-  //   super.onChange(bloc, change);
-  //   log('{bloc $bloc change : $Change}');
-  // }
-
   @override
   void onChange(BlocBase bloc, Change change) {
-    log(change.toString());
     super.onChange(bloc, change);
+    log('{bloc $bloc change : $Change}');
   }
+
+  // @override
+  // void onChange(BlocBase bloc, Change change) {
+  //   log(change.toString());
+  //   super.onChange(bloc, change);
+  // }
 
   @override
   void onCreate(BlocBase bloc) {

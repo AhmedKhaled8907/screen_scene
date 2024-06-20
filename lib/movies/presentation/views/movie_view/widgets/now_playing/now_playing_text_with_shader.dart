@@ -32,19 +32,9 @@ class NowPlayingTextWithShade extends StatelessWidget {
                 AppColors.black,
                 AppColors.transparent,
               ],
-              stops: const [
-                AppSize.s0,
-                AppSize.s0_3,
-                AppSize.s0_5,
-                AppSize.s1,
-              ],
+              stops: const [AppSize.s0, AppSize.s0_3, AppSize.s0_5, AppSize.s1],
             ).createShader(
-              Rect.fromLTRB(
-                AppSize.s0,
-                AppSize.s0,
-                rect.width,
-                rect.height,
-              ),
+              Rect.fromLTRB(AppSize.s0, AppSize.s0, rect.width, rect.height),
             );
           },
           blendMode: BlendMode.dstIn,

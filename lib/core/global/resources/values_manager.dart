@@ -41,9 +41,11 @@ class AppPadding {
 
 class AppSize {
   static const double s0 = 0.0;
+  static const double s0_15 = 0.15;
   static const double s0_3 = 0.3;
   static const double s0_5 = 0.5;
   static const double s1 = 1.0;
+  static const double s1_25 = 1.25;
   static const double s1_5 = 1.5;
   static const double s2 = 2.0;
   static const double s2_5 = 2.5;
@@ -73,6 +75,7 @@ class AppSize {
   static const double s170 = 170.0;
   static const double s180 = 180.0;
   static const double s200 = 200.0;
+  static const double s250 = 250.0;
 }
 
 class AppDuration {
@@ -86,20 +89,19 @@ class AppDuration {
   static const int d700 = 700;
   static const int d800 = 800;
   static const int d900 = 900;
-  static const int d1000 = 1000;  // 1 second
-  static const int d1500 = 1500;  // 1.5 seconds
-  static const int d2000 = 2000;  // 2 seconds
-  static const int d2500 = 2500;  // 2.5 seconds
-  static const int d3000 = 3000;  // 3 seconds
-  static const int d4000 = 4000;  // 4 seconds
-  static const int d5000 = 5000;  // 5 seconds
-  static const int d6000 = 6000;  // 6 seconds
-  static const int d7000 = 7000;  // 7 seconds
-  static const int d8000 = 8000;  // 8 seconds
-  static const int d9000 = 9000;  // 9 seconds
+  static const int d1000 = 1000; // 1 second
+  static const int d1500 = 1500; // 1.5 seconds
+  static const int d2000 = 2000; // 2 seconds
+  static const int d2500 = 2500; // 2.5 seconds
+  static const int d3000 = 3000; // 3 seconds
+  static const int d4000 = 4000; // 4 seconds
+  static const int d5000 = 5000; // 5 seconds
+  static const int d6000 = 6000; // 6 seconds
+  static const int d7000 = 7000; // 7 seconds
+  static const int d8000 = 8000; // 8 seconds
+  static const int d9000 = 9000; // 9 seconds
   static const int d10000 = 10000; // 10 seconds
 }
-
 
 class AppRadius {
   static const double r4 = 4.0;
