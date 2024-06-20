@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app/core/global/resources/colors_manager.dart';
+import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/movies/domain/entities/movie_details_entity.dart';
 
 class MovieDetailsDateRelease extends StatelessWidget {
@@ -13,12 +15,12 @@ class MovieDetailsDateRelease extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(
-        vertical: 2.0,
-        horizontal: 8.0,
+        vertical: AppPadding.p2,
+        horizontal: AppSize.s8,
       ),
       decoration: BoxDecoration(
-        color: Colors.grey[800],
-        borderRadius: BorderRadius.circular(4.0),
+        color: Colors.grey[AppColorShades.colorShade800],
+        borderRadius: BorderRadius.circular(AppRadius.r4),
       ),
       child: Text(
         movie!.releaseDate.split('-')[0],

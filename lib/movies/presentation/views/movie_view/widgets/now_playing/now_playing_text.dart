@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:movies_app/core/global/resources/colors_manager.dart';
+import 'package:movies_app/core/global/resources/strings_manager.dart';
+import 'package:movies_app/core/global/resources/values_manager.dart';
 
 class NowPlayingText extends StatelessWidget {
   const NowPlayingText({
@@ -17,18 +20,18 @@ class NowPlayingText extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Padding(
-            padding: const EdgeInsets.only(bottom: 16.0),
+            padding: const EdgeInsets.only(bottom: AppPadding.p16),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(
+                Icon(
                   Icons.circle,
-                  color: Colors.redAccent,
-                  size: 16.0,
+                  color: AppColors.redAccent,
+                  size: AppSize.s16,
                 ),
-                const SizedBox(width: 4.0),
+                const SizedBox(width: AppSize.s4),
                 Text(
-                  'Now Playing'.toUpperCase(),
+                  AppString.nowPlaying.toUpperCase(),
                   style: const TextStyle(
                     fontSize: 16.0,
                   ),
@@ -37,7 +40,7 @@ class NowPlayingText extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 16.0),
+            padding: const EdgeInsets.only(bottom: AppPadding.p16),
             child: Text(
               title,
               textAlign: TextAlign.center,

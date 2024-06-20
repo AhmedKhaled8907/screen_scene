@@ -1,12 +1,14 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_app/core/global/resources/constants_manager.dart';
+import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/core/utils/enums.dart';
 import 'package:movies_app/movies/presentation/controller/similar_movies_bloc/similar_movies_bloc.dart';
+import 'package:movies_app/movies/presentation/views/custom_widgets/custom_loading_indicator.dart';
 import 'package:movies_app/movies/presentation/views/custom_widgets/poster_image.dart';
 
-import 'movie_derails_view.dart';
-
+import '../movie_details_view.dart';
 
 class SimilarMoviesSection extends StatelessWidget {
   const SimilarMoviesSection({super.key});
@@ -18,13 +20,7 @@ class SimilarMoviesSection extends StatelessWidget {
         switch (state.similarMoviesState) {
           case RequestState.loading:
             return const SliverToBoxAdapter(
-              child: SizedBox(
-                height: 170,
-                child: Center(
-                  child: CircularProgressIndicator(),
-                ),
-              ),
-            );
+                child: CustomLoadingIndicator(height: AppSize.s170));
 
           case RequestState.loaded:
             return SliverGrid(
@@ -41,8 +37,10 @@ class SimilarMoviesSection extends StatelessWidget {
                       ));
                     },
                     child: FadeInUp(
-                      from: 20,
-                      duration: const Duration(milliseconds: 500),
+                      from: AppConstants.fromFadeInUp,
+                      duration: const Duration(
+                        milliseconds: AppDuration.d500,
+                      ),
                       child: PosterImage(
                         posterPath: similarMoviesItem.posterPath!,
                       ),
@@ -51,10 +49,10 @@ class SimilarMoviesSection extends StatelessWidget {
                 },
               ),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                mainAxisSpacing: 8.0,
-                crossAxisSpacing: 8.0,
-                childAspectRatio: 0.7,
-                crossAxisCount: 3,
+                mainAxisSpacing: AppConstants.mainAxisSpacing,
+                crossAxisSpacing: AppConstants.crossAxisSpacing,
+                childAspectRatio: AppConstants.childAspectRatio,
+                crossAxisCount: AppConstants.crossAxisCount,
               ),
             );
 

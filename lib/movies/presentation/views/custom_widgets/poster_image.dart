@@ -1,6 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/utils/app_constants.dart';
+import 'package:movies_app/core/global/resources/api_constants_manager.dart';
+import 'package:movies_app/core/global/resources/colors_manager.dart';
+import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:shimmer/shimmer.dart';
 
 class PosterImage extends StatelessWidget {
@@ -14,27 +16,29 @@ class PosterImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 8.0),
+      padding: const EdgeInsets.only(right: AppPadding.p8),
       child: ClipRRect(
-        borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+        borderRadius: const BorderRadius.all(
+          Radius.circular(AppRadius.r8),
+        ),
         child: CachedNetworkImage(
-          width: 120.0,
+          width: AppSize.s120,
           fit: BoxFit.cover,
-          imageUrl: AppConstants.imageUrl(posterPath),
+          imageUrl: ApiConstants.imageUrl(posterPath),
           placeholder: (context, url) => Shimmer.fromColors(
-            baseColor: Colors.grey[850]!,
-            highlightColor: Colors.grey[800]!,
+            baseColor: Colors.grey[AppColorShades.colorShade850]!,
+            highlightColor: Colors.grey[AppColorShades.colorShade800]!,
             child: Container(
-              height: 170.0,
-              width: 120.0,
+              height: AppSize.s170,
+              width: AppSize.s120,
               decoration: BoxDecoration(
                 color: Colors.black,
-                borderRadius: BorderRadius.circular(8.0),
+                borderRadius: BorderRadius.circular(AppRadius.r8),
               ),
             ),
           ),
           errorWidget: (context, url, error) => const Icon(Icons.error),
-          height: 120.0,
+          height: AppSize.s120,
         ),
       ),
     );

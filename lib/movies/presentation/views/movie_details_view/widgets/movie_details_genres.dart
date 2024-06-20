@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/utils/app_strings.dart';
+import 'package:movies_app/core/global/resources/strings_manager.dart';
+import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/movies/domain/entities/genres_entity.dart';
 import 'package:movies_app/movies/domain/entities/movie_details_entity.dart';
 
@@ -33,6 +34,9 @@ class MovieDetailsGenres extends StatelessWidget {
       return result;
     }
 
-    return result.substring(0, result.length - 2);
+    return result.substring(
+      0,
+      result.length - AppSize.s2.toInt(),
+    );
   }
 }

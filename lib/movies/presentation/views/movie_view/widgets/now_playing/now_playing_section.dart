@@ -2,13 +2,16 @@ import 'package:animate_do/animate_do.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_app/core/global/resources/constants_manager.dart';
+import 'package:movies_app/core/global/resources/strings_manager.dart';
+import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/core/utils/enums.dart';
-import 'package:movies_app/movies/presentation/views/movie_details_view/movie_derails_view.dart';
-import 'package:movies_app/movies/presentation/views/movie_view/now_playing/now_playing_text_with_shader.dart';
+import 'package:movies_app/movies/presentation/views/custom_widgets/custom_loading_indicator.dart';
+import 'package:movies_app/movies/presentation/views/movie_details_view/movie_details_view.dart';
+import 'package:movies_app/movies/presentation/views/movie_view/widgets/now_playing/now_playing_text_with_shader.dart';
 
-import 'package:movies_app/movies/presentation/views/movie_view/top_rated/top_rated_components.dart';
 
-import '../../../controller/movie_bloc/movie_bloc.dart';
+import '../../../../controller/movie_bloc/movie_bloc.dart';
 
 class NowPlayingSection extends StatelessWidget {
   const NowPlayingSection({super.key});
@@ -23,26 +26,30 @@ class NowPlayingSection extends StatelessWidget {
       builder: (context, state) {
         switch (state.nowPlayingState) {
           case RequestState.loading:
-            return CustomLoadingIndicator(height: size.height * 0.5);
+            return CustomLoadingIndicator(
+              height: size.height * AppSize.s0_5,
+            );
 
           case RequestState.loaded:
             return FadeIn(
-              duration: const Duration(milliseconds: 500),
+              duration: const Duration(milliseconds: AppDuration.d500),
               child: CarouselSlider(
                 options: CarouselOptions(
                   autoPlay: true,
-                  height: size.height * 0.5,
-                  viewportFraction: 1.0,
+                  height: size.height * AppSize.s0_5,
+                  viewportFraction: AppConstants.viewportFraction,
                   onPageChanged: (index, reason) {},
                 ),
                 items: state.nowPlayingMovies.map(
                   (item) {
                     return GestureDetector(
-                      key: const Key('openMovieMinimalDetail'),
+                      key: const Key(AppString.openMovieMinimalDetailKey),
                       onTap: () {
                         /// TODO : NAVIGATE TO MOVIE DETAILS
                         Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => MovieDetailView(id: item.id),
+                          builder: (context) => MovieDetailView(
+                            id: item.id,
+                          ),
                         ));
                       },
                       child: NowPlayingTextWithShade(

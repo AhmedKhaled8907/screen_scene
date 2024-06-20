@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/movies/domain/entities/movie_details_entity.dart';
 
 class MovieDetailsDuration extends StatelessWidget {
@@ -23,8 +24,8 @@ class MovieDetailsDuration extends StatelessWidget {
   }
 
   String _showDuration(int runtime) {
-    final int hours = runtime ~/ 60;
-    final int minutes = runtime % 60;
+    final int hours = runtime ~/ AppDuration.d60;
+    final int minutes = runtime % AppDuration.d60;
 
     if (hours > 0) {
       return '${hours}h ${minutes}m';

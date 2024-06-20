@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_app/core/global/resources/strings_manager.dart';
+import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/core/services/services_locator.dart';
 
-import 'now_playing/now_playing_section.dart';
+import 'widgets/now_playing/now_playing_section.dart';
 import '../../controller/movie_bloc/movie_bloc.dart';
-import 'popular/popular_section.dart';
+import 'widgets/popular/popular_section.dart';
 import '../custom_widgets/title_and_see_more.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -18,7 +20,7 @@ class HomeViewBody extends StatelessWidget {
         ..add(GetPopularMoviesEvent())
         ..add(GetTopRatedMoviesEvent()),
       child: const SingleChildScrollView(
-        key: Key('movieScrollView'),
+        key: Key(AppString.movieScrollViewKey),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -31,7 +33,7 @@ class HomeViewBody extends StatelessWidget {
             // top rated movies section
             TopRatedSection(),
 
-            SizedBox(height: 24.0),
+            SizedBox(height: AppSize.s24),
           ],
         ),
       ),

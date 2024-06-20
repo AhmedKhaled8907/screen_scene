@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:movies_app/core/error/exceptions.dart';
-import 'package:movies_app/core/utils/app_constants.dart';
+import 'package:movies_app/core/global/resources/api_constants_manager.dart';
 import 'package:movies_app/movies/data/models/movie_details_model.dart';
 import 'package:movies_app/movies/data/models/movie_model.dart';
 import 'package:movies_app/movies/data/models/similar_movies_model.dart';
@@ -15,7 +15,7 @@ class MoviesRemoteDataSource extends BaseMoviesRemoteDataSource {
   // get now playing movies
   @override
   Future<List<MovieModel>> getNowPlayingMovies() async {
-    final response = await Dio().get(AppConstants.nowPlayingBaseUrl);
+    final response = await Dio().get(ApiConstants.nowPlayingBaseUrl);
     // print(response);
     return getDataResponse(response);
   }
@@ -23,14 +23,14 @@ class MoviesRemoteDataSource extends BaseMoviesRemoteDataSource {
   // get popular movies
   @override
   Future<List<MovieModel>> getPopularMovies() async {
-    final response = await Dio().get(AppConstants.popularBaseUrl);
+    final response = await Dio().get(ApiConstants.popularBaseUrl);
     return getDataResponse(response);
   }
 
   // get top rated movies
   @override
   Future<List<MovieModel>> getTopRatedMovies() async {
-    final response = await Dio().get(AppConstants.topRatedBaseUrl);
+    final response = await Dio().get(ApiConstants.topRatedBaseUrl);
     return getDataResponse(response);
   }
 
@@ -38,7 +38,7 @@ class MoviesRemoteDataSource extends BaseMoviesRemoteDataSource {
   @override
   Future<MovieDetailsModel> getMovieDetails(MovieDetailsParams params) async {
     final response =
-        await Dio().get(AppConstants.movieDetailsBaseUrl(params.movieId));
+        await Dio().get(ApiConstants.movieDetailsBaseUrl(params.movieId));
     if (response.statusCode == 200) {
       return MovieDetailsModel.fromJson(response.data);
     } else {
@@ -53,7 +53,7 @@ class MoviesRemoteDataSource extends BaseMoviesRemoteDataSource {
   Future<List<SimilarMoviesEntity>> getSimilarMovies(
       SimilarMoviesParams params) async {
     final response =
-        await Dio().get(AppConstants.similarMoviesBaseUrl(params.movieId));
+        await Dio().get(ApiConstants.similarMoviesBaseUrl(params.movieId));
     if (response.statusCode == 200) {
       return List<SimilarMoviesModel>.from(
           (response.data['results'] as List).map(

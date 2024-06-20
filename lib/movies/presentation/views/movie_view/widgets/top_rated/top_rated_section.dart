@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:movies_app/core/utils/app_strings.dart';
+import 'package:movies_app/core/global/resources/strings_manager.dart';
 
 class TitleAndSeeMore extends StatelessWidget {
   const TitleAndSeeMore({

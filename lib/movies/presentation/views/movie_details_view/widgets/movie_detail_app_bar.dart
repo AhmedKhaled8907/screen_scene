@@ -1,7 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/utils/app_constants.dart';
+import 'package:movies_app/core/global/resources/api_constants_manager.dart';
 import 'package:movies_app/movies/domain/entities/movie_details_entity.dart';
 
 class MovieDetailsAppBar extends StatelessWidget {
@@ -39,7 +39,7 @@ class MovieDetailsAppBar extends StatelessWidget {
             blendMode: BlendMode.dstIn,
             child: CachedNetworkImage(
               width: MediaQuery.of(context).size.width,
-              imageUrl: AppConstants.imageUrl(movie!.backdropPath!),
+              imageUrl: ApiConstants.imageUrl(movie!.backdropPath!),
               fit: BoxFit.cover,
             ),
           ),
