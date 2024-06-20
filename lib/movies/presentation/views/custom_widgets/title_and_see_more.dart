@@ -4,8 +4,6 @@ import 'package:movies_app/core/global/resources/strings_manager.dart';
 import 'package:movies_app/core/global/resources/styles_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
 
-
-
 class TitleAndSeeMore extends StatelessWidget {
   const TitleAndSeeMore({
     super.key,
@@ -36,9 +34,7 @@ class TitleAndSeeMore extends StatelessWidget {
           ),
           InkWell(
             borderRadius: BorderRadius.circular(AppRadius.r8),
-            onTap: () {
-              onTap;
-            },
+            onTap: onTap,
             child: Padding(
               padding: const EdgeInsets.all(AppPadding.p8),
               child: Row(

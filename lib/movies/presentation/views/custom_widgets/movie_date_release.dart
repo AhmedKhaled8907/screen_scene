@@ -19,7 +19,7 @@ class MovieDateRelease extends StatelessWidget {
         horizontal: AppSize.s8,
       ),
       decoration: BoxDecoration(
-        color: Colors.grey[AppColorShades.colorShade800],
+        color: AppColors.red,
         borderRadius: BorderRadius.circular(AppRadius.r4),
       ),
       child: Text(

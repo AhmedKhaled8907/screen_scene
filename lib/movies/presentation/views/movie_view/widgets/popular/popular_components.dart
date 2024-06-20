@@ -8,7 +8,6 @@ import 'package:movies_app/movies/presentation/views/custom_widgets/custom_loadi
 import 'package:movies_app/movies/presentation/views/custom_widgets/poster_image.dart';
 import 'package:movies_app/movies/presentation/views/movie_details_view/movie_details_view.dart';
 
-
 class PopularComponents extends StatelessWidget {
   const PopularComponents({super.key});
 
@@ -20,7 +19,9 @@ class PopularComponents extends StatelessWidget {
       builder: (context, state) {
         switch (state.popularState) {
           case RequestState.loading:
-            return const CustomLoadingIndicator(height: AppSize.s170);
+            return const CustomLoadingIndicator(
+              height: AppSize.s170,
+            );
 
           case RequestState.loaded:
             return FadeIn(
@@ -63,4 +64,5 @@ class PopularComponents extends StatelessWidget {
       },
     );
   }
+  
 }

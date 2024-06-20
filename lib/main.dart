@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_app/core/services/services_locator.dart';
-import 'package:movies_app/movies/presentation/views/movie_view/widgets/popular_see_more/popular_see_more_view.dart';
+import 'package:movies_app/movies/presentation/controller/movie_bloc/movie_bloc.dart';
+import 'package:movies_app/movies/presentation/views/movie_view/movies_view.dart';
 
 import 'core/global/theme/theme_bloc/theme_bloc.dart';
 import 'core/utils/app_bloc_observer.dart';
@@ -21,10 +22,16 @@ class MyApp extends StatelessWidget {
       create: (context) => ThemeBloc()..add(LoadThemeEvent()),
       child: BlocBuilder<ThemeBloc, ThemeState>(
         builder: (context, theme) {
-          return MaterialApp(
-            debugShowCheckedModeBanner: false,
-            theme: theme.themeData,
-            home: const PopularSeeMoreView(),
+          return BlocProvider(
+            create: (context) => sl<MovieBloc>()
+              ..add(GetNowPlayingMoviesEvent())
+              ..add(GetPopularMoviesEvent())
+              ..add(GetTopRatedMoviesEvent()),
+            child: MaterialApp(
+              debugShowCheckedModeBanner: false,
+              theme: theme.themeData,
+              home: const MoviesView(),
+            ),
           );
         },
       ),

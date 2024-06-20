@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'home_view_body.dart';
+import 'movie_view_body.dart';
 
 class MoviesView extends StatelessWidget {
   const MoviesView({super.key});
@@ -24,7 +24,7 @@ class MoviesView extends StatelessWidget {
       //     ],
       //   ),
       // ),
-      body: HomeViewBody(),
+      body: MovieViewBody(),
     );
   }
 }
