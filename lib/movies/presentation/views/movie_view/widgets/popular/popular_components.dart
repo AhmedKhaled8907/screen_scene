@@ -24,7 +24,7 @@ class PopularComponents extends StatelessWidget {
 
           case RequestState.loaded:
             return FadeIn(
-              duration: const Duration(milliseconds: AppDuration.d600),
+              duration: const Duration(milliseconds: AppDuration.d500),
               child: SizedBox(
                 height: AppSize.s170,
                 child: ListView.builder(

@@ -3,11 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_app/core/global/resources/strings_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/core/services/services_locator.dart';
+import 'package:movies_app/movies/presentation/views/movie_view/widgets/top_rated/top_rated_section.dart';
 
 import 'widgets/now_playing/now_playing_section.dart';
 import '../../controller/movie_bloc/movie_bloc.dart';
 import 'widgets/popular/popular_section.dart';
-import '../custom_widgets/title_and_see_more.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});

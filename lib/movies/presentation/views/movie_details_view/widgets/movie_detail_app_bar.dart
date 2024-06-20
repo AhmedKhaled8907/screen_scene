@@ -22,7 +22,7 @@ class MovieDetailsAppBar extends StatelessWidget {
       leading: Container(
         margin: const EdgeInsets.only(left: AppMargin.m4),
         decoration: BoxDecoration(
-          color: Colors.grey[AppColorShades.colorShade850], // Set your desired background color here
+          color: Colors.grey[AppColorShades.colorShade850],
           shape: BoxShape.circle,
         ),
         child: IconButton(
