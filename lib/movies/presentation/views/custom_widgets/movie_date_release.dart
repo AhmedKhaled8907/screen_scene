@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/colors_manager.dart';
 import 'package:movies_app/core/global/resources/styles_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
-import 'package:movies_app/movies/domain/entities/movie_details_entity.dart';
 
-class MovieDetailsDateRelease extends StatelessWidget {
-  const MovieDetailsDateRelease({
+class MovieDateRelease extends StatelessWidget {
+  const MovieDateRelease({
     super.key,
-    required this.movie,
+    required this.releaseDate,
   });
 
-  final MovieDetailsEntity? movie;
+  final String releaseDate;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +23,7 @@ class MovieDetailsDateRelease extends StatelessWidget {
         borderRadius: BorderRadius.circular(AppRadius.r4),
       ),
       child: Text(
-        movie!.releaseDate.split('-')[AppSize.s0.toInt()],
+        releaseDate.split('-')[AppSize.s0.toInt()],
         style: getMediumStyle(
           fontSize: AppSize.s16,
         ),

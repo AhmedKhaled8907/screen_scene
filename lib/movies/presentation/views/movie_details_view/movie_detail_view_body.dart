@@ -7,14 +7,14 @@ import 'package:movies_app/core/global/resources/strings_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/core/utils/enums.dart';
 import 'package:movies_app/movies/presentation/views/movie_details_view/widgets/movie_detail_app_bar.dart';
+import 'package:movies_app/movies/presentation/views/movie_details_view/widgets/movie_details_title.dart';
 
 import '../../controller/movie_details_bloc/movie_details_bloc.dart';
 import 'similar_movies/more_like_this_text.dart';
 import 'widgets/movie_detail_duration.dart';
-import 'widgets/movie_detail_date_release.dart';
-import 'widgets/movie_detail_over_view.dart';
-import 'widgets/movie_detail_rating.dart';
-import 'widgets/movie_detail_title.dart';
+import '../custom_widgets/movie_date_release.dart';
+import '../custom_widgets/movie_over_view.dart';
+import '../custom_widgets/movie_rating.dart';
 import 'widgets/movie_details_genres.dart';
 import 'similar_movies/similar_movies_section.dart';
 
@@ -50,19 +50,29 @@ class MovieDetailsViewBody extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          MovieDetailsTitle(movie: movie),
+                          MovieDetailsTitle(
+                            movie: movie,
+                          ),
                           const SizedBox(height: AppSize.s8),
                           Row(
                             children: [
-                              MovieDetailsDateRelease(movie: movie),
+                              MovieDateRelease(
+                                releaseDate: movie!.releaseDate,
+                              ),
                               const SizedBox(width: AppSize.s16),
-                              MovieDetailsRating(movie: movie),
+                              MovieRating(
+                                voteAverage: movie.voteAverage,
+                              ),
                               const SizedBox(width: AppSize.s16),
-                              MovieDetailsDuration(movie: movie),
+                              MovieDetailsDuration(
+                                runtime: movie.runtime,
+                              ),
                             ],
                           ),
                           const SizedBox(height: AppSize.s20),
-                          MovieDetailsOverView(movie: movie),
+                          MovieOverView(
+                            overview: movie.overview,
+                          ),
                           const SizedBox(height: AppSize.s16),
                           MovieDetailsGenres(movie: movie),
                         ],

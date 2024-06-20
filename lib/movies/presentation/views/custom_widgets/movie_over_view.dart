@@ -2,20 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/font_manager.dart';
 import 'package:movies_app/core/global/resources/styles_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
-import 'package:movies_app/movies/domain/entities/movie_details_entity.dart';
 
-class MovieDetailsOverView extends StatelessWidget {
-  const MovieDetailsOverView({
+class MovieOverView extends StatelessWidget {
+  const MovieOverView({
     super.key,
-    required this.movie,
+    required this.overview,
   });
 
-  final MovieDetailsEntity? movie;
+  final String overview;
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      movie!.overview,
+      overview,
       style: getRegularStyle(
         letterSpacing: AppSize.s1_25,
         fontSize: FontSize.s14,

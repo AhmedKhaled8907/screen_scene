@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/styles_manager.dart';
-import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/movies/domain/entities/movie_details_entity.dart';
 
 class MovieDetailsTitle extends StatelessWidget {
@@ -15,10 +14,7 @@ class MovieDetailsTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       movie!.title,
-      style: getBoldStyle(
-        letterSpacing: AppSize.s1_25,
-        fontSize: AppSize.s24,
-      ),
+      style: getBoldStyle(),
     );
   }
 }

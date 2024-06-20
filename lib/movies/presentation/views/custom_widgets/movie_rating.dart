@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/font_manager.dart';
 import 'package:movies_app/core/global/resources/styles_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
-import 'package:movies_app/movies/domain/entities/movie_details_entity.dart';
 
-class MovieDetailsRating extends StatelessWidget {
-  const MovieDetailsRating({
+class MovieRating extends StatelessWidget {
+  const MovieRating({
     super.key,
-    required this.movie,
+    required this.voteAverage,
   });
 
-  final MovieDetailsEntity? movie;
+  final double voteAverage;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +22,7 @@ class MovieDetailsRating extends StatelessWidget {
         ),
         const SizedBox(width: AppSize.s4),
         Text(
-          (movie!.voteAverage / AppSize.s2).toStringAsFixed(1),
+          (voteAverage).toStringAsFixed(1),
           style: getMediumStyle(
             fontSize: FontSize.s16,
             letterSpacing: AppSize.s1_25,

@@ -23,6 +23,7 @@ class PosterImage extends StatelessWidget {
         ),
         child: CachedNetworkImage(
           width: AppSize.s120,
+          height: AppSize.s170,
           fit: BoxFit.cover,
           imageUrl: ApiConstants.imageUrl(posterPath),
           placeholder: (context, url) => Shimmer.fromColors(
@@ -38,7 +39,6 @@ class PosterImage extends StatelessWidget {
             ),
           ),
           errorWidget: (context, url, error) => const Icon(Icons.error),
-          height: AppSize.s120,
         ),
       ),
     );

@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
-import 'package:movies_app/movies/domain/entities/movie_details_entity.dart';
 
 class MovieDetailsDuration extends StatelessWidget {
   const MovieDetailsDuration({
     super.key,
-    required this.movie,
+    required this.runtime,
   });
 
-  final MovieDetailsEntity? movie;
+  final int runtime;
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      _showDuration(movie!.runtime),
+      _showDuration(runtime),
       style: const TextStyle(
         // color: Colors.white70,
         fontSize: 16.0,
