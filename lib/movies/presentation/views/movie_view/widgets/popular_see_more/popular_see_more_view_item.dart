@@ -2,8 +2,8 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/colors_manager.dart';
 import 'package:movies_app/movies/domain/entities/movie_entity.dart';
-import 'package:movies_app/core/utils/custom_widgets/movie_date_release.dart';
-import 'package:movies_app/core/utils/custom_widgets/movie_rating.dart';
+import 'package:movies_app/core/utils/custom_widgets/details_date_release.dart';
+import 'package:movies_app/core/utils/custom_widgets/details_rating.dart';
 import 'package:movies_app/core/utils/custom_widgets/movie_see_more_title.dart';
 import 'package:movies_app/core/utils/custom_widgets/poster_image.dart';
 
@@ -53,9 +53,9 @@ class PopularSeeMoreViewItem extends StatelessWidget {
                         const SizedBox(height: AppSize.s16),
                         Row(
                           children: [
-                            MovieDateRelease(releaseDate: model.releaseDate),
+                            DetailsDateRelease(releaseDate: model.releaseDate),
                             const SizedBox(width: AppSize.s16),
-                            MovieRating(
+                            Rating(
                               voteAverage: model.voteAverage.toDouble(),
                             ),
                           ],

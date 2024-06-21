@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/styles_manager.dart';
-import 'package:movies_app/movies/domain/entities/movie_details_entity.dart';
 
-class MovieDetailsTitle extends StatelessWidget {
-  const MovieDetailsTitle({
+class DetailsTitle extends StatelessWidget {
+  const DetailsTitle({
     super.key,
-    required this.movie,
+    required this.title,
   });
 
-  final MovieDetailsEntity? movie;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      movie!.title,
+      title,
       style: getBoldStyle(),
     );
   }

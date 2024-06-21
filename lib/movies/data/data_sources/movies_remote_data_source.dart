@@ -9,7 +9,7 @@ import 'package:movies_app/movies/domain/entities/similar_movies_entity.dart';
 import 'package:movies_app/movies/domain/use_cases/get_movie_details_use_case.dart';
 import 'package:movies_app/movies/domain/use_cases/get_similar_movies_use_case.dart';
 
-import '../../../core/network/error_message_model.dart';
+import '../../../core/utils/network/error_message_model.dart';
 import 'base_movies_remote_data_source.dart';
 
 class MoviesRemoteDataSource extends BaseMoviesRemoteDataSource {

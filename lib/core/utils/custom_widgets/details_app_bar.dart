@@ -4,15 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/api_constants_manager.dart';
 import 'package:movies_app/core/global/resources/colors_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
-import 'package:movies_app/movies/domain/entities/movie_details_entity.dart';
 
-class MovieDetailsAppBar extends StatelessWidget {
-  const MovieDetailsAppBar({
+class DetailsAppBar extends StatelessWidget {
+  const DetailsAppBar({
     super.key,
-    required this.movie,
+    required this.posterPath,
   });
 
-  final MovieDetailsEntity? movie;
+  final String posterPath;
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +53,7 @@ class MovieDetailsAppBar extends StatelessWidget {
             blendMode: BlendMode.dstIn,
             child: CachedNetworkImage(
               width: MediaQuery.of(context).size.width,
-              imageUrl: ApiConstants.imageUrl(movie!.backdropPath!),
+              imageUrl: ApiConstants.imageUrl(posterPath),
               fit: BoxFit.cover,
             ),
           ),

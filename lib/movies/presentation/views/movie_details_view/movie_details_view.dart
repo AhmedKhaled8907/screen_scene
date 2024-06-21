@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_app/core/services/services_locator.dart';
+import 'package:movies_app/core/utils/services/services_locator.dart';
 import 'package:movies_app/movies/presentation/controller/movie_details_bloc/movie_details_bloc.dart';
 import 'package:movies_app/movies/presentation/controller/similar_movies_bloc/similar_movies_bloc.dart';
 

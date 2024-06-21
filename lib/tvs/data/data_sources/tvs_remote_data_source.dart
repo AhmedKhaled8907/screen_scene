@@ -2,9 +2,11 @@ import 'package:dio/dio.dart';
 import 'package:movies_app/core/error/exceptions.dart';
 import 'package:movies_app/core/global/resources/api_constants_manager.dart';
 import 'package:movies_app/core/global/resources/constants_manager.dart';
-import 'package:movies_app/core/network/error_message_model.dart';
+import 'package:movies_app/core/utils/network/error_message_model.dart';
 import 'package:movies_app/tvs/data/data_sources/base_tvs_remote_data_source.dart';
+import 'package:movies_app/tvs/data/models/tv_details_model.dart';
 import 'package:movies_app/tvs/data/models/tv_model.dart';
+import 'package:movies_app/tvs/domain/use_cases/get_tv_details_use_case.dart';
 
 class TvsRemoteDataSource extends BaseTvsRemoteDataSource {
   // get on the air Tvs
@@ -41,21 +43,21 @@ class TvsRemoteDataSource extends BaseTvsRemoteDataSource {
       );
     }
   }
-}
-  // // get Tv details
-  // @override
-  // Future<TvDetailsModel> getTvDetails(TvDetailsParams params) async {
-  //   final response = await Dio().get(
-  //     ApiConstants.TvDetailsBaseUrl(params.TvId),
-  //   );
-  //   if (response.statusCode == AppConstants.successCode200) {
-  //     return TvDetailsModel.fromJson(response.data);
-  //   } else {
-  //     throw ServerException(
-  //       errorMessageModel: ErrorMessageModel.fromJson(response.data),
-  //     );
-  //   }
-  // }
+
+  // get Tv details
+  @override
+  Future<TvDetailsModel> getTvDetails(TvDetailsParams params) async {
+    final response = await Dio().get(
+      ApiConstants.tvDetailsBaseUrl(params.id),
+    );
+    if (response.statusCode == AppConstants.successCode200) {
+      return TvDetailsModel.fromJson(response.data);
+    } else {
+      throw ServerException(
+        errorMessageModel: ErrorMessageModel.fromJson(response.data),
+      );
+    }
+  }
 
   // // get similar Tv
   // @override
@@ -75,3 +77,4 @@ class TvsRemoteDataSource extends BaseTvsRemoteDataSource {
   //     );
   //   }
   // }
+}

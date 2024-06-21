@@ -3,8 +3,8 @@ import 'package:movies_app/core/global/resources/colors_manager.dart';
 import 'package:movies_app/core/global/resources/styles_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
 
-class MovieDateRelease extends StatelessWidget {
-  const MovieDateRelease({
+class DetailsDateRelease extends StatelessWidget {
+  const DetailsDateRelease({
     super.key,
     required this.releaseDate,
   });

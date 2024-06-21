@@ -3,21 +3,20 @@ import 'package:movies_app/core/global/resources/font_manager.dart';
 import 'package:movies_app/core/global/resources/strings_manager.dart';
 import 'package:movies_app/core/global/resources/styles_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
-import 'package:movies_app/movies/domain/entities/genres_entity.dart';
-import 'package:movies_app/movies/domain/entities/movie_details_entity.dart';
+import 'package:movies_app/core/global/entities/genres_entity.dart';
 
-class MovieDetailsGenres extends StatelessWidget {
-  const MovieDetailsGenres({
+class DetailsGenres extends StatelessWidget {
+  const DetailsGenres({
     super.key,
-    required this.movie,
+    required this.genres,
   });
 
-  final MovieDetailsEntity? movie;
+  final List<GenresEntity> genres;
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      '${AppString.genres}: ${_showGenres(movie!.genres!)}',
+      '${AppString.genres}: ${_showGenres(genres)}',
       style: getMediumStyle(
         fontSize: FontSize.s14,
         letterSpacing: AppSize.s1_25,

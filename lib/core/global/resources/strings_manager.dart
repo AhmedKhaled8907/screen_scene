@@ -23,4 +23,5 @@ class AppString {
   static const String tvScrollViewKey = 'tvScrollView';
   static const String tvDetailScrollViewKey = 'tvDetailScrollView';
   static const String openTVMinimalDetailKey = 'openTVMinimalDetail';
+
 }

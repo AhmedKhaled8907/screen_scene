@@ -1,4 +1,4 @@
-import 'package:movies_app/movies/data/models/genres_model.dart';
+import 'package:movies_app/core/global/models/genres_model.dart';
 
 import '../../domain/entities/movie_details_entity.dart';
 
@@ -18,7 +18,7 @@ class MovieDetailsModel extends MovieDetailsEntity {
       MovieDetailsModel(
         /// TODO: check if this is correct
         backdropPath:
-            json["backdrop_path"] ?? '/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg',
+            json["backdrop_path"] ?? '',
         genres: List<GenresModel>.from(
           json['genres'].map((x) => GenresModel.fromJson(x)),
         ),

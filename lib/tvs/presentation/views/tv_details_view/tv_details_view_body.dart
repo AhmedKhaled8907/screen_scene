@@ -5,27 +5,24 @@ import 'package:movies_app/core/global/resources/colors_manager.dart';
 import 'package:movies_app/core/global/resources/constants_manager.dart';
 import 'package:movies_app/core/global/resources/strings_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
-import 'package:movies_app/core/utils/enums.dart';
 import 'package:movies_app/core/utils/custom_widgets/details_app_bar.dart';
+import 'package:movies_app/core/utils/custom_widgets/details_date_release.dart';
+import 'package:movies_app/core/utils/custom_widgets/details_genres.dart';
 import 'package:movies_app/core/utils/custom_widgets/details_title.dart';
+import 'package:movies_app/core/utils/custom_widgets/details_over_view.dart';
+import 'package:movies_app/core/utils/custom_widgets/details_rating.dart';
+import 'package:movies_app/core/utils/enums.dart';
+import 'package:movies_app/movies/presentation/views/movie_details_view/similar_movies/more_like_this_text.dart';
+import 'package:movies_app/tvs/presentation/controller/tv_details_bloc/tv_details_bloc.dart';
 
-import '../../controller/movie_details_bloc/movie_details_bloc.dart';
-import 'similar_movies/more_like_this_text.dart';
-import 'widgets/movie_detail_duration.dart';
-import '../../../../core/utils/custom_widgets/details_date_release.dart';
-import '../../../../core/utils/custom_widgets/details_over_view.dart';
-import '../../../../core/utils/custom_widgets/details_rating.dart';
-import '../../../../core/utils/custom_widgets/details_genres.dart';
-import 'similar_movies/similar_movies_section.dart';
-
-class MovieDetailsViewBody extends StatelessWidget {
-  const MovieDetailsViewBody({super.key});
+class TvDetailsViewBody extends StatelessWidget {
+  const TvDetailsViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<MovieDetailsBloc, MovieDetailsState>(
+    return BlocBuilder<TvDetailsBloc, TvDetailsState>(
       builder: (context, state) {
-        switch (state.movieDetailsState) {
+        switch (state.tvDetailsState) {
           case RequestState.loading:
             return Center(
               child: CircularProgressIndicator(
@@ -34,11 +31,11 @@ class MovieDetailsViewBody extends StatelessWidget {
             );
 
           case RequestState.loaded:
-            final movie = state.movieDetails;
+            final tv = state.tvDetails;
             return CustomScrollView(
-              key: const Key(AppString.movieDetailScrollViewKey),
+              key: const Key(AppString.tvDetailScrollViewKey),
               slivers: [
-                DetailsAppBar(posterPath: movie!.backdropPath!),
+                DetailsAppBar(posterPath: tv!.backdropPath!),
                 SliverToBoxAdapter(
                   child: Padding(
                     padding: const EdgeInsets.all(AppPadding.p16),
@@ -51,51 +48,47 @@ class MovieDetailsViewBody extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           DetailsTitle(
-                            title: movie.title,
+                            title: tv.title,
                           ),
                           const SizedBox(height: AppSize.s8),
                           Row(
                             children: [
                               DetailsDateRelease(
-                                releaseDate: movie.releaseDate,
+                                releaseDate: tv.firstAirTime,
                               ),
                               const SizedBox(width: AppSize.s16),
                               Rating(
-                                voteAverage: movie.voteAverage,
-                              ),
-                              const SizedBox(width: AppSize.s16),
-                              MovieDetailsDuration(
-                                runtime: movie.runtime,
+                                voteAverage: tv.voteAverage,
                               ),
                             ],
                           ),
                           const SizedBox(height: AppSize.s20),
                           DetailsOverView(
-                            overview: movie.overview,
+                            overview: tv.overview,
                           ),
                           const SizedBox(height: AppSize.s16),
-                          DetailsGenres(genres: movie.genres!),
+                          DetailsGenres(genres: tv.genres!),
                         ],
                       ),
                     ),
                   ),
                 ),
                 const MoreLikeThisText(),
-                const SliverPadding(
-                  padding: EdgeInsets.fromLTRB(
-                    AppSize.s16,
-                    AppSize.s0,
-                    AppSize.s16,
-                    AppSize.s24,
-                  ),
-                  sliver: SimilarMoviesSection(),
-                ),
+                // const SliverPadding(
+                //   padding: EdgeInsets.fromLTRB(
+                //     AppSize.s16,
+                //     AppSize.s0,
+                //     AppSize.s16,
+                //     AppSize.s24,
+                //   ),
+                //   sliver: SimilarTvsSection(),
+                // ),
               ],
             );
 
           case RequestState.error:
             return Center(
-              child: Text(state.movieDetailsMessage),
+              child: Text(state.tvDetailsMessage),
             );
         }
       },

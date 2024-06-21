@@ -3,8 +3,8 @@ import 'package:movies_app/core/global/resources/font_manager.dart';
 import 'package:movies_app/core/global/resources/styles_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
 
-class MovieOverView extends StatelessWidget {
-  const MovieOverView({
+class DetailsOverView extends StatelessWidget {
+  const DetailsOverView({
     super.key,
     required this.overview,
   });

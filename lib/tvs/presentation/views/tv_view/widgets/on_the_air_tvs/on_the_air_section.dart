@@ -9,6 +9,7 @@ import 'package:movies_app/core/utils/custom_widgets/custom_loading_indicator.da
 import 'package:movies_app/core/utils/custom_widgets/title_with_shader.dart';
 import 'package:movies_app/core/utils/enums.dart';
 import 'package:movies_app/tvs/presentation/controller/tv_bloc/tv_bloc.dart';
+import 'package:movies_app/tvs/presentation/views/tv_details_view/tv_details_view.dart';
 
 class OnTheAirSection extends StatelessWidget {
   const OnTheAirSection({super.key});
@@ -42,12 +43,12 @@ class OnTheAirSection extends StatelessWidget {
                     return GestureDetector(
                       key: const Key(AppString.openTVMinimalDetailKey),
                       onTap: () {
-                        /// TODO : NAVIGATE TO TvBloc DETAILS
-                        // Navigator.of(context).push(MaterialPageRoute(
-                        //   builder: (context) => TvBlocDetailView(
-                        //     id: item.id,
-                        //   ),
-                        // ));
+                        /// TODO : NAVIGATE TO Tv DETAILS
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => TvDetailView(
+                            id: item.id,
+                          ),
+                        ));
                       },
                       child: TitleWithShade(
                         posterPath: item.posterPath,
