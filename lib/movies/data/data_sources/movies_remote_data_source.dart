@@ -16,21 +16,21 @@ class MoviesRemoteDataSource extends BaseMoviesRemoteDataSource {
   // get now playing movies
   @override
   Future<List<MovieModel>> getNowPlayingMovies() async {
-    final response = await Dio().get(ApiConstants.nowPlayingBaseUrl);
+    final response = await Dio().get(ApiConstants.nowPlayingMoviesBaseUrl);
     return getDataResponse(response);
   }
 
   // get popular movies
   @override
   Future<List<MovieModel>> getPopularMovies() async {
-    final response = await Dio().get(ApiConstants.popularBaseUrl);
+    final response = await Dio().get(ApiConstants.popularMoviesBaseUrl);
     return getDataResponse(response);
   }
 
   // get top rated movies
   @override
   Future<List<MovieModel>> getTopRatedMovies() async {
-    final response = await Dio().get(ApiConstants.topRatedBaseUrl);
+    final response = await Dio().get(ApiConstants.topRatedMoviesBaseUrl);
     return getDataResponse(response);
   }
 
