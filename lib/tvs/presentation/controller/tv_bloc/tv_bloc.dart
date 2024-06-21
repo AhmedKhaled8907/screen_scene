@@ -22,14 +22,14 @@ class TvBloc extends Bloc<TvEvent, TvState> {
     this.getPopularTvsUseCase,
     this.getTopRatedTvsUseCase,
   ) : super(const TvState()) {
-    on<GetOnTheAirTvsEvent>(_getonTheAirStateTvs);
+    on<GetOnTheAirTvsEvent>(_getOnTheAirStateTvs);
 
     on<GetPopularTvsEvent>(_getPopularTvs);
 
     on<GetTopRatedTvsEvent>(_getTopRatedTvs);
   }
 
-  FutureOr<void> _getonTheAirStateTvs(
+  FutureOr<void> _getOnTheAirStateTvs(
     GetOnTheAirTvsEvent event,
     Emitter<TvState> emit,
   ) async {
@@ -37,7 +37,7 @@ class TvBloc extends Bloc<TvEvent, TvState> {
     result.fold(
       (l) => emit(state.copyWith(
         onTheAirState: RequestState.error,
-        popularMessage: l.message,
+        onTheAirMessage: l.message,
       )),
       (r) => emit(
         state.copyWith(

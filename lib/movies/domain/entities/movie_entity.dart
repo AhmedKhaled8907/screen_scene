@@ -27,7 +27,6 @@ class MovieEntity extends Equatable {
       title,
       backdropPath,
       posterPath,
-      // genreIds,
       overview,
       voteAverage,
       releaseDate,

@@ -2,12 +2,12 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/colors_manager.dart';
 import 'package:movies_app/movies/domain/entities/movie_entity.dart';
-import 'package:movies_app/movies/presentation/views/custom_widgets/movie_date_release.dart';
-import 'package:movies_app/movies/presentation/views/custom_widgets/movie_rating.dart';
-import 'package:movies_app/movies/presentation/views/custom_widgets/movie_see_more_title.dart';
-import 'package:movies_app/movies/presentation/views/custom_widgets/poster_image.dart';
+import 'package:movies_app/core/utils/custom_widgets/movie_date_release.dart';
+import 'package:movies_app/core/utils/custom_widgets/movie_rating.dart';
+import 'package:movies_app/core/utils/custom_widgets/movie_see_more_title.dart';
+import 'package:movies_app/core/utils/custom_widgets/poster_image.dart';
 
-import 'package:movies_app/movies/presentation/views/custom_widgets/see_more_over_view_text.dart';
+import 'package:movies_app/core/utils/custom_widgets/see_more_over_view_text.dart';
 
 import '../../../../../../core/global/resources/values_manager.dart';
 

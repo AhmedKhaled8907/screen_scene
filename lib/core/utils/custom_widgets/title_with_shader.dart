@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/api_constants_manager.dart';
 import 'package:movies_app/core/global/resources/colors_manager.dart';
+import 'package:movies_app/core/global/resources/strings_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
-import 'package:movies_app/movies/presentation/views/movie_view/widgets/now_playing/now_playing_text.dart';
+import 'package:movies_app/core/utils/custom_widgets/now_playing_and_on_air_text.dart';
 
-import 'now_playing_image.dart';
+import 'slider_image.dart';
 
-class NowPlayingTextWithShade extends StatelessWidget {
-  const NowPlayingTextWithShade({
+class TitleWithShade extends StatelessWidget {
+  const TitleWithShade({
     super.key,
     required this.title,
     required this.posterPath,
@@ -38,11 +39,14 @@ class NowPlayingTextWithShade extends StatelessWidget {
             );
           },
           blendMode: BlendMode.dstIn,
-          child: NowPlayingImage(
+          child: SliderImage(
             posterPath: ApiConstants.imageUrl(posterPath),
           ),
         ),
-        NowPlayingText(title: title),
+        NowPlayingAndOnAirText(
+          title: title,
+          itemText: AppString.onTheAir,
+        ),
       ],
     );
   }

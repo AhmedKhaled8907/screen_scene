@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/core/utils/enums.dart';
-import 'package:movies_app/movies/presentation/views/custom_widgets/custom_loading_indicator.dart';
-import 'package:movies_app/movies/presentation/views/custom_widgets/poster_image.dart';
+import 'package:movies_app/core/utils/custom_widgets/custom_loading_indicator.dart';
+import 'package:movies_app/core/utils/custom_widgets/poster_image.dart';
 
 import '../../../../controller/movie_bloc/movie_bloc.dart';
 import '../../../movie_details_view/movie_details_view.dart';

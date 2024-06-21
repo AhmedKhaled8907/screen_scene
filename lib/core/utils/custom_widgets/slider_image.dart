@@ -4,8 +4,8 @@ import 'package:movies_app/core/global/resources/colors_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:shimmer/shimmer.dart';
 
-class NowPlayingImage extends StatelessWidget {
-  const NowPlayingImage({
+class SliderImage extends StatelessWidget {
+  const SliderImage({
     super.key,
     required this.posterPath,
   });

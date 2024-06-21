@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/movies/presentation/views/custom_widgets/title_and_see_more.dart';
+import 'package:movies_app/core/utils/custom_widgets/title_and_see_more.dart';
 import 'package:movies_app/movies/presentation/views/movie_view/widgets/popular/popular_components.dart';
 import 'package:movies_app/movies/presentation/views/movie_view/widgets/popular_see_more/popular_see_more_view.dart';
 

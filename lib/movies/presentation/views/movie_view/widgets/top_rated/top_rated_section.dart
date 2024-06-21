@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/strings_manager.dart';
-import 'package:movies_app/movies/presentation/views/custom_widgets/title_and_see_more.dart';
+import 'package:movies_app/core/utils/custom_widgets/title_and_see_more.dart';
 import 'package:movies_app/movies/presentation/views/movie_view/widgets/top_rated/top_rated_components.dart';
 
 import '../top_rated_see_more/top_rated_see_more_view.dart';

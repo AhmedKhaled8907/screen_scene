@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/colors_manager.dart';
-import 'package:movies_app/core/global/resources/strings_manager.dart';
 import 'package:movies_app/core/global/resources/styles_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
 
-class NowPlayingText extends StatelessWidget {
-  const NowPlayingText({
+class NowPlayingAndOnAirText extends StatelessWidget {
+  const NowPlayingAndOnAirText({
     super.key,
     required this.title,
+    required this.itemText,
   });
 
   final String title;
+  final String itemText;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,7 @@ class NowPlayingText extends StatelessWidget {
                 ),
                 const SizedBox(width: AppSize.s4),
                 Text(
-                  AppString.nowPlaying.toUpperCase(),
+                  itemText.toUpperCase(),
                   style: getRegularStyle(),
                 ),
               ],

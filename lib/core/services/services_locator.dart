@@ -10,6 +10,14 @@ import 'package:movies_app/movies/domain/use_cases/get_similar_movies_use_case.d
 import 'package:movies_app/movies/presentation/controller/movie_bloc/movie_bloc.dart';
 import 'package:movies_app/movies/presentation/controller/movie_details_bloc/movie_details_bloc.dart';
 import 'package:movies_app/movies/presentation/controller/similar_movies_bloc/similar_movies_bloc.dart';
+import 'package:movies_app/tvs/data/data_sources/base_tvs_remote_data_source.dart';
+import 'package:movies_app/tvs/data/data_sources/tvs_remote_data_source.dart';
+import 'package:movies_app/tvs/data/repos/tv_repo.dart';
+import 'package:movies_app/tvs/domain/repos/base_tv_repo.dart';
+import 'package:movies_app/tvs/domain/use_cases/get_on_the_air_tvs_use_case.dart';
+import 'package:movies_app/tvs/domain/use_cases/get_popular_tvs_use_case.dart';
+import 'package:movies_app/tvs/domain/use_cases/get_top_rated_tvs_user_case.dart';
+import 'package:movies_app/tvs/presentation/controller/tv_bloc/tv_bloc.dart';
 
 import '../../movies/domain/use_cases/get_top_rated_movies_use_case.dart';
 
@@ -17,26 +25,50 @@ final sl = GetIt.instance;
 
 class ServicesLocator {
   void init() {
-    /// Blocs
+    ///MOVIES Blocs
     sl.registerFactory(() => MovieBloc(sl(), sl(), sl()));
     sl.registerFactory(() => MovieDetailsBloc(sl()));
     sl.registerFactory(() => SimilarMoviesBloc(sl()));
 
-    /// USE CASES
+    /// MOVIES USE CASES
     sl.registerLazySingleton(() => GetNowPlayingMoviesUseCase(sl()));
     sl.registerLazySingleton(() => GetPopularMoviesUseCase(sl()));
     sl.registerLazySingleton(() => GetTopRatedMoviesUseCase(sl()));
     sl.registerLazySingleton(() => GetMovieDetailsUseCase(sl()));
     sl.registerLazySingleton(() => GetSimilarMoviesUseCase(sl()));
 
-    /// REPOS
+    ///MOVIES REPOS
     sl.registerLazySingleton<BaseMoviesRepo>(
       () => MoviesRepo(sl()),
     );
 
-    /// DATA SOURCES
+    ///MOVIES DATA SOURCES
     sl.registerLazySingleton<BaseMoviesRemoteDataSource>(
       () => MoviesRemoteDataSource(),
+    );
+
+    /////////////////////////////////////////////////////////////////////
+
+    /// TVS Blocs
+    sl.registerFactory(() => TvBloc(sl(), sl(), sl()));
+    // sl.registerFactory(() => TvDetailsBloc(sl()));
+    // sl.registerFactory(() => SimilarTvsBloc(sl()));
+
+    /// TVS USE CASES
+    sl.registerLazySingleton(() => GetOnTheAirTvsUseCase(sl()));
+    sl.registerLazySingleton(() => GetPopularTvsUseCase(sl()));
+    sl.registerLazySingleton(() => GetTopRatedTvsUseCase(sl()));
+    // sl.registerLazySingleton(() => GetTvDetailsUseCase(sl()));
+    // sl.registerLazySingleton(() => GetSimilarTvsUseCase(sl()));
+
+    
+    /// TVS REPOS
+    sl.registerLazySingleton<BaseTvsRepo>(
+      () => TvsRepo(sl()),
+    );
+    /// TVS DATA SOURCES
+    sl.registerLazySingleton<BaseTvsRemoteDataSource>(
+      () => TvsRemoteDataSource(),
     );
   }
 }

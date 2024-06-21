@@ -5,25 +5,23 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_app/core/global/resources/constants_manager.dart';
 import 'package:movies_app/core/global/resources/strings_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
-import 'package:movies_app/core/utils/enums.dart';
 import 'package:movies_app/core/utils/custom_widgets/custom_loading_indicator.dart';
-import 'package:movies_app/movies/presentation/views/movie_details_view/movie_details_view.dart';
 import 'package:movies_app/core/utils/custom_widgets/title_with_shader.dart';
+import 'package:movies_app/core/utils/enums.dart';
+import 'package:movies_app/tvs/presentation/controller/tv_bloc/tv_bloc.dart';
 
-import '../../../../controller/movie_bloc/movie_bloc.dart';
-
-class NowPlayingSection extends StatelessWidget {
-  const NowPlayingSection({super.key});
+class OnTheAirSection extends StatelessWidget {
+  const OnTheAirSection({super.key});
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return BlocBuilder<MovieBloc, MovieState>(
+    return BlocBuilder<TvBloc, TvState>(
       buildWhen: (previous, current) =>
-          previous.nowPlayingState != current.nowPlayingState,
+          previous.onTheAirState != current.onTheAirState,
       builder: (context, state) {
-        switch (state.nowPlayingState) {
+        switch (state.onTheAirState) {
           case RequestState.loading:
             return CustomLoadingIndicator(
               height: size.height * AppSize.s0_5,
@@ -39,17 +37,17 @@ class NowPlayingSection extends StatelessWidget {
                   viewportFraction: AppConstants.viewportFraction,
                   onPageChanged: (index, reason) {},
                 ),
-                items: state.nowPlayingMovies.map(
+                items: state.onTheAirTvs.map(
                   (item) {
                     return GestureDetector(
-                      key: const Key(AppString.openMovieMinimalDetailKey),
+                      key: const Key(AppString.openTVMinimalDetailKey),
                       onTap: () {
-                        /// TODO : NAVIGATE TO MOVIE DETAILS
-                        Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => MovieDetailView(
-                            id: item.id,
-                          ),
-                        ));
+                        /// TODO : NAVIGATE TO TvBloc DETAILS
+                        // Navigator.of(context).push(MaterialPageRoute(
+                        //   builder: (context) => TvBlocDetailView(
+                        //     id: item.id,
+                        //   ),
+                        // ));
                       },
                       child: TitleWithShade(
                         posterPath: item.posterPath,
@@ -63,7 +61,7 @@ class NowPlayingSection extends StatelessWidget {
 
           case RequestState.error:
             return Center(
-              child: Text(state.nowPlayingMessage),
+              child: Text(state.onTheAirMessage),
             );
         }
       },

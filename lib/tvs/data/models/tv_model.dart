@@ -1,4 +1,3 @@
-
 import 'package:movies_app/tvs/domain/entities/tv_entity.dart';
 
 class TvModel extends TvEntity {
@@ -7,7 +6,6 @@ class TvModel extends TvEntity {
     required super.title,
     required super.backdropPath,
     required super.posterPath,
-    // required super.genreIds,
     required super.overview,
     required super.voteAverage,
     required super.firstAirTime,
@@ -16,11 +14,10 @@ class TvModel extends TvEntity {
   factory TvModel.fromJson(Map<String, dynamic> json) {
     return TvModel(
       id: json['id'],
-      title: json['title'],
+      title: json['name'],
       backdropPath: json['backdrop_path'] ?? '',
       posterPath: json['poster_path'] ?? '',
-      // genreIds: List<int>.from(json['genreIds'].map((e) => e)) ?? [],
-      firstAirTime: json['first_air_date'], 
+      firstAirTime: json['first_air_date'],
       overview: json['overview'],
       voteAverage: json['vote_average'],
     );

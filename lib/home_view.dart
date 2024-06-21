@@ -3,7 +3,7 @@ import 'package:movies_app/core/global/resources/colors_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/movies/presentation/views/movie_view/movies_view.dart';
 import 'package:movies_app/search/presentation/views/search_view.dart';
-import 'package:movies_app/tvs/presentation/views/tvs_view.dart';
+import 'package:movies_app/tvs/presentation/views/tv_view/tvs_view.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});

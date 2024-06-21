@@ -12,9 +12,9 @@ import 'package:movies_app/movies/presentation/views/movie_details_view/widgets/
 import '../../controller/movie_details_bloc/movie_details_bloc.dart';
 import 'similar_movies/more_like_this_text.dart';
 import 'widgets/movie_detail_duration.dart';
-import '../custom_widgets/movie_date_release.dart';
-import '../custom_widgets/movie_over_view.dart';
-import '../custom_widgets/movie_rating.dart';
+import '../../../../core/utils/custom_widgets/movie_date_release.dart';
+import '../../../../core/utils/custom_widgets/movie_over_view.dart';
+import '../../../../core/utils/custom_widgets/movie_rating.dart';
 import 'widgets/movie_details_genres.dart';
 import 'similar_movies/similar_movies_section.dart';
 

@@ -37,7 +37,7 @@ class MovieBloc extends Bloc<MovieEvent, MovieState> {
     result.fold(
       (l) => emit(state.copyWith(
         nowPlayingState: RequestState.error,
-        popularMessage: l.message,
+        nowPlayingMessage: l.message,
       )),
       (r) => emit(
         state.copyWith(

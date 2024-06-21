@@ -9,7 +9,7 @@ import 'package:movies_app/tvs/data/models/tv_model.dart';
 class TvsRemoteDataSource extends BaseTvsRemoteDataSource {
   // get on the air Tvs
   @override
-  Future<List<TvModel>> getNowPlayingTvs() async {
+  Future<List<TvModel>> getOnTheAirTvs() async {
     final response = await Dio().get(ApiConstants.onTheAirTvsBaseUrl);
     return getDataResponse(response);
   }
