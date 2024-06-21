@@ -16,9 +16,11 @@ import 'package:movies_app/tvs/data/repos/tv_repo.dart';
 import 'package:movies_app/tvs/domain/repos/base_tv_repo.dart';
 import 'package:movies_app/tvs/domain/use_cases/get_on_the_air_tvs_use_case.dart';
 import 'package:movies_app/tvs/domain/use_cases/get_popular_tvs_use_case.dart';
+import 'package:movies_app/tvs/domain/use_cases/get_similar_tvs_use_case.dart';
 import 'package:movies_app/tvs/domain/use_cases/get_top_rated_tvs_user_case.dart';
 import 'package:movies_app/tvs/domain/use_cases/get_tv_details_use_case.dart';
 import 'package:movies_app/tvs/presentation/controller/tv_bloc/tv_bloc.dart';
+import 'package:movies_app/tvs/presentation/controller/tv_details_bloc/similar_tvs_bloc/similar_tvs_bloc.dart';
 import 'package:movies_app/tvs/presentation/controller/tv_details_bloc/tv_details_bloc.dart';
 
 import '../../../movies/domain/use_cases/get_top_rated_movies_use_case.dart';
@@ -54,14 +56,14 @@ class ServicesLocator {
     /// TVS Blocs
     sl.registerFactory(() => TvBloc(sl(), sl(), sl()));
     sl.registerFactory(() => TvDetailsBloc(sl()));
-    // sl.registerFactory(() => SimilarTvsBloc(sl()));
+    sl.registerFactory(() => SimilarTvsBloc(sl()));
 
     /// TVS USE CASES
     sl.registerLazySingleton(() => GetOnTheAirTvsUseCase(sl()));
     sl.registerLazySingleton(() => GetPopularTvsUseCase(sl()));
     sl.registerLazySingleton(() => GetTopRatedTvsUseCase(sl()));
     sl.registerLazySingleton(() => GetTvDetailsUseCase(sl()));
-    // sl.registerLazySingleton(() => GetSimilarTvsUseCase(sl()));
+    sl.registerLazySingleton(() => GetSimilarTvsUseCase(sl()));
 
     
     /// TVS REPOS

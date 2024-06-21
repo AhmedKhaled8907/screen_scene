@@ -13,8 +13,9 @@ import 'package:movies_app/core/utils/custom_widgets/details_title.dart';
 import 'package:movies_app/core/utils/custom_widgets/details_over_view.dart';
 import 'package:movies_app/core/utils/custom_widgets/details_rating.dart';
 import 'package:movies_app/core/utils/enums.dart';
-import 'package:movies_app/movies/presentation/views/movie_details_view/similar_movies/more_like_this_text.dart';
+import 'package:movies_app/core/utils/custom_widgets/more_like_this_text.dart';
 import 'package:movies_app/tvs/presentation/controller/tv_details_bloc/tv_details_bloc.dart';
+import 'package:movies_app/tvs/presentation/views/tv_details_view/similar_tvs/similar_tvs_section.dart';
 
 class TvDetailsViewBody extends StatelessWidget {
   const TvDetailsViewBody({super.key});
@@ -85,15 +86,15 @@ class TvDetailsViewBody extends StatelessWidget {
                   ),
                 ),
                 const MoreLikeThisText(),
-                // const SliverPadding(
-                //   padding: EdgeInsets.fromLTRB(
-                //     AppSize.s16,
-                //     AppSize.s0,
-                //     AppSize.s16,
-                //     AppSize.s24,
-                //   ),
-                //   sliver: SimilarTvsSection(),
-                // ),
+                const SliverPadding(
+                  padding: EdgeInsets.fromLTRB(
+                    AppSize.s16,
+                    AppSize.s0,
+                    AppSize.s16,
+                    AppSize.s24,
+                  ),
+                  sliver: SimilarTvsSection(),
+                ),
               ],
             );
 

@@ -10,7 +10,7 @@ import 'package:movies_app/core/utils/custom_widgets/details_app_bar.dart';
 import 'package:movies_app/core/utils/custom_widgets/details_title.dart';
 
 import '../../controller/movie_details_bloc/movie_details_bloc.dart';
-import 'similar_movies/more_like_this_text.dart';
+import '../../../../core/utils/custom_widgets/more_like_this_text.dart';
 import 'widgets/movie_detail_duration.dart';
 import '../../../../core/utils/custom_widgets/details_date_release.dart';
 import '../../../../core/utils/custom_widgets/details_over_view.dart';

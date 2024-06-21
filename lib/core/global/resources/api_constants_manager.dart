@@ -23,10 +23,10 @@ class ApiConstants {
       "$baseUrl/trending/tv/week?api_key=$apiKey";
   static const String topRatedTvBaseUrl =
       "$baseUrl/tv/top_rated?api_key=$apiKey";
-      static String tvDetailsBaseUrl(int tvId) =>
+  static String tvDetailsBaseUrl(int tvId) =>
       "$baseUrl/tv/$tvId?api_key=$apiKey";
-      static String similarTvsBaseUrl(int movieId) =>
-      "$baseUrl/tv/$movieId/similar?api_key=$apiKey";
+  static String similarTvsBaseUrl(int movieId) =>
+      "$baseUrl/tv/$movieId/recommendations?api_key=$apiKey";
 
   static const String baseImageUrl = "https://image.tmdb.org/t/p/w500";
 
