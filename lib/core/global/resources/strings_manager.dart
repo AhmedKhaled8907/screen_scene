@@ -17,6 +17,8 @@ class AppString {
   // Tv Constants
   static const popularTVs = 'Popular TVs';
   static const topRatedTVs = 'Top Rated Tvs';
+    static const popularTvs = 'Popular Tvs';
+  static const topRatedTvs = 'Top Rated Tvs';
   static const seasons = 'Seasons';
   static const episodes = 'Episodes';
 

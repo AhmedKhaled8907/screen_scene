@@ -4,10 +4,10 @@ import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/core/utils/enums.dart';
 import 'package:movies_app/movies/presentation/controller/movie_bloc/movie_bloc.dart';
 import 'package:movies_app/core/utils/custom_widgets/custom_loading_indicator.dart';
-import 'package:movies_app/movies/presentation/views/movie_view/widgets/top_rated_see_more/top_rated_see_more_view_list_view.dart';
+import 'package:movies_app/movies/presentation/views/movie_view/widgets/top_rated_movies_see_more/top_rated_movies_see_more_view_list_view.dart';
 
-class TopRatedSeeMoreViewBody extends StatelessWidget {
-  const TopRatedSeeMoreViewBody({super.key});
+class TopRatedMoviesSeeMoreViewBody extends StatelessWidget {
+  const TopRatedMoviesSeeMoreViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class TopRatedSeeMoreViewBody extends StatelessWidget {
             );
 
           case RequestState.loaded:
-            return TopRatedSeeMoreListView(list: state.topRatedMovies);
+            return TopRatedMoviesSeeMoreListView(list: state.topRatedMovies);
           case RequestState.error:
             return Container();
         }

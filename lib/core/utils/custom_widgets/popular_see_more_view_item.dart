@@ -1,7 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/colors_manager.dart';
-import 'package:movies_app/movies/domain/entities/movie_entity.dart';
 import 'package:movies_app/core/utils/custom_widgets/details_date_release.dart';
 import 'package:movies_app/core/utils/custom_widgets/details_rating.dart';
 import 'package:movies_app/core/utils/custom_widgets/movie_see_more_title.dart';
@@ -9,15 +8,20 @@ import 'package:movies_app/core/utils/custom_widgets/poster_image.dart';
 
 import 'package:movies_app/core/utils/custom_widgets/see_more_over_view_text.dart';
 
-import '../../../../../../core/global/resources/values_manager.dart';
+import '../../global/resources/values_manager.dart';
 
-class TopRatedSeeMoreViewItem extends StatelessWidget {
-  const TopRatedSeeMoreViewItem({
+class PopularSeeMoreViewItem extends StatelessWidget {
+  const PopularSeeMoreViewItem({
     super.key,
-    required this.model,
+    required this.title,
+    required this.posterPath,
+    required this.overview,
+    required this.releaseDate,
+    required this.voteAverage,
   });
 
-  final MovieEntity model;
+  final String title, posterPath, overview, releaseDate;
+  final double voteAverage;
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +45,7 @@ class TopRatedSeeMoreViewItem extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                PosterImage(posterPath: model.posterPath),
+                PosterImage(posterPath: posterPath),
                 const SizedBox(width: AppSize.s8),
                 Expanded(
                   child: Padding(
@@ -49,19 +53,19 @@ class TopRatedSeeMoreViewItem extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        MovieSeeMoreTitle(title: model.title),
+                        MovieSeeMoreTitle(title: title),
                         const SizedBox(height: AppSize.s16),
                         Row(
                           children: [
-                            DetailsDateRelease(releaseDate: model.releaseDate),
+                            DetailsDateRelease(releaseDate: releaseDate),
                             const SizedBox(width: AppSize.s16),
                             Rating(
-                              voteAverage: model.voteAverage.toDouble(),
+                              voteAverage: voteAverage.toDouble(),
                             ),
                           ],
                         ),
                         const SizedBox(height: AppSize.s16),
-                        SeeMoreOverViewText(overView: model.overview),
+                        SeeMoreOverViewText(overView: overview),
                       ],
                     ),
                   ),

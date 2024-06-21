@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/movies/domain/entities/movie_entity.dart';
 import 'package:movies_app/movies/presentation/views/movie_details_view/movie_details_view.dart';
-import 'package:movies_app/movies/presentation/views/movie_view/widgets/top_rated_see_more/top_rated_see_more_view_item.dart';
 
-class TopRatedSeeMoreListView extends StatelessWidget {
-  const TopRatedSeeMoreListView({
+import '../../../../../../core/utils/custom_widgets/popular_see_more_view_item.dart';
+
+class PopularMoviesSeeMoreListView extends StatelessWidget {
+  const PopularMoviesSeeMoreListView({
     super.key,
     required this.list,
   });
@@ -17,6 +18,7 @@ class TopRatedSeeMoreListView extends StatelessWidget {
       physics: const BouncingScrollPhysics(),
       itemCount: list.length,
       itemBuilder: (BuildContext context, int index) {
+        MovieEntity item = list[index];
         return InkWell(
           onTap: () {
             /// TODO : NAVIGATION TO MOVIE DETAILS
@@ -28,8 +30,12 @@ class TopRatedSeeMoreListView extends StatelessWidget {
               ),
             );
           },
-          child: TopRatedSeeMoreViewItem(
-            model: list[index],
+          child: PopularSeeMoreViewItem(
+            title: item.title,
+            posterPath: item.posterPath,
+            overview: item.overview,
+            releaseDate: item.releaseDate,
+            voteAverage: item.voteAverage.toDouble(),
           ),
         );
       },
