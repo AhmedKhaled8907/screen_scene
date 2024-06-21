@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_app/Splash/presentation/views/splash_view.dart';
+import 'package:movies_app/core/global/resources/strings_manager.dart';
 import 'package:movies_app/core/utils/services/services_locator.dart';
-import 'package:movies_app/home_view.dart';
 import 'package:movies_app/movies/presentation/controller/movie_bloc/movie_bloc.dart';
 import 'package:movies_app/tvs/presentation/controller/tv_bloc/tv_bloc.dart';
 
@@ -39,9 +40,10 @@ class MyApp extends StatelessWidget {
               ),
             ],
             child: MaterialApp(
+              title: AppString.appName,
               debugShowCheckedModeBanner: false,
               theme: theme.themeData,
-              home: const HomeView(),
+              home: const SplashView(),
             ),
           );
         },

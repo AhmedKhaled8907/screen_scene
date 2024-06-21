@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/entities/genres_entity.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';

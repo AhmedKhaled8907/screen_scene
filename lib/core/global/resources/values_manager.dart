@@ -81,6 +81,11 @@ class AppSize {
 }
 
 class AppDuration {
+  static const int d0 = 0;
+  static const int d1 = 1;
+  static const int d2 = 2;
+  static const int d3 = 3;
+  static const int d10 = 10;
   static const int d60 = 60;
   static const int d100 = 100;
   static const int d200 = 200;

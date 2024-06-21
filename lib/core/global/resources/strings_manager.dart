@@ -1,5 +1,6 @@
 class AppString {
-  static const appName = "Movies App";
+  static const appName = "Screen Scene";
+  static const slidingText = 'Find your next favorite\n movie or tv show';
   static const popular = "Popular";
   static const seeMore = "See More";
   static const topRated = "Top Rated";
