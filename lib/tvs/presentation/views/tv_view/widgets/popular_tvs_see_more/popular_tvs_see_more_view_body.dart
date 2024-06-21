@@ -5,7 +5,6 @@ import 'package:movies_app/core/utils/custom_widgets/custom_loading_indicator.da
 import 'package:movies_app/core/utils/enums.dart';
 import 'package:movies_app/tvs/presentation/controller/tv_bloc/tv_bloc.dart';
 
-
 import 'popular_tvs_see_more_view_list_view.dart';
 
 class PopularTvsSeeMoreViewBody extends StatelessWidget {
@@ -24,7 +23,10 @@ class PopularTvsSeeMoreViewBody extends StatelessWidget {
             );
 
           case RequestState.loaded:
-            return PopularTvsSeeMoreListView(list: state.popularTvs);
+            return PopularTvsSeeMoreListView(
+              list: state.popularTvs,
+            );
+
           case RequestState.error:
             return Container();
         }

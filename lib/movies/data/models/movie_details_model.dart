@@ -1,4 +1,5 @@
-import 'package:movies_app/core/global/models/genres_model.dart';
+
+import 'package:movies_app/core/utils/models/genres_model.dart';
 
 import '../../domain/entities/movie_details_entity.dart';
 

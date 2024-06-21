@@ -4,7 +4,7 @@ import 'package:movies_app/core/global/resources/colors_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/core/utils/custom_widgets/now_playing_and_on_air_text.dart';
 
-import 'slider_image.dart';
+import 'sliding_image.dart';
 
 class TitleWithShade extends StatelessWidget {
   const TitleWithShade({
@@ -40,7 +40,7 @@ class TitleWithShade extends StatelessWidget {
             );
           },
           blendMode: BlendMode.dstIn,
-          child: SliderImage(
+          child: SlidingImage(
             posterPath: ApiConstants.imageUrl(posterPath),
           ),
         ),

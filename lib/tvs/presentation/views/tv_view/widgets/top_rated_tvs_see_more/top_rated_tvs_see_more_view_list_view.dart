@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/utils/custom_widgets/top_rated_see_more_view_item.dart';
+import 'package:movies_app/core/utils/custom_widgets/see_more_widgets/top_rated_see_more_view_item.dart';
 import 'package:movies_app/tvs/domain/entities/tv_entity.dart';
 import 'package:movies_app/tvs/presentation/views/tv_details_view/tv_details_view.dart';
 

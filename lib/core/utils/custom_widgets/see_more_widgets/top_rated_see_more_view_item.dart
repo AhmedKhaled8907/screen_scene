@@ -1,14 +1,14 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/colors_manager.dart';
-import 'package:movies_app/core/utils/custom_widgets/details_date_release.dart';
-import 'package:movies_app/core/utils/custom_widgets/details_rating.dart';
-import 'package:movies_app/core/utils/custom_widgets/movie_see_more_title.dart';
+import 'package:movies_app/core/utils/custom_widgets/details_widgets/details_date_release.dart';
+import 'package:movies_app/core/utils/custom_widgets/details_widgets/details_rating.dart';
+import 'package:movies_app/core/utils/custom_widgets/see_more_widgets/see_more_title.dart';
 import 'package:movies_app/core/utils/custom_widgets/poster_image.dart';
 
-import 'package:movies_app/core/utils/custom_widgets/see_more_over_view_text.dart';
+import 'package:movies_app/core/utils/custom_widgets/see_more_widgets/see_more_over_view_text.dart';
 
-import '../../global/resources/values_manager.dart';
+import '../../../global/resources/values_manager.dart';
 
 class TopRatedSeeMoreViewItem extends StatelessWidget {
   const TopRatedSeeMoreViewItem({
@@ -53,7 +53,7 @@ class TopRatedSeeMoreViewItem extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        MovieSeeMoreTitle(title: title),
+                        SeeMoreTitle(title: title),
                         const SizedBox(height: AppSize.s16),
                         Row(
                           children: [

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/strings_manager.dart';
 import 'package:movies_app/core/global/resources/styles_manager.dart';
 
-
 import 'popular_tvs_see_more_view_body.dart';
 
 class PopularTvsSeeMoreView extends StatelessWidget {
@@ -25,5 +24,4 @@ class PopularTvsSeeMoreView extends StatelessWidget {
       centerTitle: true,
     );
   }
-
 }

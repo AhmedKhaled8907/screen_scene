@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/global/entities/genres_entity.dart';
 import 'package:movies_app/core/global/resources/colors_manager.dart';
 import 'package:movies_app/core/global/resources/font_manager.dart';
 import 'package:movies_app/core/global/resources/styles_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
+import 'package:movies_app/core/utils/entities/genres_entity.dart';
 
 class DetailsGenresItem extends StatelessWidget {
   const DetailsGenresItem({

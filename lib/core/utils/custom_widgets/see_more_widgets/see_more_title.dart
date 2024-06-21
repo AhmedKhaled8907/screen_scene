@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/styles_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
 
-class MovieSeeMoreTitle extends StatelessWidget {
-  const MovieSeeMoreTitle({
+class SeeMoreTitle extends StatelessWidget {
+  const SeeMoreTitle({
     super.key,
     required this.title,
   });

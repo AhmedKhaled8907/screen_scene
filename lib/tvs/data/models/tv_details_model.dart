@@ -1,4 +1,4 @@
-import 'package:movies_app/core/global/models/genres_model.dart';
+import 'package:movies_app/core/utils/models/genres_model.dart';
 import 'package:movies_app/tvs/domain/entities/tv_details_entity.dart';
 
 class TvDetailsModel extends TvDetailsEntity {

@@ -6,16 +6,16 @@ import 'package:movies_app/core/global/resources/constants_manager.dart';
 import 'package:movies_app/core/global/resources/strings_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/core/utils/enums.dart';
-import 'package:movies_app/core/utils/custom_widgets/details_app_bar.dart';
-import 'package:movies_app/core/utils/custom_widgets/details_title.dart';
+import 'package:movies_app/core/utils/custom_widgets/details_widgets/details_app_bar.dart';
+import 'package:movies_app/core/utils/custom_widgets/details_widgets/details_title.dart';
 
 import '../../controller/movie_details_bloc/movie_details_bloc.dart';
-import '../../../../core/utils/custom_widgets/more_like_this_text.dart';
+import '../../../../core/utils/custom_widgets/details_widgets/more_like_this_text.dart';
 import 'widgets/movie_detail_duration.dart';
-import '../../../../core/utils/custom_widgets/details_date_release.dart';
-import '../../../../core/utils/custom_widgets/details_over_view.dart';
-import '../../../../core/utils/custom_widgets/details_rating.dart';
-import '../../../../core/utils/custom_widgets/details_genres.dart';
+import '../../../../core/utils/custom_widgets/details_widgets/details_date_release.dart';
+import '../../../../core/utils/custom_widgets/details_widgets/details_over_view.dart';
+import '../../../../core/utils/custom_widgets/details_widgets/details_rating.dart';
+import '../../../../core/utils/custom_widgets/details_widgets/details_genres.dart';
 import 'similar_movies/similar_movies_section.dart';
 
 class MovieDetailsViewBody extends StatelessWidget {
