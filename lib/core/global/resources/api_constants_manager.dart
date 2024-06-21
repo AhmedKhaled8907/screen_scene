@@ -28,6 +28,10 @@ class ApiConstants {
   static String similarTvsBaseUrl(int movieId) =>
       "$baseUrl/tv/$movieId/recommendations?api_key=$apiKey";
 
+  // Search Api Constants
+  static String multiSearchBaseUrl(String query) =>
+      "$baseUrl/search/multi?api_key=$apiKey&query=$query";
+
   static const String baseImageUrl = "https://image.tmdb.org/t/p/w500";
 
   static String imageUrl(String path) => "$baseImageUrl$path";

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app/search/presentation/views/search_view_body.dart';
 
 class SearchView extends StatelessWidget {
   const SearchView({super.key});
@@ -6,8 +7,8 @@ class SearchView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(
-        child: Text('Search View'),
+      body: SafeArea(
+        child: SearchViewBody(),
       ),
     );
   }
