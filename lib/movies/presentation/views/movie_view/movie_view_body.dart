@@ -4,7 +4,7 @@ import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/movies/presentation/views/movie_view/widgets/top_rated/top_rated_section.dart';
 
 import 'widgets/now_playing/now_playing_section.dart';
-import 'widgets/popular/popular_section.dart';
+import 'widgets/popular_movies/popular_movies_section.dart';
 
 class MovieViewBody extends StatelessWidget {
   const MovieViewBody({super.key});
@@ -20,7 +20,7 @@ class MovieViewBody extends StatelessWidget {
           NowPlayingSection(),
 
           // popular movies section
-          PopularSection(),
+          PopularMoviesSection(),
 
           // top rated movies section
           TopRatedSection(),

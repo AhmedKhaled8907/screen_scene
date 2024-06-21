@@ -3,6 +3,8 @@ import 'package:movies_app/core/global/resources/strings_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/tvs/presentation/views/tv_view/widgets/on_the_air/on_the_air_section.dart';
 
+import 'widgets/popular_tvs/popular_tvs_section.dart';
+
 class TvsViewBody extends StatelessWidget {
   const TvsViewBody({super.key});
 
@@ -16,8 +18,8 @@ class TvsViewBody extends StatelessWidget {
           // on the air Tvs section
           OnTheAirSection(),
 
-          // // popular Tvs section
-          // PopularSection(),
+          // popular Tvs section
+          PopularTvsSection(),
 
           // // top rated Tvs section
           // TopRatedSection(),

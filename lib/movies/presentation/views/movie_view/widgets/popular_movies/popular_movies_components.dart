@@ -8,8 +8,8 @@ import 'package:movies_app/core/utils/custom_widgets/custom_loading_indicator.da
 import 'package:movies_app/core/utils/custom_widgets/poster_image.dart';
 import 'package:movies_app/movies/presentation/views/movie_details_view/movie_details_view.dart';
 
-class PopularComponents extends StatelessWidget {
-  const PopularComponents({super.key});
+class PopularMoviesComponents extends StatelessWidget {
+  const PopularMoviesComponents({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -64,5 +64,4 @@ class PopularComponents extends StatelessWidget {
       },
     );
   }
-  
 }
