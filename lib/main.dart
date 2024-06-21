@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_app/core/services/services_locator.dart';
 import 'package:movies_app/home_view.dart';
 import 'package:movies_app/movies/presentation/controller/movie_bloc/movie_bloc.dart';
-import 'package:movies_app/movies/presentation/views/movie_view/movies_view.dart';
 
 import 'core/global/theme/theme_bloc/theme_bloc.dart';
 import 'core/utils/app_bloc_observer.dart';
