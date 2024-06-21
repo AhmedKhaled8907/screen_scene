@@ -14,14 +14,13 @@ class AppString {
   static const String movieDetailScrollViewKey = 'movieDetailScrollView';
   static const String openMovieMinimalDetailKey = 'openMovieMinimalDetail';
 
-
-  // Tv Constants 
+  // Tv Constants
   static const popularTVs = 'Popular TVs';
   static const topRatedTVs = 'Top Rated Tvs';
-  
-  
+  static const seasons = 'Seasons';
+  static const episodes = 'Episodes';
+
   static const String tvScrollViewKey = 'tvScrollView';
   static const String tvDetailScrollViewKey = 'tvDetailScrollView';
   static const String openTVMinimalDetailKey = 'openTVMinimalDetail';
-
 }

@@ -53,7 +53,7 @@ class MovieDetailsViewBody extends StatelessWidget {
                           DetailsTitle(
                             title: movie.title,
                           ),
-                          const SizedBox(height: AppSize.s8),
+                          const SizedBox(height: AppSize.s16),
                           Row(
                             children: [
                               DetailsDateRelease(
@@ -69,7 +69,7 @@ class MovieDetailsViewBody extends StatelessWidget {
                               ),
                             ],
                           ),
-                          const SizedBox(height: AppSize.s20),
+                          const SizedBox(height: AppSize.s16),
                           DetailsOverView(
                             overview: movie.overview,
                           ),

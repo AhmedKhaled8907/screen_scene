@@ -8,6 +8,7 @@ import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/core/utils/custom_widgets/details_app_bar.dart';
 import 'package:movies_app/core/utils/custom_widgets/details_date_release.dart';
 import 'package:movies_app/core/utils/custom_widgets/details_genres.dart';
+import 'package:movies_app/core/utils/custom_widgets/details_num_of.dart';
 import 'package:movies_app/core/utils/custom_widgets/details_title.dart';
 import 'package:movies_app/core/utils/custom_widgets/details_over_view.dart';
 import 'package:movies_app/core/utils/custom_widgets/details_rating.dart';
@@ -62,9 +63,19 @@ class TvDetailsViewBody extends StatelessWidget {
                               ),
                             ],
                           ),
-                          const SizedBox(height: AppSize.s20),
+                          const SizedBox(height: AppSize.s16),
                           DetailsOverView(
                             overview: tv.overview,
+                          ),
+                          const SizedBox(height: AppSize.s16),
+                          DetailsNumOf(
+                            title: AppString.seasons,
+                            numOf: tv.numOfSeasons.toString(),
+                          ),
+                          const SizedBox(height: AppSize.s8),
+                          DetailsNumOf(
+                            title: AppString.episodes,
+                            numOf: tv.numOfEpisodes.toString(),
                           ),
                           const SizedBox(height: AppSize.s16),
                           DetailsGenres(genres: tv.genres!),

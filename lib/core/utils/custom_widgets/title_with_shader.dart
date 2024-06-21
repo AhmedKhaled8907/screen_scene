@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/api_constants_manager.dart';
 import 'package:movies_app/core/global/resources/colors_manager.dart';
-import 'package:movies_app/core/global/resources/strings_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/core/utils/custom_widgets/now_playing_and_on_air_text.dart';
 
@@ -12,10 +11,12 @@ class TitleWithShade extends StatelessWidget {
     super.key,
     required this.title,
     required this.posterPath,
+    required this.nowOrAirText,
   });
 
   final String title;
   final String posterPath;
+  final String nowOrAirText;
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +46,7 @@ class TitleWithShade extends StatelessWidget {
         ),
         NowPlayingAndOnAirText(
           title: title,
-          itemText: AppString.onTheAir,
+          itemText: nowOrAirText,
         ),
       ],
     );

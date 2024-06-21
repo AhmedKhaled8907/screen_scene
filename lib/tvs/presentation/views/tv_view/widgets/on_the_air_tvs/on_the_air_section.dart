@@ -53,6 +53,7 @@ class OnTheAirSection extends StatelessWidget {
                       child: TitleWithShade(
                         posterPath: item.posterPath,
                         title: item.title,
+                        nowOrAirText: AppString.onTheAir,
                       ),
                     );
                   },

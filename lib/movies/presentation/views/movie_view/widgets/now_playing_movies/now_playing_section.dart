@@ -54,6 +54,7 @@ class NowPlayingSection extends StatelessWidget {
                       child: TitleWithShade(
                         posterPath: item.posterPath,
                         title: item.title,
+                        nowOrAirText: AppString.nowPlaying,
                       ),
                     );
                   },
