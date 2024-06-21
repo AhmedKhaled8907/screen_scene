@@ -9,8 +9,8 @@ import 'package:movies_app/core/utils/custom_widgets/poster_image.dart';
 import '../../../../controller/movie_bloc/movie_bloc.dart';
 import '../../../movie_details_view/movie_details_view.dart';
 
-class TopRatedComponents extends StatelessWidget {
-  const TopRatedComponents({super.key});
+class TopRatedMoviesComponents extends StatelessWidget {
+  const TopRatedMoviesComponents({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -58,4 +58,3 @@ class TopRatedComponents extends StatelessWidget {
     );
   }
 }
-

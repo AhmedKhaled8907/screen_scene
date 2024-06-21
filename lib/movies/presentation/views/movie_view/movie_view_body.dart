@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/strings_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
-import 'package:movies_app/movies/presentation/views/movie_view/widgets/top_rated/top_rated_section.dart';
+import 'package:movies_app/movies/presentation/views/movie_view/widgets/top_rated_movies/top_rated_movies_section.dart';
 
-import 'widgets/now_playing/now_playing_section.dart';
+import 'widgets/now_playing_movies/now_playing_section.dart';
 import 'widgets/popular_movies/popular_movies_section.dart';
 
 class MovieViewBody extends StatelessWidget {
@@ -23,7 +23,7 @@ class MovieViewBody extends StatelessWidget {
           PopularMoviesSection(),
 
           // top rated movies section
-          TopRatedSection(),
+          TopRatedMoviesSection(),
 
           SizedBox(height: AppSize.s24),
         ],
