@@ -2,9 +2,11 @@ import 'package:dartz/dartz.dart';
 import 'package:movies_app/core/error/exceptions.dart';
 import 'package:movies_app/core/error/failure.dart';
 import 'package:movies_app/tvs/data/data_sources/base_tvs_remote_data_source.dart';
+import 'package:movies_app/tvs/domain/entities/similar_tvs_entity.dart';
 import 'package:movies_app/tvs/domain/entities/tv_details_entity.dart';
 import 'package:movies_app/tvs/domain/entities/tv_entity.dart';
 import 'package:movies_app/tvs/domain/repos/base_tv_repo.dart';
+import 'package:movies_app/tvs/domain/use_cases/get_similar_tvs_use_case.dart';
 import 'package:movies_app/tvs/domain/use_cases/get_tv_details_use_case.dart';
 
 class TvsRepo extends BaseTvsRepo {
@@ -41,8 +43,6 @@ class TvsRepo extends BaseTvsRepo {
     }
   }
 
-
-
   @override
   Future<Either<Failure, TvDetailsEntity>> getTvDetails(
       TvDetailsParams params) async {
@@ -54,15 +54,14 @@ class TvsRepo extends BaseTvsRepo {
     }
   }
 
-  // @override
-  // Future<Either<Failure, List<SimilarTvsEntity>>> getSimilarTvs(
-  //     SimilarTvsParams params) async {
-  //   final result = await remoteDataSource.getSimilarTvs(params);
-  //   try {
-  //     return Right(result);
-  //   } catch (e) {
-  //     return Left(ServerFailure(e.toString()));
-  //   }
-  // }
-
+  @override
+  Future<Either<Failure, List<SimilarTvsEntity>>> getSimilarTvs(
+      SimilarTvsParams params) async {
+    final result = await remoteDataSource.getSimilarTvs(params);
+    try {
+      return Right(result);
+    } catch (e) {
+      return Left(ServerFailure(e.toString()));
+    }
+  }
 }

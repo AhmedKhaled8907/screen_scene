@@ -4,8 +4,11 @@ import 'package:movies_app/core/global/resources/api_constants_manager.dart';
 import 'package:movies_app/core/global/resources/constants_manager.dart';
 import 'package:movies_app/core/utils/network/error_message_model.dart';
 import 'package:movies_app/tvs/data/data_sources/base_tvs_remote_data_source.dart';
+import 'package:movies_app/tvs/data/models/similar_tvs_model.dart';
 import 'package:movies_app/tvs/data/models/tv_details_model.dart';
 import 'package:movies_app/tvs/data/models/tv_model.dart';
+import 'package:movies_app/tvs/domain/entities/similar_tvs_entity.dart';
+import 'package:movies_app/tvs/domain/use_cases/get_similar_tvs_use_case.dart';
 import 'package:movies_app/tvs/domain/use_cases/get_tv_details_use_case.dart';
 
 class TvsRemoteDataSource extends BaseTvsRemoteDataSource {
@@ -59,22 +62,23 @@ class TvsRemoteDataSource extends BaseTvsRemoteDataSource {
     }
   }
 
-  // // get similar Tv
-  // @override
-  // Future<List<SimilarTvsEntity>> getSimilarTvs(
-  //     SimilarTvsParams params) async {
-  //   final response = await Dio().get(
-  //     ApiConstants.similarTvsBaseUrl(params.TvId),
-  //   );
-  //   if (response.statusCode == AppConstants.successCode200) {
-  //     return List<SimilarTvsModel>.from(
-  //         (response.data[ApiConstants.listName] as List).map(
-  //       (e) => SimilarTvsModel.fromJson(e),
-  //     ));
-  //   } else {
-  //     throw ServerException(
-  //       errorMessageModel: ErrorMessageModel.fromJson(response.data),
-  //     );
-  //   }
-  // }
+  // // get similar Tvs
+  @override
+  Future<List<SimilarTvsEntity>> getSimilarTvs(
+      SimilarTvsParams params) async {
+    final response = await Dio().get(
+      ApiConstants.similarTvsBaseUrl(params.id),
+    );
+    if (response.statusCode == AppConstants.successCode200) {
+      return List<SimilarTvsModel>.from(
+          (response.data[ApiConstants.listName] as List).map(
+        (e) => SimilarTvsModel.fromJson(e),
+      ));
+    } else {
+      throw ServerException(
+        errorMessageModel: ErrorMessageModel.fromJson(response.data),
+      );
+    }
+  }
+
 }
