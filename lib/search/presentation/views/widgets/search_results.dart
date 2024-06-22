@@ -56,7 +56,7 @@ class SearchResults extends StatelessWidget {
                 },
                 child: Column(
                   children: [
-                    SearchResultsItem(searchEntity: searchEntity),
+                    SearchResultsItem(item: searchEntity),
                   ],
                 ),
               );

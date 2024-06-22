@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_app/search/domain/entities/search_entity.dart';
-import 'package:movies_app/search/domain/use_cases/get_search_multi_use_case.dart';
+import 'package:movies_app/movies/domain/entities/movie_entity.dart';
+import 'package:movies_app/search/domain/use_cases/get_search_movies_use_case.dart';
 
 part 'search_event.dart';
 part 'search_state.dart';
@@ -24,7 +24,7 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
     }
     emit(SearchLoading());
 
-    final result = await getMultiSearchUseCase(SearchMultiParams(
+    final result = await getMultiSearchUseCase(SearchMoviesParams(
       query: event.query,
     ));
     result.fold(

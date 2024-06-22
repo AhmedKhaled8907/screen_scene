@@ -3,20 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/colors_manager.dart';
 import 'package:movies_app/core/global/resources/styles_manager.dart';
 import 'package:movies_app/core/utils/custom_widgets/details_widgets/details_rating.dart';
+import 'package:movies_app/movies/domain/entities/movie_entity.dart';
 import 'package:movies_app/search/presentation/views/widgets/search_results_text.dart';
 
 import '../../../../core/global/resources/values_manager.dart';
 import '../../../../core/utils/custom_widgets/details_widgets/details_date_release.dart';
 import '../../../../core/utils/custom_widgets/poster_image.dart';
-import '../../../domain/entities/search_entity.dart';
 
 class SearchResultsItem extends StatelessWidget {
   const SearchResultsItem({
     super.key,
-    required this.searchEntity,
+    required this.item,
   });
 
-  final SearchEntity searchEntity;
+  final MovieEntity item;
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class SearchResultsItem extends StatelessWidget {
                   height: AppSize.s120,
                   width: AppSize.s80,
                   child: PosterImage(
-                    posterPath: searchEntity.posterPath,
+                    posterPath: item.posterPath,
                   ),
                 ),
                 const SizedBox(width: AppPadding.p16),
@@ -48,16 +48,16 @@ class SearchResultsItem extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SearchResultText(searchEntity: searchEntity),
+                      SearchResultText(title: item.title),
                       const SizedBox(height: AppPadding.p4),
                       Row(
                         children: [
                           DetailsDateRelease(
-                            releaseDate: searchEntity.releaseDate.toString(),
+                            releaseDate: item.releaseDate.toString(),
                           ),
                           const SizedBox(width: AppSize.s16),
                           Rating(
-                            voteAverage: searchEntity.voteAverage.toDouble(),
+                            voteAverage: item.voteAverage.toDouble(),
                           ),
                         ],
                       ),
