@@ -1,4 +1,4 @@
-
+import 'package:movies_app/core/global/resources/api_constants_manager.dart';
 import 'package:movies_app/core/utils/models/genres_model.dart';
 
 import '../../domain/entities/movie_details_entity.dart';
@@ -17,17 +17,15 @@ class MovieDetailsModel extends MovieDetailsEntity {
 
   factory MovieDetailsModel.fromJson(Map<String, dynamic> json) =>
       MovieDetailsModel(
-        /// TODO: check if this is correct
-        backdropPath:
-            json["backdrop_path"] ?? '',
+        backdropPath: json[AppJson.backdropPath] ?? '',
         genres: List<GenresModel>.from(
-          json['genres'].map((x) => GenresModel.fromJson(x)),
+          json[AppJson.genres].map((x) => GenresModel.fromJson(x)),
         ),
-        id: json["id"],
-        overview: json['overview'],
-        releaseDate: json['release_date'],
-        runtime: json['runtime'],
-        title: json['title'],
-        voteAverage: json['vote_average'],
+        id: json[AppJson.id],
+        overview: json[AppJson.overview],
+        releaseDate: json[AppJson.releaseDate],
+        runtime: json[AppJson.runtime],
+        title: json[AppJson.title],
+        voteAverage: json[AppJson.voteAverage],
       );
 }

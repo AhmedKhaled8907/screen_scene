@@ -1,3 +1,4 @@
+import 'package:movies_app/core/global/resources/api_constants_manager.dart';
 import 'package:movies_app/tvs/domain/entities/tv_entity.dart';
 
 class TvModel extends TvEntity {
@@ -13,13 +14,13 @@ class TvModel extends TvEntity {
 
   factory TvModel.fromJson(Map<String, dynamic> json) {
     return TvModel(
-      id: json['id'],
-      title: json['name'],
-      backdropPath: json['backdrop_path'] ?? '',
-      posterPath: json['poster_path'] ?? '',
-      firstAirTime: json['first_air_date'],
-      overview: json['overview'],
-      voteAverage: json['vote_average'],
+      id: json[AppJson.id],
+      title: json[AppJson.name],
+      backdropPath: json[AppJson.backdropPath] ?? '',
+      posterPath: json[AppJson.posterPath] ?? '',
+      firstAirTime: json[AppJson.firstAirDate],
+      overview: json[AppJson.overview],
+      voteAverage: json[AppJson.voteAverage],
     );
   }
 }

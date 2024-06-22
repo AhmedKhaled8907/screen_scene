@@ -1,3 +1,4 @@
+import 'package:movies_app/core/global/resources/api_constants_manager.dart';
 import 'package:movies_app/search/domain/entities/search_entity.dart';
 
 class SearchModel extends SearchEntity {
@@ -7,15 +8,17 @@ class SearchModel extends SearchEntity {
     required super.posterPath,
     required super.overview,
     required super.releaseDate,
+    required super.voteAverage,
   });
 
   factory SearchModel.fromJson(Map<String, dynamic> json) {
     return SearchModel(
-      id: json['id'],
-      title: json['title'] ?? json['name'],
-      posterPath: json['poster_path'] ?? json['profile_path'],
-      releaseDate: json['release_date'] ?? json['first_air_date'] ?? '',
-      overview: json['overview'] ?? '',
+      id: json[AppJson.id],
+      title: json[AppJson.title],
+      posterPath: json[AppJson.posterPath],
+      releaseDate: json[AppJson.releaseDate],
+      overview: json[AppJson.overview],
+      voteAverage: json[AppJson.voteAverage],
     );
   }
 }

@@ -30,11 +30,30 @@ class ApiConstants {
 
   // Search Api Constants
   static String multiSearchBaseUrl(String query) =>
-      "$baseUrl/search/multi?api_key=$apiKey&query=$query";
+      "$baseUrl/search/movie?api_key=$apiKey&query=$query";
 
   static const String baseImageUrl = "https://image.tmdb.org/t/p/w500";
 
   static String imageUrl(String path) => "$baseImageUrl$path";
 
   static const String listName = "results";
+}
+
+class AppJson {
+  static const String id = 'id';
+  static const String title = 'title';
+  static const String name = 'name';
+  static const String posterPath = 'poster_path';
+  static const String overview = 'overview';
+  static const String genres = 'genres';
+  static const String releaseDate = 'release_date';
+  static const String voteAverage = 'vote_average';
+  static const String firstAirDate = 'first_air_date';
+  static const String backdropPath = 'backdrop_path';
+  static const String numOfSeasons = 'number_of_seasons';
+  static const String numOfEpisodes = 'number_of_episodes';
+  static const String runtime = 'runtime';
+  static const String statusCode = 'status_code';
+  static const String statusMessage = "status_message";
+  static const String success = 'success';
 }
