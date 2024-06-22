@@ -7,6 +7,8 @@ class AppColors {
   static Color redAccent = Colors.redAccent;
   static Color red = Colors.red;
   static Color grey = Colors.grey;
+  static Color blueAccent = Colors.blueAccent;
+  static Color gold = const Color(0xFFFFD700);
   // static Color grey = const Color(0xff737477);
   // static Color lightGrey = const Color(0xff9E9E9E);
 

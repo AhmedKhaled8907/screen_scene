@@ -6,6 +6,7 @@ class SearchEntity extends Equatable {
   final String posterPath;
   final String overview;
   final String? releaseDate;
+  final num voteAverage;
 
   const SearchEntity({
     required this.id,
@@ -13,6 +14,7 @@ class SearchEntity extends Equatable {
     required this.posterPath,
     required this.overview,
     this.releaseDate,
+    required this.voteAverage,
   });
 
   @override
@@ -23,6 +25,7 @@ class SearchEntity extends Equatable {
       posterPath,
       overview,
       releaseDate,
+      voteAverage,
     ];
   }
 }

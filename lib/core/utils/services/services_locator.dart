@@ -10,6 +10,12 @@ import 'package:movies_app/movies/domain/use_cases/get_similar_movies_use_case.d
 import 'package:movies_app/movies/presentation/controller/movie_bloc/movie_bloc.dart';
 import 'package:movies_app/movies/presentation/controller/movie_details_bloc/movie_details_bloc.dart';
 import 'package:movies_app/movies/presentation/controller/similar_movies_bloc/similar_movies_bloc.dart';
+import 'package:movies_app/search/data/data_sources/base_search_remote_data_source.dart';
+import 'package:movies_app/search/data/data_sources/search_remote_data_source.dart';
+import 'package:movies_app/search/data/repos/search_repo.dart';
+import 'package:movies_app/search/domain/repos/base_search_repo.dart';
+import 'package:movies_app/search/domain/use_cases/get_search_multi_use_case.dart';
+import 'package:movies_app/search/presentation/controller/bloc/search_bloc.dart';
 import 'package:movies_app/tvs/data/data_sources/base_tvs_remote_data_source.dart';
 import 'package:movies_app/tvs/data/data_sources/tvs_remote_data_source.dart';
 import 'package:movies_app/tvs/data/repos/tv_repo.dart';
@@ -65,14 +71,33 @@ class ServicesLocator {
     sl.registerLazySingleton(() => GetTvDetailsUseCase(sl()));
     sl.registerLazySingleton(() => GetSimilarTvsUseCase(sl()));
 
-    
     /// TVS REPOS
     sl.registerLazySingleton<BaseTvsRepo>(
       () => TvsRepo(sl()),
     );
+
     /// TVS DATA SOURCES
     sl.registerLazySingleton<BaseTvsRemoteDataSource>(
       () => TvsRemoteDataSource(),
+    );
+
+    /////////////////////////////////////////////////////////////////////
+
+    /// Search Blocs
+    sl.registerFactory(() => SearchBloc(sl()));
+
+    /// Search USE CASES
+    sl.registerLazySingleton(() => GetMultiSearchUseCase(sl()));
+    // sl.registerLazySingleton(() => GetPopularSearchUseCase(sl()));
+
+    /// Search REPOS
+    sl.registerLazySingleton<BaseSearchRepo>(
+      () => SearchRepo(sl()),
+    );
+
+    /// Search DATA SOURCES
+    sl.registerLazySingleton<BaseSearchRemoteDataSource>(
+      () => SearchRemoteDataSource(),
     );
   }
 }

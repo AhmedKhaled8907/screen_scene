@@ -56,7 +56,7 @@ class TvDetailsViewBody extends StatelessWidget {
                           Row(
                             children: [
                               DetailsDateRelease(
-                                releaseDate: tv.firstAirTime,
+                                releaseDate: tv.firstAirDate,
                               ),
                               const SizedBox(width: AppSize.s16),
                               Rating(

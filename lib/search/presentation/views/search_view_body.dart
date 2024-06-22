@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_app/core/global/resources/strings_manager.dart';
+import 'package:movies_app/core/global/resources/styles_manager.dart';
+import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/search/presentation/controller/bloc/search_bloc.dart';
+import 'package:movies_app/search/presentation/views/widgets/search_results.dart';
+
+import '../../../core/global/resources/font_manager.dart';
+import 'widgets/search_bar_items.dart';
+import 'widgets/search_results_item.dart';
 
 class SearchViewBody extends StatefulWidget {
   const SearchViewBody({super.key});
@@ -11,6 +19,9 @@ class SearchViewBody extends StatefulWidget {
 
 class SearchViewBodyState extends State<SearchViewBody> {
   final TextEditingController _controller = TextEditingController();
+  bool _showNoDataMessage = false;
+  String _lastQuery = '';
+  final FocusNode _focusNode = FocusNode();
 
   @override
   void initState() {
@@ -22,6 +33,7 @@ class SearchViewBodyState extends State<SearchViewBody> {
   void dispose() {
     _controller.removeListener(_onTextChanged);
     _controller.dispose();
+    _focusNode.dispose();
     super.dispose();
   }
 
@@ -30,53 +42,72 @@ class SearchViewBodyState extends State<SearchViewBody> {
     if (query.isEmpty) {
       context.read<SearchBloc>().add(ClearSearchResults());
     } else {
-      context.read<SearchBloc>().add(SearchQueryChanged(query));
+      if (query != _lastQuery) {
+        _lastQuery = query;
+        context.read<SearchBloc>().add(SearchQueryChanged(query: query));
+        _startLoadingTimeout();
+      }
     }
+  }
+
+  void _clearSearch() {
+    _controller.clear();
+    _focusNode.unfocus();
+    context.read<SearchBloc>().add(ClearSearchResults());
+  }
+
+  void _startLoadingTimeout() {
+    final currentQuery = _lastQuery;
+
+    setState(() {
+      _showNoDataMessage = false;
+    });
+
+    Future.delayed(const Duration(seconds: AppDuration.d3), () {
+      if (mounted && _lastQuery == currentQuery) {
+        final state = context.read<SearchBloc>().state;
+        if (state is SearchLoading) {
+          setState(() {
+            _showNoDataMessage = true;
+          });
+        } else if (state is SearchSuccess && state.results.isEmpty) {
+          setState(() {
+            _showNoDataMessage = true;
+          });
+        }
+      }
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Search Movies'),
-      ),
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: TextField(
-              controller: _controller,
-              decoration: const InputDecoration(
-                labelText: 'Search',
-                border: OutlineInputBorder(),
-              ),
-            ),
+          SearchBarItems(
+            controller: _controller,
+            clearSearch: _clearSearch,
+            focusNode: _focusNode,
+          ),
+          const SizedBox(height: AppSize.s8),
+          const SizedBox(
+            height: AppSize.s50,
+            child: SearchTitleListView(),
+          ),
+          const SizedBox(height: AppSize.s16),
+          const Divider(
+            height: AppSize.s1,
+            thickness: AppSize.s1,
           ),
           Expanded(
-            child: BlocBuilder<SearchBloc, SearchState>(
-              builder: (context, state) {
-                if (state is SearchInitial) {
-                  return const Center(child: Text('Enter a search term'));
-                } else if (state is SearchLoading) {
-                  return const Center(child: CircularProgressIndicator());
-                } else if (state is SearchLoaded) {
-                  return ListView.builder(
-                    itemCount: state.results.length,
-                    itemBuilder: (context, index) {
-                      final result = state.results[index];
-                      return ListTile(
-                        title: Text(
-                          result['title'] ?? result['name'],
-                        ),
-                      );
-                    },
-                  );
-                } else if (state is SearchError) {
-                  return Center(child: Text(state.message));
-                }
-                return Container();
-              },
-            ),
+            child: _showNoDataMessage
+                ? Center(
+                    child: Text(
+                      AppString.noResultsFound,
+                      style: getMediumStyle(fontSize: FontSize.s16),
+                    ),
+                  )
+                : const SearchResults(),
           ),
         ],
       ),

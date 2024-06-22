@@ -6,7 +6,7 @@ class TvDetailsEntity extends Equatable {
   final List<GenresEntity>? genres;
   final int id;
   final String overview;
-  final String firstAirTime;
+  final String firstAirDate;
   final String title;
   final double voteAverage;
   final int numOfSeasons;
@@ -17,7 +17,7 @@ class TvDetailsEntity extends Equatable {
     this.genres,
     required this.id,
     required this.overview,
-    required this.firstAirTime,
+    required this.firstAirDate,
     required this.title,
     required this.voteAverage,
     required this.numOfSeasons,
@@ -30,7 +30,7 @@ class TvDetailsEntity extends Equatable {
         genres,
         id,
         overview,
-        firstAirTime,
+        firstAirDate,
         title,
         voteAverage,
         numOfEpisodes,

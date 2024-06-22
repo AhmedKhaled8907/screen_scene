@@ -5,9 +5,6 @@ import 'package:movies_app/core/utils/use_cases/base_use_case.dart';
 import 'package:movies_app/search/domain/entities/search_entity.dart';
 import 'package:movies_app/search/domain/repos/base_search_repo.dart';
 
-
-
-
 class GetMultiSearchUseCase
     extends BaseUseCase<List<SearchEntity>, SearchMultiParams> {
   final BaseSearchRepo baseSearchRepo;
@@ -16,7 +13,8 @@ class GetMultiSearchUseCase
 
   @override
   Future<Either<Failure, List<SearchEntity>>> call(
-      SearchMultiParams params) async {
+    SearchMultiParams params,
+  ) async {
     return await baseSearchRepo.getMultiSearch(params);
   }
 }

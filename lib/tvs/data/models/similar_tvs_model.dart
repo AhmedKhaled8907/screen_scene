@@ -1,3 +1,4 @@
+import 'package:movies_app/core/global/resources/api_constants_manager.dart';
 import 'package:movies_app/tvs/domain/entities/similar_tvs_entity.dart';
 
 class SimilarTvsModel extends SimilarTvsEntity {
@@ -8,8 +9,8 @@ class SimilarTvsModel extends SimilarTvsEntity {
 
   factory SimilarTvsModel.fromJson(Map<String, dynamic> json) {
     return SimilarTvsModel(
-      id: json['id'],
-      posterPath: json['poster_path'] ?? '',
+      id: json[AppJson.id],
+      posterPath: json[AppJson.posterPath] ?? '',
     );
   }
 }
