@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app/core/global/resources/colors_manager.dart';
 
 class CustomLoadingIndicator extends StatelessWidget {
   const CustomLoadingIndicator({
@@ -14,7 +15,7 @@ class CustomLoadingIndicator extends StatelessWidget {
       height: height,
       child: const Center(
         child: CircularProgressIndicator(
-          color: Colors.white,
+          color: AppColors.gold,
         ),
       ),
     );

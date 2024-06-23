@@ -21,11 +21,11 @@ class DetailsAppBar extends StatelessWidget {
       leading: Container(
         margin: const EdgeInsets.only(left: AppMargin.m4),
         decoration: BoxDecoration(
-          color: Colors.grey[AppColorShades.colorShade850],
+          color: Colors.grey[500],
           shape: BoxShape.circle,
         ),
         child: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back,
             color: AppColors.white,
           ),
@@ -39,7 +39,7 @@ class DetailsAppBar extends StatelessWidget {
           duration: const Duration(milliseconds: AppDuration.d500),
           child: ShaderMask(
             shaderCallback: (rect) {
-              return LinearGradient(
+              return const LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
@@ -48,7 +48,7 @@ class DetailsAppBar extends StatelessWidget {
                   AppColors.black,
                   AppColors.transparent,
                 ],
-                stops: const [AppSize.s0, AppSize.s0_5, AppSize.s1, AppSize.s1],
+                stops: [AppSize.s0, AppSize.s0_5, AppSize.s1, AppSize.s1],
               ).createShader(
                 Rect.fromLTRB(AppSize.s0, AppSize.s0, rect.width, rect.height),
               );

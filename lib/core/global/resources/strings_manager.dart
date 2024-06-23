@@ -19,6 +19,8 @@ class AppString {
   static const noResultsFound = 'No Results Found';
   static const moreLikeThis = "More like this";
   static const person = "Person";
+  static const more = "More";
+  static const less = "Less";
 
   static const String movieScrollViewKey = 'movieScrollView';
   static const String movieDetailScrollViewKey = 'movieDetailScrollView';

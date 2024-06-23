@@ -42,12 +42,12 @@ class SearchViewBodyState extends State<SearchViewBody> {
     final query = _controller.text;
     if (query.isEmpty) {
       context.read<SearchBloc>().add(ClearSearchResults());
+      _startLoadingTimeout();
     } else {
       if (query != _lastQuery) {
         _lastQuery = query;
 
         _performSearch(query);
-        _startLoadingTimeout();
       }
     }
   }
@@ -94,7 +94,7 @@ class SearchViewBodyState extends State<SearchViewBody> {
     });
 
     Future.delayed(const Duration(seconds: AppDuration.d5), () {
-      if (mounted && _lastQuery == currentQuery) {
+      if (mounted && _lastQuery == currentQuery && currentQuery.isNotEmpty) {
         final state = context.read<SearchBloc>().state;
         if (state is SearchLoading) {
           setState(() {

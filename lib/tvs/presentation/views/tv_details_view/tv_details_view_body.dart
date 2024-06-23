@@ -26,7 +26,7 @@ class TvDetailsViewBody extends StatelessWidget {
       builder: (context, state) {
         switch (state.tvDetailsState) {
           case RequestState.loading:
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(
                 color: AppColors.white,
               ),
