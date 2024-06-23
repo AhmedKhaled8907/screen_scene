@@ -69,3 +69,26 @@ class SimilarMoviesSection extends StatelessWidget {
     );
   }
 }
+
+class BlackBorder extends StatelessWidget {
+  const BlackBorder({
+    super.key,
+    required this.child,
+  });
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: Colors.black,
+          width: AppSize.s0_5,
+        ),
+        borderRadius: BorderRadius.circular(AppRadius.r8),
+      ),
+      child: child,
+    );
+  }
+}

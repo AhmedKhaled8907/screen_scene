@@ -81,15 +81,7 @@ class MovieDetailsViewBody extends StatelessWidget {
                   ),
                 ),
                 const MoreLikeThisText(),
-                const SliverPadding(
-                  padding: EdgeInsets.fromLTRB(
-                    AppSize.s16,
-                    AppSize.s0,
-                    AppSize.s16,
-                    AppSize.s24,
-                  ),
-                  sliver: SimilarMoviesSection(),
-                ),
+                const SimilarMoviesSection(),
               ],
             );
 

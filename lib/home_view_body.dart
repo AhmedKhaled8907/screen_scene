@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/colors_manager.dart';
+import 'package:movies_app/core/global/resources/strings_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/movies/presentation/views/movie_view/movies_view.dart';
 import 'package:movies_app/search/presentation/views/search_view.dart';
@@ -37,15 +38,15 @@ class _HomeViewBodyState extends State<HomeViewBody> {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.movie),
-            label: 'Movies',
+            label: AppString.moviesNav,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.tv),
-            label: 'TVs',
+            label: AppString.tvsNav,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
-            label: 'Search',
+            label: AppString.searchNav,
           ),
         ],
       ),

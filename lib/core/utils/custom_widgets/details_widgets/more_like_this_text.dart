@@ -16,7 +16,7 @@ class MoreLikeThisText extends StatelessWidget {
         AppSize.s16,
         AppSize.s16,
         AppSize.s16,
-        AppSize.s24,
+        AppSize.s16,
       ),
       sliver: SliverToBoxAdapter(
         child: FadeInUp(
