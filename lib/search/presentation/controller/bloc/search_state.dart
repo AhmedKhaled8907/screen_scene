@@ -11,20 +11,59 @@ class SearchInitial extends SearchState {}
 
 class SearchLoading extends SearchState {}
 
-class SearchSuccess extends SearchState {
+// Movies Search States
+class SearchMoviesSuccess extends SearchState {
   final List<MovieEntity> results;
 
-  const SearchSuccess(this.results);
+  const SearchMoviesSuccess(this.results);
 
   @override
   List<Object> get props => [results];
 }
 
-class SearchError extends SearchState {
+class SearchMoviesError extends SearchState {
   final String message;
 
-  const SearchError(this.message);
+  const SearchMoviesError(this.message);
 
   @override
   List<Object> get props => [message];
 }
+
+// TVs Search States
+class SearchTvsSuccess extends SearchState {
+  final List<TvEntity> results;
+
+  const SearchTvsSuccess(this.results);
+
+  @override
+  List<Object> get props => [results];
+}
+
+class SearchTvsError extends SearchState {
+  final String message;
+
+  const SearchTvsError(this.message);
+
+  @override
+  List<Object> get props => [message];
+}
+
+// // Persons Search States
+// class SearchPersonsSuccess extends SearchState {
+//   final List<PersonEntity> results;
+
+//   const SearchPersonsSuccess(this.results);
+
+//   @override
+//   List<Object> get props => [results];
+// }
+
+// class SearchPersonsError extends SearchState {
+//   final String message;
+
+//   const SearchPersonsError(this.message);
+
+//   @override
+//   List<Object> get props => [message];
+// }

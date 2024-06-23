@@ -29,8 +29,16 @@ class ApiConstants {
       "$baseUrl/tv/$movieId/recommendations?api_key=$apiKey";
 
   // Search Api Constants
-  static String multiSearchBaseUrl(String query) =>
-      "$baseUrl/search/movie?api_key=$apiKey&query=$query";
+  static String searchMoviesBaseUrl(String query) =>
+      "$baseUrl/search/$movie?api_key=$apiKey&query=$query";
+  static String searchTvsBaseUrl(String query) =>
+      "$baseUrl/search/$tv?api_key=$apiKey&query=$query";
+  static String searchPersonBaseUrl(String query) =>
+      "$baseUrl/search/$person?api_key=$apiKey&query=$query";
+      
+  static const String movie = "movie";
+  static const String tv = "tv";
+  static const String person = "person";
 
   static const String baseImageUrl = "https://image.tmdb.org/t/p/w500";
 

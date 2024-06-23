@@ -6,11 +6,11 @@ import 'package:movies_app/search/domain/repos/base_search_repo.dart';
 
 import '../../../movies/domain/entities/movie_entity.dart';
 
-class GetMultiSearchUseCase
+class GetSearchMoviesUseCase
     extends BaseUseCase<List<MovieEntity>, SearchMoviesParams> {
   final BaseSearchRepo baseSearchRepo;
 
-  GetMultiSearchUseCase(this.baseSearchRepo);
+  GetSearchMoviesUseCase(this.baseSearchRepo);
 
   @override
   Future<Either<Failure, List<MovieEntity>>> call(

@@ -3,19 +3,27 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_app/movies/domain/entities/movie_entity.dart';
 import 'package:movies_app/search/domain/use_cases/get_search_movies_use_case.dart';
 
+import '../../../../tvs/domain/entities/tv_entity.dart';
+import '../../../domain/use_cases/get_search_tvs_use_case.dart';
+
 part 'search_event.dart';
 part 'search_state.dart';
 
 class SearchBloc extends Bloc<SearchEvent, SearchState> {
-  final GetMultiSearchUseCase getMultiSearchUseCase;
+  final GetSearchMoviesUseCase getSearchMoviesUseCase;
+  final GetSearchTvsUseCase getSearchTvsUseCase;
 
-  SearchBloc(this.getMultiSearchUseCase) : super(SearchInitial()) {
-    on<SearchQueryChanged>(_onSearchQueryChanged);
+  SearchBloc(
+    this.getSearchMoviesUseCase,
+    this.getSearchTvsUseCase,
+  ) : super(SearchInitial()) {
+    on<SearchMoviesQueryChanged>(_onSearchMoviesQueryChanged);
+    on<SearchTvsQueryChanged>(_onSearchTvQueryChanged);
     on<ClearSearchResults>(_onClearSearchResults);
   }
 
-  void _onSearchQueryChanged(
-    SearchQueryChanged event,
+  void _onSearchMoviesQueryChanged(
+    SearchMoviesQueryChanged event,
     Emitter<SearchState> emit,
   ) async {
     if (event.query.isEmpty) {
@@ -24,14 +32,35 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
     }
     emit(SearchLoading());
 
-    final result = await getMultiSearchUseCase(SearchMoviesParams(
+    final result = await getSearchMoviesUseCase(SearchMoviesParams(
       query: event.query,
     ));
     result.fold(
       (failure) => emit(
-        SearchError(failure.message),
+        SearchMoviesError(failure.message),
       ),
-      (result) => emit(SearchSuccess(result)),
+      (result) => emit(SearchMoviesSuccess(result)),
+    );
+  }
+
+  void _onSearchTvQueryChanged(
+    SearchTvsQueryChanged event,
+    Emitter<SearchState> emit,
+  ) async {
+    if (event.query.isEmpty) {
+      emit(SearchInitial());
+      return;
+    }
+    emit(SearchLoading());
+
+    final result = await getSearchTvsUseCase(SearchTvsParams(
+      query: event.query,
+    ));
+    result.fold(
+      (failure) => emit(
+        SearchTvsError(failure.message),
+      ),
+      (result) => emit(SearchTvsSuccess(result)),
     );
   }
 

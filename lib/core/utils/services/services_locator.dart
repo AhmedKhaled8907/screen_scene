@@ -30,6 +30,7 @@ import 'package:movies_app/tvs/presentation/controller/tv_details_bloc/similar_t
 import 'package:movies_app/tvs/presentation/controller/tv_details_bloc/tv_details_bloc.dart';
 
 import '../../../movies/domain/use_cases/get_top_rated_movies_use_case.dart';
+import '../../../search/domain/use_cases/get_search_tvs_use_case.dart';
 
 final sl = GetIt.instance;
 
@@ -84,11 +85,11 @@ class ServicesLocator {
     /////////////////////////////////////////////////////////////////////
 
     /// Search Blocs
-    sl.registerFactory(() => SearchBloc(sl()));
+    sl.registerFactory(() => SearchBloc(sl(), sl()));
 
     /// Search USE CASES
-    sl.registerLazySingleton(() => GetMultiSearchUseCase(sl()));
-    // sl.registerLazySingleton(() => GetPopularSearchUseCase(sl()));
+    sl.registerLazySingleton(() => GetSearchMoviesUseCase(sl()));
+    sl.registerLazySingleton(() => GetSearchTvsUseCase(sl()));
 
     /// Search REPOS
     sl.registerLazySingleton<BaseSearchRepo>(

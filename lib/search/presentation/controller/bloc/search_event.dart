@@ -1,7 +1,5 @@
 part of 'search_bloc.dart';
 
-
-
 abstract class SearchEvent extends Equatable {
   const SearchEvent();
 
@@ -9,10 +7,18 @@ abstract class SearchEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class SearchQueryChanged extends SearchEvent {
+class SearchMoviesQueryChanged extends SearchEvent {
   final String query;
 
-  const SearchQueryChanged({required this.query});
+  const SearchMoviesQueryChanged({required this.query});
+
+  @override
+  List<Object> get props => [query];
+}
+class SearchTvsQueryChanged extends SearchEvent {
+  final String query;
+
+  const SearchTvsQueryChanged({required this.query});
 
   @override
   List<Object> get props => [query];

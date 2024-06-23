@@ -8,7 +8,7 @@ import 'package:movies_app/search/presentation/views/widgets/search_results.dart
 
 import '../../../core/global/resources/font_manager.dart';
 import 'widgets/search_bar_items.dart';
-import 'widgets/search_results_item.dart';
+import 'widgets/search_title_list_view.dart';
 
 class SearchViewBody extends StatefulWidget {
   const SearchViewBody({super.key});
@@ -22,6 +22,7 @@ class SearchViewBodyState extends State<SearchViewBody> {
   bool _showNoDataMessage = false;
   String _lastQuery = '';
   final FocusNode _focusNode = FocusNode();
+  int _selectedSearchType = 0;
 
   @override
   void initState() {
@@ -44,13 +45,42 @@ class SearchViewBodyState extends State<SearchViewBody> {
     } else {
       if (query != _lastQuery) {
         _lastQuery = query;
-        context.read<SearchBloc>().add(SearchQueryChanged(query: query));
+
+        _performSearch(query);
         _startLoadingTimeout();
       }
     }
   }
 
+  void _performSearch(String query) {
+    if (_selectedSearchType == 0) {
+      context.read<SearchBloc>().add(SearchMoviesQueryChanged(query: query));
+    } else if (_selectedSearchType == 1) {
+      context.read<SearchBloc>().add(SearchTvsQueryChanged(query: query));
+    }
+    // else if (_selectedSearchType == 2) {
+    //   context.read<SearchBloc>().add(SearchPersonQueryChanged(query: query));
+    // }
+  }
+
+  void onSearchTypeChanged(int newIndex) {
+    _clearSearch();
+
+    setState(() {
+      _selectedSearchType = newIndex;
+    });
+    if (_lastQuery.isNotEmpty) {
+      _lastQuery = '';
+      _performSearch(_lastQuery);
+    }
+  }
+
   void _clearSearch() {
+    _controller.clear();
+    context.read<SearchBloc>().add(ClearSearchResults());
+  }
+
+  void _clearSearchWithUnfocus() {
     _controller.clear();
     _focusNode.unfocus();
     context.read<SearchBloc>().add(ClearSearchResults());
@@ -63,14 +93,15 @@ class SearchViewBodyState extends State<SearchViewBody> {
       _showNoDataMessage = false;
     });
 
-    Future.delayed(const Duration(seconds: AppDuration.d3), () {
+    Future.delayed(const Duration(seconds: AppDuration.d5), () {
       if (mounted && _lastQuery == currentQuery) {
         final state = context.read<SearchBloc>().state;
         if (state is SearchLoading) {
           setState(() {
             _showNoDataMessage = true;
           });
-        } else if (state is SearchSuccess && state.results.isEmpty) {
+        } else if (state is SearchMoviesSuccess ||
+            state is SearchTvsSuccess && state.results.isEmpty) {
           setState(() {
             _showNoDataMessage = true;
           });
@@ -86,13 +117,15 @@ class SearchViewBodyState extends State<SearchViewBody> {
         children: [
           SearchBarItems(
             controller: _controller,
-            clearSearch: _clearSearch,
+            clearSearch: _clearSearchWithUnfocus,
             focusNode: _focusNode,
           ),
           const SizedBox(height: AppSize.s8),
-          const SizedBox(
+          SizedBox(
             height: AppSize.s50,
-            child: SearchTitleListView(),
+            child: SearchTitleListView(
+              onSearchTypeChanged: onSearchTypeChanged,
+            ),
           ),
           const SizedBox(height: AppSize.s16),
           const Divider(

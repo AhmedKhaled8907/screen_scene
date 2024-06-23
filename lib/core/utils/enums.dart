@@ -4,8 +4,4 @@ enum RequestState {
   error,
 }
 
-enum SearchType {
-  movies,
-  tvs,
-  people,
-}
+

@@ -1,9 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/global/resources/colors_manager.dart';
-import 'package:movies_app/core/global/resources/styles_manager.dart';
 import 'package:movies_app/core/utils/custom_widgets/details_widgets/details_rating.dart';
-import 'package:movies_app/movies/domain/entities/movie_entity.dart';
 import 'package:movies_app/search/presentation/views/widgets/search_results_text.dart';
 
 import '../../../../core/global/resources/values_manager.dart';
@@ -13,10 +10,16 @@ import '../../../../core/utils/custom_widgets/poster_image.dart';
 class SearchResultsItem extends StatelessWidget {
   const SearchResultsItem({
     super.key,
-    required this.item,
+    required this.title,
+    required this.posterPath,
+    required this.releaseDate,
+    required this.voteAverage,
   });
 
-  final MovieEntity item;
+  final String title;
+  final String posterPath;
+  final String releaseDate;
+  final double voteAverage;
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +43,7 @@ class SearchResultsItem extends StatelessWidget {
                   height: AppSize.s120,
                   width: AppSize.s80,
                   child: PosterImage(
-                    posterPath: item.posterPath,
+                    posterPath: posterPath,
                   ),
                 ),
                 const SizedBox(width: AppPadding.p16),
@@ -48,16 +51,16 @@ class SearchResultsItem extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SearchResultText(title: item.title),
+                      SearchResultText(title: title),
                       const SizedBox(height: AppPadding.p4),
                       Row(
                         children: [
                           DetailsDateRelease(
-                            releaseDate: item.releaseDate.toString(),
+                            releaseDate: releaseDate.toString(),
                           ),
                           const SizedBox(width: AppSize.s16),
                           Rating(
-                            voteAverage: item.voteAverage.toDouble(),
+                            voteAverage: voteAverage.toDouble(),
                           ),
                         ],
                       ),
@@ -73,62 +76,6 @@ class SearchResultsItem extends StatelessWidget {
           ),
         ],
       ),
-    );
-  }
-}
-
-class SearchTitleListView extends StatefulWidget {
-  const SearchTitleListView({super.key});
-
-  @override
-  SearchTitleListViewState createState() => SearchTitleListViewState();
-}
-
-class SearchTitleListViewState extends State<SearchTitleListView> {
-  int _selectedIndex = 0;
-
-  final List<String> items = ["Movies", "TVs", "People"];
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      scrollDirection: Axis.horizontal,
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        return GestureDetector(
-          onTap: () {
-            setState(() {
-              _selectedIndex = index;
-            });
-          },
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8.0),
-              border: Border.all(color: Colors.white),
-              color:
-                  _selectedIndex == index ? AppColors.gold : Colors.transparent,
-            ),
-            padding: const EdgeInsets.symmetric(
-              vertical: AppPadding.p2,
-              horizontal: AppPadding.p8,
-            ),
-            margin: const EdgeInsets.symmetric(
-              // vertical: AppMargin.m2,
-              horizontal: AppMargin.m8,
-            ),
-            child: Center(
-              child: Text(
-                items[index],
-                style: getSemiBoldStyle(fontSize: 16.0).copyWith(
-                  color: _selectedIndex == index
-                      ? AppColors.black
-                      : AppColors.white,
-                ),
-              ),
-            ),
-          ),
-        );
-      },
     );
   }
 }
