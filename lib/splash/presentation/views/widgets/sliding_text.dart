@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_app/core/global/resources/colors_manager.dart';
 import 'package:movies_app/core/global/resources/font_manager.dart';
 import 'package:movies_app/core/global/resources/strings_manager.dart';
 import 'package:movies_app/core/global/resources/styles_manager.dart';
-import 'package:movies_app/core/global/resources/values_manager.dart';
+import '../../../../core/global/theme/theme_bloc/theme_bloc.dart';
 
 class SlidingText extends StatelessWidget {
   const SlidingText({
@@ -20,12 +21,18 @@ class SlidingText extends StatelessWidget {
         builder: (context, Widget? child) {
           return SlideTransition(
             position: slidingAnimation,
-            child: Text(
-              AppString.slidingText,
-              style: getRegularStyle(fontSize: FontSize.s14).copyWith(
-                color: AppColors.white.withOpacity(AppSize.s0_5),
-              ),
-              textAlign: TextAlign.center,
+            child: BlocBuilder<ThemeBloc, ThemeState>(
+              builder: (context, state) {
+                bool isDarkMode = state.isDarkMode;
+
+                return Text(
+                  AppString.slidingText,
+                  style: getRegularStyle(fontSize: FontSize.s14).copyWith(
+                    color: isDarkMode ? AppColors.gold : AppColors.darkGold,
+                  ),
+                  textAlign: TextAlign.center,
+                );
+              },
             ),
           );
         });

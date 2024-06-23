@@ -2,7 +2,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/colors_manager.dart';
 import 'package:movies_app/core/utils/custom_widgets/details_widgets/details_date_release.dart';
-import 'package:movies_app/core/utils/custom_widgets/details_widgets/details_rating.dart';
+import 'package:movies_app/core/utils/custom_widgets/see_more_widgets/see_more_rating.dart';
 import 'package:movies_app/core/utils/custom_widgets/see_more_widgets/see_more_title.dart';
 import 'package:movies_app/core/utils/custom_widgets/poster_image.dart';
 
@@ -10,8 +10,8 @@ import 'package:movies_app/core/utils/custom_widgets/see_more_widgets/see_more_o
 
 import '../../../global/resources/values_manager.dart';
 
-class PopularSeeMoreViewItem extends StatelessWidget {
-  const PopularSeeMoreViewItem({
+class SeeMoreViewItem extends StatelessWidget {
+  const SeeMoreViewItem({
     super.key,
     required this.title,
     required this.posterPath,
@@ -52,6 +52,7 @@ class PopularSeeMoreViewItem extends StatelessWidget {
                     padding: const EdgeInsets.only(top: AppSize.s8),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         SeeMoreTitle(title: title),
                         const SizedBox(height: AppSize.s16),
@@ -59,7 +60,7 @@ class PopularSeeMoreViewItem extends StatelessWidget {
                           children: [
                             DetailsDateRelease(releaseDate: releaseDate),
                             const SizedBox(width: AppSize.s16),
-                            Rating(
+                            SeeMoreRating(
                               voteAverage: voteAverage.toDouble(),
                             ),
                           ],

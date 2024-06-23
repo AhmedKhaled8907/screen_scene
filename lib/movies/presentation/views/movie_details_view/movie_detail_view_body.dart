@@ -62,6 +62,7 @@ class MovieDetailsViewBody extends StatelessWidget {
                               const SizedBox(width: AppSize.s16),
                               Rating(
                                 voteAverage: movie.voteAverage,
+                                
                               ),
                               const SizedBox(width: AppSize.s16),
                               MovieDetailsDuration(
@@ -81,7 +82,15 @@ class MovieDetailsViewBody extends StatelessWidget {
                   ),
                 ),
                 const MoreLikeThisText(),
-                const SimilarMoviesSection(),
+                const SliverPadding(
+                  padding: EdgeInsets.fromLTRB(
+                    AppSize.s12,
+                    AppSize.s16,
+                    AppSize.s4,
+                    AppSize.s16,
+                  ),
+                  sliver: SimilarMoviesSection(),
+                ),
               ],
             );
 

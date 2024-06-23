@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/global/resources/colors_manager.dart';
 import 'package:movies_app/core/global/resources/strings_manager.dart';
-import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/movies/presentation/views/movie_view/movies_view.dart';
 import 'package:movies_app/search/presentation/views/search_view.dart';
 import 'package:movies_app/tvs/presentation/views/tv_view/tvs_view.dart';
+
 
 class HomeViewBody extends StatefulWidget {
   const HomeViewBody({super.key});
@@ -28,8 +27,6 @@ class _HomeViewBodyState extends State<HomeViewBody> {
       body: viewsList[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
-        selectedItemColor: AppColors.white,
-        unselectedItemColor: AppColors.grey.withOpacity(AppSize.s0_75),
         onTap: (index) {
           setState(() {
             currentIndex = index;

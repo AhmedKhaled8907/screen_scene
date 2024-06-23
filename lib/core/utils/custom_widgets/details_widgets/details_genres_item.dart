@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_app/core/global/resources/colors_manager.dart';
 import 'package:movies_app/core/global/resources/font_manager.dart';
 import 'package:movies_app/core/global/resources/styles_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
 import 'package:movies_app/core/utils/entities/genres_entity.dart';
+
+import '../../../global/theme/theme_bloc/theme_bloc.dart';
 
 class DetailsGenresItem extends StatelessWidget {
   const DetailsGenresItem({
@@ -15,24 +18,32 @@ class DetailsGenresItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: AppPadding.p8,
-        vertical: AppPadding.p4,
-      ),
-      decoration: BoxDecoration(
-        border: Border.all(color: AppColors.white),
-        borderRadius: BorderRadius.circular(AppRadius.r12),
-      ),
-      child: Center(
-        child: Text(
-          genres.name,
-          style: getMediumStyle(
-            fontSize: FontSize.s14,
-            letterSpacing: AppSize.s1_25,
+    return BlocBuilder<ThemeBloc, ThemeState>(
+      builder: (context, state) {
+        bool isDarkMode = state.isDarkMode;
+        return Container(
+          padding: const EdgeInsets.symmetric(
+            horizontal: AppPadding.p8,
+            vertical: AppPadding.p4,
           ),
-        ),
-      ),
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: isDarkMode ? AppColors.white : AppColors.black,
+              width: AppSize.s1,
+            ),
+            borderRadius: BorderRadius.circular(AppRadius.r12),
+          ),
+          child: Center(
+            child: Text(
+              genres.name,
+              style: getMediumStyle(
+                fontSize: FontSize.s14,
+                letterSpacing: AppSize.s1_25,
+              ),
+            ),
+          ),
+        );
+      },
     );
   }
 }

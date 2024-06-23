@@ -2,7 +2,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/colors_manager.dart';
 import 'package:movies_app/core/utils/custom_widgets/details_widgets/details_date_release.dart';
-import 'package:movies_app/core/utils/custom_widgets/details_widgets/details_rating.dart';
+import 'package:movies_app/core/utils/custom_widgets/see_more_widgets/see_more_rating.dart';
 import 'package:movies_app/core/utils/custom_widgets/see_more_widgets/see_more_title.dart';
 import 'package:movies_app/core/utils/custom_widgets/poster_image.dart';
 
@@ -10,8 +10,8 @@ import 'package:movies_app/core/utils/custom_widgets/see_more_widgets/see_more_o
 
 import '../../../global/resources/values_manager.dart';
 
-class TopRatedSeeMoreViewItem extends StatelessWidget {
-  const TopRatedSeeMoreViewItem({
+class SeeMoreItems extends StatelessWidget {
+  const SeeMoreItems({
     super.key,
     required this.title,
     required this.posterPath,
@@ -49,9 +49,13 @@ class TopRatedSeeMoreViewItem extends StatelessWidget {
                 const SizedBox(width: AppSize.s8),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.only(top: AppSize.s8),
+                    padding: const EdgeInsets.only(
+                      top: AppPadding.p8,
+                      right: AppPadding.p8,
+                    ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         SeeMoreTitle(title: title),
                         const SizedBox(height: AppSize.s16),
@@ -59,7 +63,7 @@ class TopRatedSeeMoreViewItem extends StatelessWidget {
                           children: [
                             DetailsDateRelease(releaseDate: releaseDate),
                             const SizedBox(width: AppSize.s16),
-                            Rating(
+                            SeeMoreRating(
                               voteAverage: voteAverage.toDouble(),
                             ),
                           ],

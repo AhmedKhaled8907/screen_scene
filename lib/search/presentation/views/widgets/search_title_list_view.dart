@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_app/core/global/resources/strings_manager.dart';
 import '../../../../core/global/resources/colors_manager.dart';
 import '../../../../core/global/resources/styles_manager.dart';
 import '../../../../core/global/resources/values_manager.dart';
+import '../../../../core/global/theme/theme_bloc/theme_bloc.dart';
 
 class SearchTitleListView extends StatefulWidget {
   final Function(int) onSearchTypeChanged;
@@ -15,7 +18,11 @@ class SearchTitleListView extends StatefulWidget {
 class SearchTitleListViewState extends State<SearchTitleListView> {
   int _selectedIndex = 0;
 
-  final List<String> items = ["Movies", "TVs", "People"];
+  final List<String> items = [
+    AppString.moviesNav,
+    AppString.tvsNav,
+    AppString.person,
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -30,30 +37,44 @@ class SearchTitleListViewState extends State<SearchTitleListView> {
             });
             widget.onSearchTypeChanged(_selectedIndex);
           },
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8.0),
-              border: Border.all(color: Colors.white),
-              color:
-                  _selectedIndex == index ? AppColors.gold : Colors.transparent,
-            ),
-            padding: const EdgeInsets.symmetric(
-              vertical: AppPadding.p2,
-              horizontal: AppPadding.p8,
-            ),
-            margin: const EdgeInsets.symmetric(
-              horizontal: AppMargin.m8,
-            ),
-            child: Center(
-              child: Text(
-                items[index],
-                style: getSemiBoldStyle(fontSize: 16.0).copyWith(
+          child: BlocBuilder<ThemeBloc, ThemeState>(
+            buildWhen: (previous, current) =>
+                previous.isDarkMode != current.isDarkMode,
+            builder: (context, state) {
+              bool isDarkMode = state.isDarkMode;
+              return Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  border: Border.all(
+                    color: isDarkMode ? Colors.white : Colors.black,
+                  ),
                   color: _selectedIndex == index
-                      ? AppColors.black
-                      : AppColors.white,
+                      ? AppColors.gold
+                      : Colors.transparent,
                 ),
-              ),
-            ),
+                padding: const EdgeInsets.symmetric(
+                  vertical: AppPadding.p2,
+                  horizontal: AppPadding.p8,
+                ),
+                margin: const EdgeInsets.symmetric(
+                  horizontal: AppMargin.m8,
+                ),
+                child: Center(
+                  child: Text(
+                    items[index],
+                    style: getSemiBoldStyle(fontSize: 16.0).copyWith(
+                      color: isDarkMode
+                          ? _selectedIndex == index
+                              ? AppColors.black
+                              : AppColors.white
+                          : _selectedIndex == index
+                              ? AppColors.black
+                              : AppColors.black,
+                    ),
+                  ),
+                ),
+              );
+            },
           ),
         );
       },

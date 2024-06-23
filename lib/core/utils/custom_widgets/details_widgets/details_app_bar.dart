@@ -25,7 +25,10 @@ class DetailsAppBar extends StatelessWidget {
           shape: BoxShape.circle,
         ),
         child: IconButton(
-          icon: const Icon(Icons.arrow_back),
+          icon: Icon(
+            Icons.arrow_back,
+            color: AppColors.white,
+          ),
           onPressed: () {
             Navigator.of(context).pop();
           },

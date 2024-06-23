@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app/core/global/resources/colors_manager.dart';
 import 'package:movies_app/core/global/resources/styles_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
 
@@ -15,11 +16,11 @@ class SeeMoreTitle extends StatelessWidget {
     return Text(
       title,
       maxLines: 2,
+      overflow: TextOverflow.ellipsis,
       style: getBoldStyle(
         letterSpacing: AppSize.s1_25,
         fontSize: AppSize.s18,
-        overflow: TextOverflow.ellipsis,
-      ),
+      ).copyWith(color: AppColors.white),
     );
   }
 }

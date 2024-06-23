@@ -26,7 +26,7 @@ class DetailsDateRelease extends StatelessWidget {
         releaseDate.split('-')[AppSize.s0.toInt()],
         style: getMediumStyle(
           fontSize: AppSize.s16,
-        ),
+        ).copyWith(color: AppColors.white),
       ),
     );
   }

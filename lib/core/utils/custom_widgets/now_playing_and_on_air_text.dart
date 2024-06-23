@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/colors_manager.dart';
+import 'package:movies_app/core/global/resources/font_manager.dart';
 import 'package:movies_app/core/global/resources/styles_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
 
@@ -25,7 +26,7 @@ class NowPlayingAndOnAirText extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(
+                const Icon(
                   Icons.circle,
                   color: AppColors.redAccent,
                   size: AppSize.s16,
@@ -33,7 +34,7 @@ class NowPlayingAndOnAirText extends StatelessWidget {
                 const SizedBox(width: AppSize.s4),
                 Text(
                   itemText.toUpperCase(),
-                  style: getRegularStyle(),
+                  style: getMediumStyle(fontSize: FontSize.s16),
                 ),
               ],
             ),

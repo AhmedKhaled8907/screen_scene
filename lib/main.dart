@@ -21,34 +21,34 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => ThemeBloc()..add(LoadThemeEvent()),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => ThemeBloc()..add(LoadThemeEvent()),
+        ),
+        BlocProvider(
+          create: (context) => sl<MovieBloc>()
+            ..add(GetNowPlayingMoviesEvent())
+            ..add(GetPopularMoviesEvent())
+            ..add(GetTopRatedMoviesEvent()),
+        ),
+        BlocProvider(
+          create: (context) => sl<TvBloc>()
+            ..add(GetOnTheAirTvsEvent())
+            ..add(GetPopularTvsEvent())
+            ..add(GetTopRatedTvsEvent()),
+        ),
+        BlocProvider(
+          create: (context) => sl<SearchBloc>(),
+        ),
+      ],
       child: BlocBuilder<ThemeBloc, ThemeState>(
-        builder: (context, theme) {
-          return MultiBlocProvider(
-            providers: [
-              BlocProvider(
-                create: (context) => sl<MovieBloc>()
-                  ..add(GetNowPlayingMoviesEvent())
-                  ..add(GetPopularMoviesEvent())
-                  ..add(GetTopRatedMoviesEvent()),
-              ),
-              BlocProvider(
-                create: (context) => sl<TvBloc>()
-                  ..add(GetOnTheAirTvsEvent())
-                  ..add(GetPopularTvsEvent())
-                  ..add(GetTopRatedTvsEvent()),
-              ),
-              BlocProvider(
-                create: (context) => sl<SearchBloc>(),
-              ),
-            ],
-            child: MaterialApp(
-              title: AppString.appName,
-              debugShowCheckedModeBanner: false,
-              theme: theme.themeData,
-              home: const SplashView(),
-            ),
+        builder: (context, state) {
+          return MaterialApp(
+            title: AppString.appName,
+            debugShowCheckedModeBanner: false,
+            theme: state.themeData,
+            home: const SplashView(),
           );
         },
       ),

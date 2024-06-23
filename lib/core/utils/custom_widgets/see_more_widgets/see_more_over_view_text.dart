@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app/core/global/resources/colors_manager.dart';
+import 'package:movies_app/core/global/resources/styles_manager.dart';
 
+import '../../../global/resources/font_manager.dart';
 
 class SeeMoreOverViewText extends StatelessWidget {
   const SeeMoreOverViewText({
@@ -15,10 +18,10 @@ class SeeMoreOverViewText extends StatelessWidget {
       child: Text(
         overView,
         maxLines: 2,
-        style: const TextStyle(
-          fontSize: 16,
-          overflow: TextOverflow.ellipsis,
-        ),
+        overflow: TextOverflow.ellipsis,
+        style: getRegularStyle(
+          fontSize: FontSize.s16,
+        ).copyWith(color: AppColors.white),
       ),
     );
   }

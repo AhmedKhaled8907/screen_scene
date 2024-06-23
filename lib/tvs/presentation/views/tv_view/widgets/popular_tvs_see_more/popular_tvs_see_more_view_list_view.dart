@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:movies_app/tvs/domain/entities/tv_entity.dart';
 import 'package:movies_app/tvs/presentation/views/tv_details_view/tv_details_view.dart';
 
-import '../../../../../../core/utils/custom_widgets/see_more_widgets/popular_see_more_view_item.dart';
+import '../../../../../../core/utils/custom_widgets/see_more_widgets/see_more_items.dart';
 
 class PopularTvsSeeMoreListView extends StatelessWidget {
   const PopularTvsSeeMoreListView({
@@ -32,7 +32,7 @@ class PopularTvsSeeMoreListView extends StatelessWidget {
           },
           child: Column(
             children: [
-              PopularSeeMoreViewItem(
+              SeeMoreItems(
                 title: item.title,
                 posterPath: item.posterPath,
                 overview: item.overview,

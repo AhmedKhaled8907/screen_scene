@@ -7,7 +7,6 @@ TextStyle _getTextStyle(
   FontWeight fontWeight,
   double fontSize,
   double? letterSpacing,
-  TextOverflow? overflow,
 ) {
   return GoogleFonts.poppins(
     fontWeight: fontWeight,
@@ -20,13 +19,11 @@ TextStyle _getTextStyle(
 TextStyle getLightStyle({
   double fontSize = FontSize.s12,
   double? letterSpacing = AppSize.s1,
-  TextOverflow? overflow = TextOverflow.visible,
 }) {
   return _getTextStyle(
     FontWeightManager.light,
     fontSize,
     letterSpacing,
-    overflow,
   );
 }
 
@@ -34,13 +31,11 @@ TextStyle getLightStyle({
 TextStyle getRegularStyle({
   double fontSize = FontSize.s16,
   double? letterSpacing = AppSize.s1,
-  TextOverflow? overflow = TextOverflow.visible,
 }) {
   return _getTextStyle(
     FontWeightManager.regular,
     fontSize,
     letterSpacing,
-    overflow,
   );
 }
 
@@ -48,13 +43,11 @@ TextStyle getRegularStyle({
 TextStyle getMediumStyle({
   double fontSize = FontSize.s20,
   double? letterSpacing = AppSize.s1,
-  TextOverflow? overflow = TextOverflow.visible,
 }) {
   return _getTextStyle(
     FontWeightManager.medium,
     fontSize,
     letterSpacing,
-    overflow,
   );
 }
 
@@ -62,13 +55,11 @@ TextStyle getMediumStyle({
 TextStyle getSemiBoldStyle({
   double fontSize = FontSize.s12,
   double? letterSpacing = AppSize.s1,
-  TextOverflow? overflow = TextOverflow.visible,
 }) {
   return _getTextStyle(
     FontWeightManager.semiBold,
     fontSize,
     letterSpacing,
-    overflow,
   );
 }
 
@@ -76,12 +67,10 @@ TextStyle getSemiBoldStyle({
 TextStyle getBoldStyle({
   double fontSize = FontSize.s22,
   double? letterSpacing = AppSize.s1,
-  TextOverflow? overflow = TextOverflow.visible,
 }) {
   return _getTextStyle(
     FontWeightManager.bold,
     fontSize,
     letterSpacing,
-    overflow,
   );
 }

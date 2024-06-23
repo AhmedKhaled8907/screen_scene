@@ -17,11 +17,18 @@ class AppString {
   static const anythingYouWant = 'Search for anything you want';
   static const noDataToShow = 'No data to show';
   static const noResultsFound = 'No Results Found';
-
   static const moreLikeThis = "More like this";
+  static const person = "Person";
+
   static const String movieScrollViewKey = 'movieScrollView';
   static const String movieDetailScrollViewKey = 'movieDetailScrollView';
   static const String openMovieMinimalDetailKey = 'openMovieMinimalDetail';
+
+  // Theme Constants
+  static const String light = 'Light';
+  static const String dark = 'Dark';
+  static const String theme = 'theme';
+
 
   // Tv Constants
   static const popularTVs = 'Popular TVs';

@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static Color white = Colors.white;
-  static Color black = Colors.black;
-  static Color transparent = Colors.transparent;
-  static Color redAccent = Colors.redAccent;
-  static Color red = Colors.red;
-  static Color grey = Colors.grey;
-  static Color blueAccent = Colors.blueAccent;
-  static Color gold = const Color(0xFFFFD700);
+  static const Color white = Colors.white;
+  static const Color black = Colors.black;
+  static const Color transparent = Colors.transparent;
+  static const Color redAccent = Colors.redAccent;
+  static const Color red = Colors.red;
+  static const Color grey = Colors.grey;
+  static const Color blueAccent = Colors.blueAccent;
+  static const Color gold = Color(0xFFFFD700);
+  static const Color darkGold = Color(0xFF875a28);
+
+  // Background colors
+  static Color? lightBackground = Colors.grey[AppColorShades.colorShade200];
   // static Color grey = const Color(0xff737477);
   // static Color lightGrey = const Color(0xff9E9E9E);
 
@@ -22,6 +26,7 @@ class AppColors {
 }
 
 class AppColorShades {
+  static const int colorShade200 = 200;
   static const int colorShade700 = 700;
   static const int colorShade800 = 800;
   static const int colorShade850 = 850;
