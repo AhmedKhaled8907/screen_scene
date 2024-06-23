@@ -37,21 +37,16 @@ class PopularMoviesComponents extends StatelessWidget {
                   itemCount: state.popularMovies.length,
                   itemBuilder: (context, index) {
                     final movie = state.popularMovies[index];
-                    return Container(
-                      padding: const EdgeInsets.only(
-                        right: AppPadding.p8,
-                      ),
-                      child: InkWell(
-                        /// TODO : NAVIGATE TO MOVIE DETAILS
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => MovieDetailView(
-                              id: movie.id,
-                            ),
-                          ));
-                        },
-                        child: PosterImage(posterPath: movie.posterPath),
-                      ),
+                    return InkWell(
+                      /// TODO : NAVIGATE TO MOVIE DETAILS
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => MovieDetailView(
+                            id: movie.id,
+                          ),
+                        ));
+                      },
+                      child: PosterImage(posterPath: movie.posterPath),
                     );
                   },
                 ),

@@ -34,7 +34,7 @@ class TitleWithShade extends StatelessWidget {
                 AppColors.black,
                 AppColors.transparent,
               ],
-              stops: [AppSize.s0, AppSize.s0_3, AppSize.s0_5, AppSize.s1],
+              stops: [AppSize.s0, AppSize.s0_2, AppSize.s0_3, AppSize.s1],
             ).createShader(
               Rect.fromLTRB(AppSize.s0, AppSize.s0, rect.width, rect.height),
             );

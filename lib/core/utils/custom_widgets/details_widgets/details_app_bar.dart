@@ -19,9 +19,9 @@ class DetailsAppBar extends StatelessWidget {
       pinned: true,
       expandedHeight: AppSize.s250,
       leading: Container(
-        margin: const EdgeInsets.only(left: AppMargin.m4),
+        margin: const EdgeInsets.only(left: AppMargin.m8),
         decoration: BoxDecoration(
-          color: Colors.grey[500],
+          color: Colors.grey[AppColorShades.colorShade800],
           shape: BoxShape.circle,
         ),
         child: IconButton(
@@ -48,7 +48,7 @@ class DetailsAppBar extends StatelessWidget {
                   AppColors.black,
                   AppColors.transparent,
                 ],
-                stops: [AppSize.s0, AppSize.s0_5, AppSize.s1, AppSize.s1],
+                stops: [AppSize.s0, AppSize.s0_3, AppSize.s1, AppSize.s1],
               ).createShader(
                 Rect.fromLTRB(AppSize.s0, AppSize.s0, rect.width, rect.height),
               );

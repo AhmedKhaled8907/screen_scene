@@ -16,8 +16,13 @@ ThemeData getThemeDataLight() {
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: AppColors.lightBackground,
       elevation: AppSize.s0,
-      selectedItemColor: AppColors.darkGold,
-      unselectedItemColor: AppColors.black.withOpacity(AppSize.s0_5),
+      showSelectedLabels: true,
+      showUnselectedLabels: true,
+      selectedIconTheme: const IconThemeData(
+        fill: 1.0,
+      ),
+      selectedItemColor: AppColors.black,
+      unselectedItemColor: AppColors.black.withOpacity(AppSize.s0_3),
       selectedLabelStyle: getMediumStyle(
         fontSize: FontSize.s14,
       ),

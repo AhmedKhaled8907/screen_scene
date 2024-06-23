@@ -10,9 +10,7 @@ class AppString {
   static const nowPlaying = 'Now Playing';
   static const onTheAir = 'On The Air';
   static const search = 'Search';
-  static const searchNav = 'Search';
-  static const moviesNav = 'Movies';
-  static const tvsNav = 'Tvs';
+  
   static const cancel = 'Cancel';
   static const anythingYouWant = 'Search for anything you want';
   static const noDataToShow = 'No data to show';
@@ -21,6 +19,13 @@ class AppString {
   static const person = "Person";
   static const more = "More";
   static const less = "Less";
+
+
+  static const searchNav = 'Search';
+  static const moviesNav = 'Movies';
+  static const tvsNav = 'Tvs';
+  static const settingsNav = 'Settings';
+
 
   static const String movieScrollViewKey = 'movieScrollView';
   static const String movieDetailScrollViewKey = 'movieDetailScrollView';

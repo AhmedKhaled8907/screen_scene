@@ -1,7 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_app/core/global/resources/colors_manager.dart';
 import 'package:movies_app/core/global/resources/constants_manager.dart';
 import 'package:movies_app/core/global/resources/strings_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
@@ -27,10 +26,8 @@ class MovieDetailsViewBody extends StatelessWidget {
       builder: (context, state) {
         switch (state.movieDetailsState) {
           case RequestState.loading:
-            return Center(
-              child: CircularProgressIndicator(
-                color: AppColors.white,
-              ),
+            return const Center(
+              child: CircularProgressIndicator(),
             );
 
           case RequestState.loaded:
@@ -62,7 +59,6 @@ class MovieDetailsViewBody extends StatelessWidget {
                               const SizedBox(width: AppSize.s16),
                               Rating(
                                 voteAverage: movie.voteAverage,
-                                
                               ),
                               const SizedBox(width: AppSize.s16),
                               MovieDetailsDuration(
