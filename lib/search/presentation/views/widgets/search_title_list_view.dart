@@ -21,7 +21,6 @@ class SearchTitleListViewState extends State<SearchTitleListView> {
   final List<String> items = [
     AppString.moviesNav,
     AppString.tvsNav,
-    AppString.person,
   ];
 
   @override
@@ -46,7 +45,7 @@ class SearchTitleListViewState extends State<SearchTitleListView> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   border: Border.all(
-                    color: isDarkMode ? Colors.white : Colors.black,
+                    color: isDarkMode ? AppColors.grey : Colors.black,
                   ),
                   color: _selectedIndex == index
                       ? AppColors.gold

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app/core/global/resources/strings_manager.dart';
+import 'package:movies_app/core/global/resources/styles_manager.dart';
 import 'package:movies_app/settings/presentation/views/settings_view_body.dart';
 
 class SettingsView extends StatelessWidget {
@@ -6,9 +8,15 @@ class SettingsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       child: Scaffold(
-        body: SettingsViewBody(),
+        appBar: AppBar(
+          title: Text(
+            AppString.settingsNav,
+            style: getBoldStyle(),
+          ),
+        ),
+        body: const SettingsViewBody(),
       ),
     );
   }

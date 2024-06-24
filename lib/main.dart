@@ -4,7 +4,6 @@ import 'package:movies_app/Splash/presentation/views/splash_view.dart';
 import 'package:movies_app/core/global/resources/strings_manager.dart';
 import 'package:movies_app/core/utils/services/services_locator.dart';
 import 'package:movies_app/movies/presentation/controller/movie_bloc/movie_bloc.dart';
-import 'package:movies_app/search/presentation/controller/bloc/search_bloc.dart';
 import 'package:movies_app/tvs/presentation/controller/tv_bloc/tv_bloc.dart';
 
 import 'core/global/theme/theme_bloc/theme_bloc.dart';
@@ -38,14 +37,11 @@ class MyApp extends StatelessWidget {
             ..add(GetPopularTvsEvent())
             ..add(GetTopRatedTvsEvent()),
         ),
-        BlocProvider(
-          create: (context) => sl<SearchBloc>(),
-        ),
       ],
       child: BlocBuilder<ThemeBloc, ThemeState>(
         builder: (context, state) {
           return MaterialApp(
-            title: AppString.appName,
+            title: AppString.appName.toUpperCase(),
             debugShowCheckedModeBanner: false,
             theme: state.themeData,
             home: const SplashView(),

@@ -64,8 +64,6 @@ class SearchViewBodyState extends State<SearchViewBody> {
   }
 
   void onSearchTypeChanged(int newIndex) {
-    _clearSearch();
-
     setState(() {
       _selectedSearchType = newIndex;
     });
@@ -75,10 +73,10 @@ class SearchViewBodyState extends State<SearchViewBody> {
     }
   }
 
-  void _clearSearch() {
-    _controller.clear();
-    context.read<SearchBloc>().add(ClearSearchResults());
-  }
+  // void _clearSearch() {
+  //   _controller.clear();
+  //   context.read<SearchBloc>().add(ClearSearchResults());
+  // }
 
   void _clearSearchWithUnfocus() {
     _controller.clear();

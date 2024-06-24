@@ -1,5 +1,7 @@
 class AppString {
   static const appName = "SCREEN SCENE";
+  static const screen = "SCREEN";
+  static const scene = "SCENE";
   static const slidingText = 'Find your next favorite\n movie or tv show';
   static const popular = "Popular";
   static const seeMore = "See More";
@@ -10,7 +12,7 @@ class AppString {
   static const nowPlaying = 'Now Playing';
   static const onTheAir = 'On The Air';
   static const search = 'Search';
-  
+
   static const cancel = 'Cancel';
   static const anythingYouWant = 'Search for anything you want';
   static const noDataToShow = 'No data to show';
@@ -20,12 +22,14 @@ class AppString {
   static const more = "More";
   static const less = "Less";
 
+  static const lightMode = "Light Mode";
+  static const darkMode = "Dark Mode";
+  static const themeImage = "assets/images/theme.png";
 
   static const searchNav = 'Search';
   static const moviesNav = 'Movies';
   static const tvsNav = 'Tvs';
   static const settingsNav = 'Settings';
-
 
   static const String movieScrollViewKey = 'movieScrollView';
   static const String movieDetailScrollViewKey = 'movieDetailScrollView';
@@ -35,7 +39,6 @@ class AppString {
   static const String light = 'Light';
   static const String dark = 'Dark';
   static const String theme = 'theme';
-
 
   // Tv Constants
   static const popularTVs = 'Popular TVs';
