@@ -1,4 +1,5 @@
 import 'package:get_it/get_it.dart';
+import 'package:movies_app/home/bottom_nav_bar_cubit/bottom_nav_bar_cubit.dart';
 import 'package:movies_app/movies/data/data_sources/base_movies_remote_data_source.dart';
 import 'package:movies_app/movies/data/data_sources/movies_remote_data_source.dart';
 import 'package:movies_app/movies/data/repos/movies_repo.dart';
@@ -40,6 +41,7 @@ class ServicesLocator {
     sl.registerFactory(() => MovieBloc(sl(), sl(), sl()));
     sl.registerFactory(() => MovieDetailsBloc(sl()));
     sl.registerFactory(() => SimilarMoviesBloc(sl()));
+    sl.registerFactory(() => BottomNavBarCubit());
 
     /// MOVIES USE CASES
     sl.registerLazySingleton(() => GetNowPlayingMoviesUseCase(sl()));

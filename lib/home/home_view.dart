@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/home_view_body.dart';
+import 'package:movies_app/home/home_view_body.dart';
 
 
 class HomeView extends StatelessWidget {
