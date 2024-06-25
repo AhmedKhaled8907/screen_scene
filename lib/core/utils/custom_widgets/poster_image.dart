@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/api_constants_manager.dart';
 import 'package:movies_app/core/global/resources/colors_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
-import 'package:movies_app/movies/presentation/views/movie_details_view/similar_movies/similar_movies_section.dart';
+import 'package:movies_app/features/movies/presentation/views/movie_details_view/similar_movies/similar_movies_section.dart';
 import 'package:shimmer/shimmer.dart';
 
 class PosterImage extends StatelessWidget {

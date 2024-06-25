@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_app/Splash/presentation/views/splash_view.dart';
 import 'package:movies_app/core/global/resources/strings_manager.dart';
 import 'package:movies_app/core/utils/services/services_locator.dart';
-import 'package:movies_app/home/bottom_nav_bar_cubit/bottom_nav_bar_cubit.dart';
-import 'package:movies_app/movies/presentation/controller/movie_bloc/movie_bloc.dart';
-import 'package:movies_app/tvs/presentation/controller/tv_bloc/tv_bloc.dart';
+import 'package:movies_app/features/home/bottom_nav_bar_cubit/bottom_nav_bar_cubit.dart';
+import 'package:movies_app/features/movies/presentation/controller/movie_bloc/movie_bloc.dart';
+import 'package:movies_app/features/tvs/presentation/controller/tv_bloc/tv_bloc.dart';
 
 import 'core/global/theme/theme_bloc/theme_bloc.dart';
 import 'core/utils/app_bloc_observer.dart';
+import 'features/splash/presentation/views/splash_view.dart';
 
 void main() {
   ServicesLocator().init();
