@@ -110,7 +110,8 @@ I used (TMDB) for fetching the data.
         └───presentation
             ├───controller
             └───views
-                └───widgets
+                |───tv_details_view
+                └───tv_view
     
 ```
 
