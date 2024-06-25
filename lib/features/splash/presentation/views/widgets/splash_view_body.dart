@@ -3,7 +3,7 @@ import 'package:movies_app/core/global/resources/font_manager.dart';
 import 'package:movies_app/core/global/resources/strings_manager.dart';
 import 'package:movies_app/core/global/resources/styles_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
-import 'package:movies_app/features/home/home_view.dart';
+import 'package:movies_app/features/home/views/home_view.dart';
 
 import 'sliding_text.dart';
 

@@ -16,7 +16,7 @@ import 'package:movies_app/features/search/data/data_sources/search_remote_data_
 import 'package:movies_app/features/search/data/repos/search_repo.dart';
 import 'package:movies_app/features/search/domain/repos/base_search_repo.dart';
 import 'package:movies_app/features/search/domain/use_cases/get_search_movies_use_case.dart';
-import 'package:movies_app/features/search/presentation/controller/bloc/search_bloc.dart';
+import 'package:movies_app/features/search/presentation/controller/search_bloc/search_bloc.dart';
 import 'package:movies_app/features/tvs/data/data_sources/base_tvs_remote_data_source.dart';
 import 'package:movies_app/features/tvs/data/data_sources/tvs_remote_data_source.dart';
 import 'package:movies_app/features/tvs/data/repos/tv_repo.dart';

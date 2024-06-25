@@ -10,7 +10,7 @@ import '../../../../../core/global/resources/values_manager.dart';
 import '../../../../../core/utils/custom_widgets/custom_loading_indicator.dart';
 import '../../../../movies/domain/entities/movie_entity.dart';
 import '../../../../tvs/domain/entities/tv_entity.dart';
-import '../../controller/bloc/search_bloc.dart';
+import '../../controller/search_bloc/search_bloc.dart';
 import 'search_results_item.dart';
 
 class SearchResults extends StatelessWidget {

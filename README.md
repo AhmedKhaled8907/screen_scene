@@ -1,6 +1,6 @@
 # **SCREEN SCENE**
 
-I made this app with Flutter using clean architecture and  used Bloc as state management at the presentation layer.
+I made this app with Flutter using clean architecture and  used controller as state management at the presentation layer.
 
 ## Brief explanation
 
@@ -17,7 +17,7 @@ I used (TMDB) for fetching the data.
 | :-----------: | :---------: | :------------: 
 ![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/movie_details.png?raw=true)|![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/similar.png?raw=true)|![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/movie_search.png?raw=true)|![]
 
-| TVs View | Popualr TVs | Top Rated TVs | Search TVs |
+| TVs View | Popular TVs | Top Rated TVs | Search TVs |
 | :-----------: | :---------: | :------------: | :--------------: |
 ![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/tv.png?raw=true)|![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/popular_tv.png?raw=true)|![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/toprated_tv.png?raw=true)|![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/tv_search.png?raw=true)
 
@@ -38,11 +38,80 @@ I used (TMDB) for fetching the data.
   dartz: ^0.10.1
   dio: ^5.4.3+1
   equatable: ^2.0.5
-  flutter_bloc: ^8.1.6
+  flutter_controller: ^8.1.6
   get_it: ^7.7.0
   google_fonts: ^6.2.1
   shared_preferences: ^2.2.3
   shimmer: ^3.0.0
+```
+## Directory Structure for project
+
+```
+├───core
+│   ├───error
+│   ├───global
+|   |   ├───resources
+|   |   └───theme
+│   └───utils
+│       ├───custom_widgets
+│       ├───entities
+│       ├───models
+│       ├───network
+│       ├───services
+│       └───use_cases
+└───features
+    ├───home
+    │   ├───bottom_nav_bar_cubit
+    │   └───views
+    ├───movie
+    │   ├───data
+    │   │   ├───data_sources
+    │   │   ├───models
+    │   │   └───repos
+    │   ├───domain
+    │   │   ├───entities
+    │   │   ├───repos
+    │   │   └───use_cases
+    │   └───presentation
+    │       ├───controller
+    │       └───views
+    │           |───movie_details_view
+    |           └───movie_view
+    ├───search
+    │   ├───data
+    │   │   ├───data_sources
+    │   │   ├───models
+    │   │   └───repos
+    │   ├───domain
+    │   │   ├───entities
+    │   │   ├───repos
+    │   │   └───use_cases
+    │   └───presentation
+    │       ├───controller
+    │       └───views
+    |           └───widgets
+    ├───settings
+    │   └───presentation
+    │       └───views
+    |            └───widgets  
+    ├───splash
+    │   └───presentation
+    │       └───views
+    |            └───widgets  
+    └───tvs
+        ├───data
+        |   ├───data_sources
+        |   ├───models
+        |   └───repos
+        ├───domain
+        │   ├───entities
+        │   ├───repos
+        │   └───use_cases
+        └───presentation
+            ├───controller
+            └───views
+                └───widgets
+    
 ```
 
 
