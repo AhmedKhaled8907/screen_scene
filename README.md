@@ -1,16 +1,23 @@
-# movies_app
+# **SCREEN SCENE**
 
-A new Flutter project.
+I have made this app with flutter using clean architecture and I used Bloc as state management at the presentation layer.
 
-## Getting Started
+## Brief explanation
 
-This project is a starting point for a Flutter application.
+Screen Scene is a movies and tv shows data app and searching for them too.
+I used (TMDB) for fetching the data.
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+| Splash screen | Home screen | Popular Movies | Top Rated Movies |
+| :-----------: | :---------: | :------------: | :--------------: |
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![]
+(https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/splah.png?raw=true)
+|![]
+(https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/movie.png?raw=true)
+|![]
+(https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/popular_movie.png?raw=true)
+|![]
+(https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/toprated_movie.png?raw=true)
+
