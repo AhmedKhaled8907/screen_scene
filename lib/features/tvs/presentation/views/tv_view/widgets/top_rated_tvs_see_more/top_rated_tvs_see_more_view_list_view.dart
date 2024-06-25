@@ -21,7 +21,6 @@ class TopRatedTvsSeeMoreListView extends StatelessWidget {
 
         return InkWell(
           onTap: () {
-            /// TODO : NAVIGATION TO Tv DETAILS
             Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (context) => TvDetailView(

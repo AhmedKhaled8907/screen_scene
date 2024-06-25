@@ -15,7 +15,6 @@ class PopularTvsSection extends StatelessWidget {
         TitleAndSeeMore(
           title: AppString.popular,
           onTap: () {
-            /// TODO : NAVIGATION TO POPULAR SCREEN
             Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => const PopularTvsSeeMoreView(),
             ));

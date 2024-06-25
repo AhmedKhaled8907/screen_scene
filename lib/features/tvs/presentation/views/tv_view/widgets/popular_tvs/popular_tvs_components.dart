@@ -40,7 +40,6 @@ class PopularTvsComponents extends StatelessWidget {
                     return InkWell(
                       borderRadius: BorderRadius.circular(AppRadius.r8),
 
-                      /// TODO : NAVIGATE TO Tv DETAILS
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => TvDetailView(

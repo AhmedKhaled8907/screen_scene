@@ -43,7 +43,6 @@ class OnTheAirSection extends StatelessWidget {
                     return GestureDetector(
                       key: const Key(AppString.openTVMinimalDetailKey),
                       onTap: () {
-                        /// TODO : NAVIGATE TO Tv DETAILS
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => TvDetailView(
                             id: item.id,

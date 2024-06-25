@@ -44,7 +44,6 @@ class NowPlayingSection extends StatelessWidget {
                     return GestureDetector(
                       key: const Key(AppString.openMovieMinimalDetailKey),
                       onTap: () {
-                        /// TODO : NAVIGATE TO MOVIE DETAILS
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => MovieDetailView(
                             id: item.id,

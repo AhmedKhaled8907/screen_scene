@@ -32,7 +32,6 @@ class SimilarTvsSection extends StatelessWidget {
                   final similarTvsItem = state.similarTvs[index];
                   return InkWell(
                     onTap: () {
-                      /// TODO : NAVIGATE TO Tv DETAILS
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
                         builder: (context) => TvDetailView(
                           id: similarTvsItem.id,

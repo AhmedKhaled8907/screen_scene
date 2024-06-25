@@ -38,7 +38,6 @@ class PopularMoviesComponents extends StatelessWidget {
                   itemBuilder: (context, index) {
                     final movie = state.popularMovies[index];
                     return InkWell(
-                      /// TODO : NAVIGATE TO MOVIE DETAILS
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => MovieDetailView(

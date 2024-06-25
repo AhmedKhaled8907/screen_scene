@@ -16,7 +16,6 @@ class TvDetailsModel extends TvDetailsEntity {
   });
 
   factory TvDetailsModel.fromJson(Map<String, dynamic> json) => TvDetailsModel(
-        /// TODO: check if this is correct
         backdropPath: json[AppJson.backdropPath] ?? '',
         id: json[AppJson.id],
         genres: List<GenresModel>.from(

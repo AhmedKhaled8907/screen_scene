@@ -38,7 +38,6 @@ class TopRatedTvsComponents extends StatelessWidget {
                     final tv = state.topRatedTvs[index];
                     return InkWell(
                       onTap: () {
-                        /// TODO : NAVIGATE TO Tv DETAILS
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => TvDetailView(
                             id: tv.id,

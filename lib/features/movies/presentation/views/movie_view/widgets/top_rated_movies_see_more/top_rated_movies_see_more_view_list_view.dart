@@ -21,7 +21,6 @@ class TopRatedMoviesSeeMoreListView extends StatelessWidget {
 
         return InkWell(
           onTap: () {
-            /// TODO : NAVIGATION TO MOVIE DETAILS
             Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (context) => MovieDetailView(

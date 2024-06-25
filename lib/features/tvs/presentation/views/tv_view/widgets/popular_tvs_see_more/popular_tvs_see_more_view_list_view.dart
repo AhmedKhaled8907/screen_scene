@@ -21,7 +21,6 @@ class PopularTvsSeeMoreListView extends StatelessWidget {
         TvEntity item = list[index];
         return InkWell(
           onTap: () {
-            /// TODO : NAVIGATION TO Tv DETAILS
             Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (context) => TvDetailView(

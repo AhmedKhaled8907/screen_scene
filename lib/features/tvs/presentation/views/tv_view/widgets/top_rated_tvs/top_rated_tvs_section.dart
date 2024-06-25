@@ -17,7 +17,6 @@ class TopRatedTvsSection extends StatelessWidget {
         TitleAndSeeMore(
           title: AppString.topRated,
           onTap: () {
-            /// TODO : NAVIGATION TO TOP RATED SCREEN
             Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (context) => const TopRatedTvsSeeMoreView(),

@@ -37,7 +37,6 @@ class TopRatedMoviesComponents extends StatelessWidget {
                     final movie = state.topRatedMovies[index];
                     return InkWell(
                       onTap: () {
-                        /// TODO : NAVIGATE TO MOVIE DETAILS
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => MovieDetailView(
                             id: movie.id,
