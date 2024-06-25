@@ -58,13 +58,11 @@ class SearchViewBodyState extends State<SearchViewBody> {
     } else if (_selectedSearchType == 1) {
       context.read<SearchBloc>().add(SearchTvsQueryChanged(query: query));
     }
-    // else if (_selectedSearchType == 2) {
-    //   context.read<SearchBloc>().add(SearchPersonQueryChanged(query: query));
-    // }
   }
 
   void onSearchTypeChanged(int newIndex) {
     setState(() {
+      _controller.clear();
       _selectedSearchType = newIndex;
     });
     if (_lastQuery.isNotEmpty) {
@@ -72,11 +70,6 @@ class SearchViewBodyState extends State<SearchViewBody> {
       _performSearch(_lastQuery);
     }
   }
-
-  // void _clearSearch() {
-  //   _controller.clear();
-  //   context.read<SearchBloc>().add(ClearSearchResults());
-  // }
 
   void _clearSearchWithUnfocus() {
     _controller.clear();
