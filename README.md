@@ -29,3 +29,21 @@ I used (TMDB) for fetching the data.
 | :-----------: | :---------: | :------------: 
 ![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/light_movie.png?raw=true)|![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/light_movie_details.png?raw=true)|![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/light_search.png?raw=true)|![]
 
+## Dependencies
+```yaml
+  animate_do: ^3.3.4
+  cached_network_image: ^3.3.1
+  carousel_slider: ^4.2.1
+  cupertino_icons: ^1.0.6
+  dartz: ^0.10.1
+  dio: ^5.4.3+1
+  equatable: ^2.0.5
+  flutter_bloc: ^8.1.6
+  get_it: ^7.7.0
+  google_fonts: ^6.2.1
+  shared_preferences: ^2.2.3
+  shimmer: ^3.0.0
+```
+
+
+  
