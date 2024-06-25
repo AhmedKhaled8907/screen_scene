@@ -12,12 +12,4 @@ I used (TMDB) for fetching the data.
 | Splash screen | Home screen | Popular Movies | Top Rated Movies |
 | :-----------: | :---------: | :------------: | :--------------: |
 
-![]
-(https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/splah.png?raw=true)
-|![]
-(https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/movie.png?raw=true)
-|![]
-(https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/popular_movie.png?raw=true)
-|![]
-(https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/toprated_movie.png?raw=true)
-
+![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/splah.png?raw=true)|![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/movie.png?raw=true)|![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/popular_movie.png?raw=true)|![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/toprated_movie.png?raw=true)
