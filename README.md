@@ -1,6 +1,6 @@
 # **SCREEN SCENE**
 
-I made this app with Flutter using clean architecture and  used controller as state management at the presentation layer.
+I made this app with Flutter using clean architecture and  bloc as state management at the presentation layer.
 
 ## Brief explanation
 
@@ -110,7 +110,8 @@ I used (TMDB) for fetching the data.
         └───presentation
             ├───controller
             └───views
-                └───widgets
+                |───tv_details_view
+                └───tv_view
     
 ```
 
