@@ -57,4 +57,9 @@ class AppString {
   static const String getStartedText =
       'Thank you for choosing Screen Scene, your ultimate Movie & TV Show companion! ';
   static const String findText = 'Find Your Favorite\n Movie & TV Show';
+
+  static const String chooseMode = 'Choose Mode';
+  static const String continueText = 'Continue';
+  
+  
 }

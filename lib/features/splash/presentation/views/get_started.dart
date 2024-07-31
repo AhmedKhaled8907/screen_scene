@@ -2,6 +2,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:movies_app/core/global/resources/strings_manager.dart';
 import 'package:movies_app/core/global/resources/styles_manager.dart';
+import 'package:movies_app/features/splash/presentation/views/choose_theme.dart';
 
 import '../../../../core/global/resources/colors_manager.dart';
 import '../../../../core/global/resources/font_manager.dart';
@@ -76,12 +77,12 @@ class GetStartedPage extends StatelessWidget {
                     // get started button
                     BasicAppButton(
                       title: AppString.getStarted,
-                      
-                      
                       onPressed: () {
-                        // Navigator.of(context).pushReplacementNamed(
-                        //   AppRoutes.chooseModeRoute,
-                        // );
+                        Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(
+                            builder: (context) => const ChooseModePage(),
+                          ),
+                        );
                       },
                     ),
                   ],

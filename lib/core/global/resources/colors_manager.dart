@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app/core/global/resources/values_manager.dart';
 
 class AppColors {
   static const Color white = Colors.white;
@@ -10,6 +11,8 @@ class AppColors {
   static const Color blueAccent = Colors.blueAccent;
   static const Color gold = Color(0xFFFFD700);
   static const Color darkGold = Color(0xFF875a28);
+  static Color filteredBg = const Color(0x0fffffff).withOpacity(AppSize.s0_03);
+
 
   // Background colors
   static Color? lightBackground = Colors.grey[AppColorShades.colorShade200];

@@ -11,9 +11,14 @@ abstract class ThemeState extends Equatable {
 }
 
 class LightThemeState extends ThemeState {
-  LightThemeState() : super(getThemeDataLight(), false);
+  final ThemeMode themeMode;
+
+  LightThemeState(this.themeMode) : super(getThemeDataLight(), false);
 }
 
 class DarkThemeState extends ThemeState {
-  DarkThemeState() : super(getThemeDataDark(), true);
+  final ThemeMode themeMode;
+
+  
+  DarkThemeState(this.themeMode) : super(getThemeDataDark(), true);
 }

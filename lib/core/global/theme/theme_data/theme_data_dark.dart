@@ -8,6 +8,7 @@ import '../../resources/values_manager.dart';
 
 ThemeData getThemeDataDark() {
   return ThemeData.dark().copyWith(
+    brightness: Brightness.dark,
     scaffoldBackgroundColor: AppColorDark.scaffoldBackgroundColor,
     appBarTheme: AppBarTheme(
       backgroundColor: AppColorDark.appBarBackgroundColor,
@@ -26,6 +27,5 @@ ThemeData getThemeDataDark() {
         fontSize: FontSize.s14,
       ),
     ),
-    
   );
 }

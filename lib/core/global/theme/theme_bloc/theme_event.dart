@@ -9,4 +9,16 @@ sealed class ThemeEvent extends Equatable {
 
 class ToggleThemeEvent extends ThemeEvent {}
 
+class DarkThemeEvent extends ThemeEvent {
+  final ThemeMode themeMode;
+
+  const DarkThemeEvent(this.themeMode);
+}
+
+class LightThemeEvent extends ThemeEvent {
+  final ThemeMode themeMode;
+  
+  const LightThemeEvent(this.themeMode);
+}
+
 class LoadThemeEvent extends ThemeEvent {}

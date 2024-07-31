@@ -7,6 +7,7 @@ import '../../resources/styles_manager.dart';
 
 ThemeData getThemeDataLight() {
   return ThemeData(
+    brightness: Brightness.light,
     appBarTheme: AppBarTheme(
       elevation: AppSize.s0,
       backgroundColor: AppColors.lightBackground,

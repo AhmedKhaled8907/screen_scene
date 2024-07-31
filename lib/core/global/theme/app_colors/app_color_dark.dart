@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
 class AppColorDark {
-  static Color scaffoldBackgroundColor = Colors.grey.shade900;
-  static Color appBarBackgroundColor = Colors.grey.shade900;
+  static Color scaffoldBackgroundColor = const Color(0xff1C1B1B);
+  static Color appBarBackgroundColor = const Color(0xff1C1B1B);
 }
