@@ -3,7 +3,7 @@ import 'package:movies_app/core/global/resources/font_manager.dart';
 import 'package:movies_app/core/global/resources/strings_manager.dart';
 import 'package:movies_app/core/global/resources/styles_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
-import 'package:movies_app/features/home/views/home_view.dart';
+import 'package:movies_app/features/splash/presentation/views/get_started.dart';
 
 import 'sliding_text.dart';
 
@@ -73,7 +73,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       const Duration(seconds: AppDuration.d3),
       () {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context) => const HomeView(),
+          builder: (context) => const GetStartedPage(),
         ));
       },
     );

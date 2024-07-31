@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:movies_app/core/global/resources/font_manager.dart';
 import 'package:movies_app/core/global/resources/values_manager.dart';
 
@@ -6,11 +7,13 @@ TextStyle _getTextStyle(
   FontWeight fontWeight,
   double fontSize,
   double? letterSpacing,
+  Color? color,
 ) {
-  return TextStyle(
+  return GoogleFonts.inter(
     fontWeight: fontWeight,
     fontSize: fontSize,
     letterSpacing: letterSpacing,
+    color: color,
   );
 }
 
@@ -18,11 +21,13 @@ TextStyle _getTextStyle(
 TextStyle getLightStyle({
   double fontSize = FontSize.s12,
   double? letterSpacing = AppSize.s1,
+  Color? color,
 }) {
   return _getTextStyle(
     FontWeightManager.light,
     fontSize,
     letterSpacing,
+    color,
   );
 }
 
@@ -30,11 +35,13 @@ TextStyle getLightStyle({
 TextStyle getRegularStyle({
   double fontSize = FontSize.s16,
   double? letterSpacing = AppSize.s1,
+  Color? color,
 }) {
   return _getTextStyle(
     FontWeightManager.regular,
     fontSize,
     letterSpacing,
+    color,
   );
 }
 
@@ -42,11 +49,13 @@ TextStyle getRegularStyle({
 TextStyle getMediumStyle({
   double fontSize = FontSize.s20,
   double? letterSpacing = AppSize.s1,
+  Color? color,
 }) {
   return _getTextStyle(
     FontWeightManager.medium,
     fontSize,
     letterSpacing,
+    color,
   );
 }
 
@@ -54,11 +63,13 @@ TextStyle getMediumStyle({
 TextStyle getSemiBoldStyle({
   double fontSize = FontSize.s12,
   double? letterSpacing = AppSize.s1,
+  Color? color,
 }) {
   return _getTextStyle(
     FontWeightManager.semiBold,
     fontSize,
     letterSpacing,
+    color,
   );
 }
 
@@ -66,10 +77,12 @@ TextStyle getSemiBoldStyle({
 TextStyle getBoldStyle({
   double fontSize = FontSize.s22,
   double? letterSpacing = AppSize.s1,
+  Color? color,
 }) {
   return _getTextStyle(
     FontWeightManager.bold,
     fontSize,
     letterSpacing,
+    color,
   );
 }

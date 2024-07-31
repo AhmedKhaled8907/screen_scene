@@ -51,4 +51,10 @@ class AppString {
   static const String tvScrollViewKey = 'tvScrollView';
   static const String tvDetailScrollViewKey = 'tvDetailScrollView';
   static const String openTVMinimalDetailKey = 'openTVMinimalDetail';
+
+  static const String enjoy = 'Enjoy';
+  static const String getStarted = 'Get Started';
+  static const String getStartedText =
+      'Thank you for choosing Screen Scene, your ultimate Movie & TV Show companion! ';
+  static const String findText = 'Find Your Favorite\n Movie & TV Show';
 }

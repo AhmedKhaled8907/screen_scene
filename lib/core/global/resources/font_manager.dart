@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-class FontConstants {
-  static const String fontFamily = 'Circular Std';
-}
+class FontConstants {}
 
 class FontWeightManager {
   static const FontWeight light = FontWeight.w300;
