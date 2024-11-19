@@ -42,7 +42,7 @@ class ChooseModePage extends StatelessWidget {
             // black overlay
             context.isDarkMode
                 ? Container(color: AppColors.black.withOpacity(AppSize.s0_5))
-                : Container(color: AppColors.black.withOpacity(AppSize.s0_3)),
+                : Container(color: AppColors.black.withOpacity(AppSize.s0_03)),
 
             // content section
             SafeArea(
