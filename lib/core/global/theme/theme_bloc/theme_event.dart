@@ -17,7 +17,7 @@ class DarkThemeEvent extends ThemeEvent {
 
 class LightThemeEvent extends ThemeEvent {
   final ThemeMode themeMode;
-  
+
   const LightThemeEvent(this.themeMode);
 }
 

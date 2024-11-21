@@ -11,4 +11,3 @@ class GetTvDetailsEvent extends TvDetailsEvent {
   @override
   List<Object?> get props => [id];
 }
-

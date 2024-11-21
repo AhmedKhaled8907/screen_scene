@@ -64,8 +64,7 @@ class TvsRemoteDataSource extends BaseTvsRemoteDataSource {
 
   // // get similar Tvs
   @override
-  Future<List<SimilarTvsEntity>> getSimilarTvs(
-      SimilarTvsParams params) async {
+  Future<List<SimilarTvsEntity>> getSimilarTvs(SimilarTvsParams params) async {
     final response = await Dio().get(
       ApiConstants.similarTvsBaseUrl(params.id),
     );
@@ -80,5 +79,4 @@ class TvsRemoteDataSource extends BaseTvsRemoteDataSource {
       );
     }
   }
-
 }

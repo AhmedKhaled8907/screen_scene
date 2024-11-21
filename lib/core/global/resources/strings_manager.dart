@@ -60,6 +60,4 @@ class AppString {
 
   static const String chooseMode = 'Choose Mode';
   static const String continueText = 'Continue';
-  
-  
 }

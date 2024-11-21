@@ -6,8 +6,7 @@ import '../../../../core/utils/use_cases/base_use_case.dart';
 import '../../../tvs/domain/entities/tv_entity.dart';
 import '../repos/base_search_repo.dart';
 
-class GetSearchTvsUseCase
-    extends BaseUseCase<List<TvEntity>, SearchTvsParams> {
+class GetSearchTvsUseCase extends BaseUseCase<List<TvEntity>, SearchTvsParams> {
   final BaseSearchRepo baseSearchRepo;
 
   GetSearchTvsUseCase(this.baseSearchRepo);
@@ -16,7 +15,7 @@ class GetSearchTvsUseCase
   Future<Either<Failure, List<TvEntity>>> call(
     SearchTvsParams params,
   ) async {
-    return await baseSearchRepo.getTvsSearch( params);
+    return await baseSearchRepo.getTvsSearch(params);
   }
 }
 

@@ -77,4 +77,10 @@ class SigninCubit extends Cubit<SigninState> {
     await authRepo.signOut();
     emit(SignoutSuccess());
   }
+
+  Future<void> resetPassword({required String email}) async {
+    emit(SigninLoading());
+    await authRepo.resetPassword(email: email);
+    emit(ResetPasswordSuccess());
+  }
 }

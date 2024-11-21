@@ -15,6 +15,7 @@ class SearchMoviesQueryChanged extends SearchEvent {
   @override
   List<Object> get props => [query];
 }
+
 class SearchTvsQueryChanged extends SearchEvent {
   final String query;
 

@@ -49,4 +49,3 @@ class ThemeSwitchTile extends StatelessWidget {
     );
   }
 }
-

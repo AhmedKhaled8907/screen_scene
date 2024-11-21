@@ -5,7 +5,6 @@ import 'package:screen_scene/features/settings/presentation/views/widgets/signou
 import 'package:screen_scene/features/settings/presentation/views/widgets/theme_switch_tile.dart';
 import 'package:screen_scene/features/settings/presentation/views/widgets/user_info_page.dart';
 
-
 class SettingsViewBody extends StatelessWidget {
   const SettingsViewBody({super.key});
 
@@ -36,5 +35,3 @@ class SettingsViewBody extends StatelessWidget {
     );
   }
 }
-
-

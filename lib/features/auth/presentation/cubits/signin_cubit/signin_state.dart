@@ -17,6 +17,10 @@ final class SignoutSuccess extends SigninState {
   SignoutSuccess();
 }
 
+final class ResetPasswordSuccess extends SigninState {
+  ResetPasswordSuccess();
+}
+
 final class SigninFailure extends SigninState {
   final String message;
 

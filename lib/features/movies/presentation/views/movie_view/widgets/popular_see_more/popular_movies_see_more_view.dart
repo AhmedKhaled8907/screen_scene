@@ -24,5 +24,4 @@ class PopularMoviesSeeMoreView extends StatelessWidget {
       centerTitle: true,
     );
   }
-
 }

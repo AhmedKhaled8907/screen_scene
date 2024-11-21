@@ -4,7 +4,6 @@
 // import 'package:screen_scene/core/global/resources/styles_manager.dart';
 // import 'package:screen_scene/core/global/resources/values_manager.dart';
 
-
 // ThemeData getApplicationTheme() {
 //   return ThemeData(
 //     // main colors

@@ -9,7 +9,7 @@ class GenresModel extends GenresEntity {
   });
 
   factory GenresModel.fromJson(Map<String, dynamic> json) => GenresModel(
-        id: json[AppJson.id] ,
+        id: json[AppJson.id],
         name: json[AppJson.name],
       );
 }

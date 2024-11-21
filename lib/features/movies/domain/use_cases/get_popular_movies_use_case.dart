@@ -5,7 +5,7 @@ import 'package:screen_scene/features/movies/domain/repos/base_movies_repo.dart'
 import '../../../../core/error/failure.dart';
 import '../entities/movie_entity.dart';
 
-class GetPopularMoviesUseCase extends BaseUseCase<List<MovieEntity>,NoParams> {
+class GetPopularMoviesUseCase extends BaseUseCase<List<MovieEntity>, NoParams> {
   final BaseMoviesRepo baseMoviesRepo;
 
   GetPopularMoviesUseCase(this.baseMoviesRepo);

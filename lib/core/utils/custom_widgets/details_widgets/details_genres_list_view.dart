@@ -22,8 +22,7 @@ class DetailsGenresListView extends StatelessWidget {
           itemCount: genres.length,
           itemBuilder: (context, index) {
             return Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: AppPadding.p4),
+              padding: const EdgeInsets.symmetric(horizontal: AppPadding.p4),
               child: DetailsGenresItem(
                 genres: genres[index],
               ),

@@ -19,6 +19,5 @@ class LightThemeState extends ThemeState {
 class DarkThemeState extends ThemeState {
   final ThemeMode themeMode;
 
-  
   DarkThemeState(this.themeMode) : super(getThemeDataDark(), true);
 }

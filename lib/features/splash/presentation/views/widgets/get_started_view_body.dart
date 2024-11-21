@@ -10,8 +10,6 @@ import 'package:screen_scene/core/utils/custom_widgets/basic_button.dart';
 import 'package:screen_scene/core/utils/services/shared_preferences_singleton.dart';
 import 'package:screen_scene/features/splash/presentation/views/choose_theme.dart';
 
-
-
 class GetStartedViewBody extends StatelessWidget {
   const GetStartedViewBody({
     super.key,

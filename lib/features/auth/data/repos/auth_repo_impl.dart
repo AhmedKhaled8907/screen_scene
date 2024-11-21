@@ -209,4 +209,9 @@ class AuthRepoImpl extends AuthRepo {
 
     return right(UserModel.fromJson(result));
   }
+
+  @override
+  Future<void> resetPassword({required String email}) async {
+    right(await firebaseAuthService.resetPassword(email: email));
+  }
 }

@@ -181,5 +181,8 @@ class FirebaseAuthService {
   bool isSignedIn() => auth.currentUser != null;
 
   Future<void> signOut() async => await auth.signOut();
-  
+
+  Future<void> resetPassword({required String email}) async {
+    await auth.sendPasswordResetEmail(email: email);
+  }
 }

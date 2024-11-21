@@ -35,7 +35,7 @@ class ApiConstants {
       "$baseUrl/search/$tv?api_key=$apiKey&query=$query";
   static String searchPersonBaseUrl(String query) =>
       "$baseUrl/search/$person?api_key=$apiKey&query=$query";
-      
+
   static const String movie = "movie";
   static const String tv = "tv";
   static const String person = "person";

@@ -90,4 +90,3 @@ class TvBloc extends Bloc<TvEvent, TvState> {
     );
   }
 }
-

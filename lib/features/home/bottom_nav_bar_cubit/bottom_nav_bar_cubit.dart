@@ -15,7 +15,7 @@ class BottomNavBarCubit extends Cubit<BottomNavBarState> {
       BlocProvider.of(context);
   int _currentIndex = 0;
   int get currentIndex => _currentIndex;
-  
+
   List<Widget> views = [
     const MoviesView(),
     const TvsView(),

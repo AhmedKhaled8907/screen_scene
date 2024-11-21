@@ -43,7 +43,7 @@ final sl = GetIt.instance;
 
 void setupGetIt() {
   // Auth
-    sl.registerSingleton<DatabaseService>(
+  sl.registerSingleton<DatabaseService>(
     FirestoreService(),
   );
   sl.registerSingleton<FirebaseAuthService>(

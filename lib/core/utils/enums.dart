@@ -3,5 +3,3 @@ enum RequestState {
   loaded,
   error,
 }
-
-
