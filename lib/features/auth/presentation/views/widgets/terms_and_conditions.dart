@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:screen_scene/core/global/resources/colors_manager.dart';
 import 'package:screen_scene/core/global/resources/font_manager.dart';
 import 'package:screen_scene/core/global/resources/styles_manager.dart';
+import 'package:screen_scene/core/global/theme/theme_bloc/theme_bloc.dart';
 import 'package:screen_scene/features/auth/presentation/views/widgets/custom_check_box.dart';
 
 class TermsAndConditionsWidget extends StatefulWidget {
@@ -49,7 +50,9 @@ class _TermsAndConditionsWidgetState extends State<TermsAndConditionsWidget> {
                   text: "our Terms and Conditions",
                   style: getSemiBoldStyle(
                     fontSize: FontSize.s13,
-                    color: AppColors.gold,
+                    color: context.isDarkMode
+                        ? AppColors.gold
+                        : AppColors.darkGold,
                   ),
                 ),
               ],

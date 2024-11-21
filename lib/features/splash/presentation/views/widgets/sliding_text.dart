@@ -27,8 +27,10 @@ class SlidingText extends StatelessWidget {
 
                 return Text(
                   AppString.slidingText,
-                  style: getRegularStyle(fontSize: FontSize.s14).copyWith(
-                    color: isDarkMode ? AppColors.gold : AppColors.gold,
+                  style: getRegularStyle(fontSize: FontSize.s16).copyWith(
+                    color: isDarkMode
+                        ? const Color(0xff949D9E)
+                        : const Color(0xff949D9E),
                   ),
                   textAlign: TextAlign.center,
                 );

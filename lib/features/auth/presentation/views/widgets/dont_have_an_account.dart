@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:screen_scene/core/global/resources/colors_manager.dart';
 import 'package:screen_scene/core/global/resources/styles_manager.dart';
+import 'package:screen_scene/core/global/theme/theme_bloc/theme_bloc.dart';
 
 import '../signup_view.dart';
 
@@ -32,7 +33,7 @@ class DontHaveAnAccount extends StatelessWidget {
           child: Text(
             "Create Account",
             style: getSemiBoldStyle(
-              color: AppColors.gold,
+              color: context.isDarkMode ? AppColors.gold : AppColors.darkGold,
             ),
           ),
         ),

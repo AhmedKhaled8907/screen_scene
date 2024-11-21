@@ -65,7 +65,11 @@ class CustomTextFormField extends StatelessWidget {
 
   OutlineInputBorder outline(BuildContext context) {
     return context.isDarkMode
-        ? const OutlineInputBorder()
+        ? const OutlineInputBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(AppSize.s8),
+            ),
+          )
         : const OutlineInputBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(AppSize.s8),

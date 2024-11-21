@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:screen_scene/core/global/resources/colors_manager.dart';
+import 'package:screen_scene/core/global/theme/theme_bloc/theme_bloc.dart';
 
 class CustomCheckBox extends StatelessWidget {
   const CustomCheckBox({
@@ -23,7 +24,11 @@ class CustomCheckBox extends StatelessWidget {
         height: 24,
         duration: const Duration(milliseconds: 100),
         decoration: ShapeDecoration(
-          color: isChecked ? AppColors.gold : Colors.white,
+          color: isChecked
+              ? context.isDarkMode
+                  ? AppColors.gold
+                  : AppColors.darkGold
+              : Colors.white,
           shape: RoundedRectangleBorder(
             side: BorderSide(
               width: 1.50,
@@ -38,7 +43,7 @@ class CustomCheckBox extends StatelessWidget {
               ? SvgPicture.asset(
                   'assets/images/Check.svg',
                   colorFilter: ColorFilter.mode(
-                    AppColors.black,
+                    context.isDarkMode ? AppColors.black : AppColors.white,
                     BlendMode.srcIn,
                   ),
                 )

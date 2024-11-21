@@ -7,7 +7,10 @@ import '../../resources/styles_manager.dart';
 import '../../resources/values_manager.dart';
 
 ThemeData getThemeDataDark() {
+  
   return ThemeData.dark().copyWith(
+    indicatorColor: AppColors.gold,
+    
     primaryColor: AppColors.gold,
     primaryColorDark: AppColors.gold,
     brightness: Brightness.dark,

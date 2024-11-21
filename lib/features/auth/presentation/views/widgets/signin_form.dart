@@ -45,6 +45,9 @@ class _SigninFormState extends State<SigninForm> {
               password = value!;
             },
             validator: (value) {
+              if (value == null || value.isEmpty) {
+                return 'Password cannot be empty.';
+              }
               return null;
             },
           ),

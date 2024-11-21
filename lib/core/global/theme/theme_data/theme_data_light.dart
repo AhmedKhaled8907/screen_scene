@@ -7,6 +7,7 @@ import '../../resources/styles_manager.dart';
 
 ThemeData getThemeDataLight() {
   return ThemeData(
+    indicatorColor: AppColors.gold,
     primaryColor: AppColors.gold,
     primaryColorLight: AppColors.gold,
     brightness: Brightness.light,
@@ -28,13 +29,12 @@ ThemeData getThemeDataLight() {
       unselectedItemColor: AppColors.black.withOpacity(AppSize.s0_3),
       selectedLabelStyle: getMediumStyle(
         fontSize: FontSize.s14,
-      ),  
+      ),
       unselectedLabelStyle: getMediumStyle(
         fontSize: FontSize.s14,
       ),
     ),
     progressIndicatorTheme:
         const ProgressIndicatorThemeData(color: AppColors.gold),
-
   );
 }
