@@ -1,10 +1,10 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/global/resources/constants_manager.dart';
-import 'package:movies_app/core/global/resources/font_manager.dart';
-import 'package:movies_app/core/global/resources/strings_manager.dart';
-import 'package:movies_app/core/global/resources/styles_manager.dart';
-import 'package:movies_app/core/global/resources/values_manager.dart';
+import 'package:screen_scene/core/global/resources/constants_manager.dart';
+import 'package:screen_scene/core/global/resources/font_manager.dart';
+import 'package:screen_scene/core/global/resources/strings_manager.dart';
+import 'package:screen_scene/core/global/resources/styles_manager.dart';
+import 'package:screen_scene/core/global/resources/values_manager.dart';
 
 class MoreLikeThisText extends StatelessWidget {
   const MoreLikeThisText({super.key});

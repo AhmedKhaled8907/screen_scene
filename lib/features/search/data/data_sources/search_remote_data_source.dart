@@ -1,11 +1,11 @@
 import 'package:dio/dio.dart';
-import 'package:movies_app/core/error/exceptions.dart';
-import 'package:movies_app/core/global/resources/api_constants_manager.dart';
-import 'package:movies_app/core/global/resources/constants_manager.dart';
-import 'package:movies_app/core/utils/network/error_message_model.dart';
-import 'package:movies_app/features/movies/data/models/movie_model.dart';
-import 'package:movies_app/features/search/data/data_sources/base_search_remote_data_source.dart';
-import 'package:movies_app/features/search/domain/use_cases/get_search_movies_use_case.dart';
+import 'package:screen_scene/core/error/exceptions.dart';
+import 'package:screen_scene/core/global/resources/api_constants_manager.dart';
+import 'package:screen_scene/core/global/resources/constants_manager.dart';
+import 'package:screen_scene/core/utils/network/error_message_model.dart';
+import 'package:screen_scene/features/movies/data/models/movie_model.dart';
+import 'package:screen_scene/features/search/data/data_sources/base_search_remote_data_source.dart';
+import 'package:screen_scene/features/search/domain/use_cases/get_search_movies_use_case.dart';
 
 import '../../../tvs/data/models/tv_model.dart';
 import '../../domain/use_cases/get_search_tvs_use_case.dart';

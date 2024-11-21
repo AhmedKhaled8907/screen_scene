@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/global/resources/font_manager.dart';
-import 'package:movies_app/core/global/resources/styles_manager.dart';
-import 'package:movies_app/core/global/resources/values_manager.dart';
+import 'package:screen_scene/core/global/resources/font_manager.dart';
+import 'package:screen_scene/core/global/resources/styles_manager.dart';
+import 'package:screen_scene/core/global/resources/values_manager.dart';
 
 import '../../../global/resources/colors_manager.dart';
 import '../../../global/resources/strings_manager.dart';
@@ -60,13 +60,13 @@ class _DetailsOverViewState extends State<DetailsOverView> {
                       _isDataHidden
                           ? Icons.keyboard_arrow_down_rounded
                           : Icons.keyboard_arrow_up_rounded,
-                      size: AppSize.s30,
+                      size: AppSize.s24,
                       color: AppColors.red,
                     ),
                     const SizedBox(width: AppSize.s4),
                     Text(
                       _isDataHidden ? AppString.more : AppString.less,
-                      style: getSemiBoldStyle(fontSize: FontSize.s20).copyWith(
+                      style: getSemiBoldStyle(fontSize: FontSize.s16).copyWith(
                         color: AppColors.red,
                       ),
                     ),

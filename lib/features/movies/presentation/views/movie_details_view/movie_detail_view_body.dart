@@ -1,12 +1,12 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_app/core/global/resources/constants_manager.dart';
-import 'package:movies_app/core/global/resources/strings_manager.dart';
-import 'package:movies_app/core/global/resources/values_manager.dart';
-import 'package:movies_app/core/utils/enums.dart';
-import 'package:movies_app/core/utils/custom_widgets/details_widgets/details_app_bar.dart';
-import 'package:movies_app/core/utils/custom_widgets/details_widgets/details_title.dart';
+import 'package:screen_scene/core/global/resources/constants_manager.dart';
+import 'package:screen_scene/core/global/resources/strings_manager.dart';
+import 'package:screen_scene/core/global/resources/values_manager.dart';
+import 'package:screen_scene/core/utils/enums.dart';
+import 'package:screen_scene/core/utils/custom_widgets/details_widgets/details_app_bar.dart';
+import 'package:screen_scene/core/utils/custom_widgets/details_widgets/details_title.dart';
 
 import '../../controller/movie_details_bloc/movie_details_bloc.dart';
 import '../../../../../core/utils/custom_widgets/details_widgets/more_like_this_text.dart';

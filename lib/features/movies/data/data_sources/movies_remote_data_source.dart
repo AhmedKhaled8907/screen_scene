@@ -1,13 +1,13 @@
 import 'package:dio/dio.dart';
-import 'package:movies_app/core/error/exceptions.dart';
-import 'package:movies_app/core/global/resources/api_constants_manager.dart';
-import 'package:movies_app/core/global/resources/constants_manager.dart';
-import 'package:movies_app/features/movies/data/models/movie_details_model.dart';
-import 'package:movies_app/features/movies/data/models/movie_model.dart';
-import 'package:movies_app/features/movies/data/models/similar_movies_model.dart';
-import 'package:movies_app/features/movies/domain/entities/similar_movies_entity.dart';
-import 'package:movies_app/features/movies/domain/use_cases/get_movie_details_use_case.dart';
-import 'package:movies_app/features/movies/domain/use_cases/get_similar_movies_use_case.dart';
+import 'package:screen_scene/core/error/exceptions.dart';
+import 'package:screen_scene/core/global/resources/api_constants_manager.dart';
+import 'package:screen_scene/core/global/resources/constants_manager.dart';
+import 'package:screen_scene/features/movies/data/models/movie_details_model.dart';
+import 'package:screen_scene/features/movies/data/models/movie_model.dart';
+import 'package:screen_scene/features/movies/data/models/similar_movies_model.dart';
+import 'package:screen_scene/features/movies/domain/entities/similar_movies_entity.dart';
+import 'package:screen_scene/features/movies/domain/use_cases/get_movie_details_use_case.dart';
+import 'package:screen_scene/features/movies/domain/use_cases/get_similar_movies_use_case.dart';
 
 import '../../../../core/utils/network/error_message_model.dart';
 import 'base_movies_remote_data_source.dart';

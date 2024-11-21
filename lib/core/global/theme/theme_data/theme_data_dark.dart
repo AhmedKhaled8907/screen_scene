@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/global/theme/app_colors/app_color_dark.dart';
+import 'package:screen_scene/core/global/theme/app_colors/app_color_dark.dart';
 
 import '../../resources/colors_manager.dart';
 import '../../resources/font_manager.dart';
@@ -8,6 +8,8 @@ import '../../resources/values_manager.dart';
 
 ThemeData getThemeDataDark() {
   return ThemeData.dark().copyWith(
+    primaryColor: AppColors.gold,
+    primaryColorDark: AppColors.gold,
     brightness: Brightness.dark,
     scaffoldBackgroundColor: AppColorDark.scaffoldBackgroundColor,
     appBarTheme: AppBarTheme(
@@ -27,5 +29,8 @@ ThemeData getThemeDataDark() {
         fontSize: FontSize.s14,
       ),
     ),
+    hintColor: AppColors.white,
+    progressIndicatorTheme:
+        const ProgressIndicatorThemeData(color: AppColors.gold),
   );
 }

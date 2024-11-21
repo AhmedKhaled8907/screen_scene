@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/features/tvs/domain/entities/tv_entity.dart';
-import 'package:movies_app/features/tvs/presentation/views/tv_details_view/tv_details_view.dart';
+import 'package:screen_scene/features/tvs/domain/entities/tv_entity.dart';
+import 'package:screen_scene/features/tvs/presentation/views/tv_details_view/tv_details_view.dart';
 
 import '../../../../../../../core/utils/custom_widgets/see_more_widgets/see_more_items.dart';
 

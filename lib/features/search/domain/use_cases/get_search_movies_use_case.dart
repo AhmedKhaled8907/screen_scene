@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:movies_app/core/error/failure.dart';
-import 'package:movies_app/core/utils/use_cases/base_use_case.dart';
-import 'package:movies_app/features/search/domain/repos/base_search_repo.dart';
+import 'package:screen_scene/core/error/failure.dart';
+import 'package:screen_scene/core/utils/use_cases/base_use_case.dart';
+import 'package:screen_scene/features/search/domain/repos/base_search_repo.dart';
 
 import '../../../movies/domain/entities/movie_entity.dart';
 

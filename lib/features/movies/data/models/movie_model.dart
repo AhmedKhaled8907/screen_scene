@@ -1,5 +1,5 @@
-import 'package:movies_app/core/global/resources/api_constants_manager.dart';
-import 'package:movies_app/features/movies/domain/entities/movie_entity.dart';
+import 'package:screen_scene/core/global/resources/api_constants_manager.dart';
+import 'package:screen_scene/features/movies/domain/entities/movie_entity.dart';
 
 class MovieModel extends MovieEntity {
   const MovieModel({

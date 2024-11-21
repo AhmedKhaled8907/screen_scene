@@ -1,6 +1,6 @@
 {
-    "name": "movies_app",
-    "short_name": "movies_app",
+    "name": "screen_scene",
+    "short_name": "screen_scene",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

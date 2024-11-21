@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/global/resources/font_manager.dart';
-import 'package:movies_app/core/global/resources/styles_manager.dart';
+import 'package:screen_scene/core/global/resources/font_manager.dart';
+import 'package:screen_scene/core/global/resources/styles_manager.dart';
 
 import '../../global/resources/colors_manager.dart';
 import '../../global/resources/values_manager.dart';
@@ -22,14 +22,14 @@ class BasicAppButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        minimumSize: Size.fromHeight(height ?? AppSize.s80),
-        backgroundColor: AppColors.darkGold,
+        minimumSize: Size.fromHeight(height ?? AppSize.s56),
+        backgroundColor: AppColors.gold,
       ),
       child: Text(
         title,
         style: getBoldStyle(
           color: AppColors.white,
-          fontSize: FontSize.s24,
+          fontSize: FontSize.s18,
         ),
       ),
     );

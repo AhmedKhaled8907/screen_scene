@@ -1,11 +1,13 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_app/core/global/resources/strings_manager.dart';
-import 'package:movies_app/core/global/resources/styles_manager.dart';
-import 'package:movies_app/core/global/theme/theme_bloc/theme_bloc.dart';
-import 'package:movies_app/features/home/views/home_view.dart';
-import 'package:movies_app/features/splash/presentation/views/choose_theme_item.dart';
+import 'package:screen_scene/core/back_end_points.dart';
+import 'package:screen_scene/core/global/resources/strings_manager.dart';
+import 'package:screen_scene/core/global/resources/styles_manager.dart';
+import 'package:screen_scene/core/global/theme/theme_bloc/theme_bloc.dart';
+import 'package:screen_scene/core/utils/services/shared_preferences_singleton.dart';
+import 'package:screen_scene/features/auth/presentation/views/signin_view.dart';
+import 'package:screen_scene/features/splash/presentation/views/choose_theme_item.dart';
 
 import '../../../../core/global/resources/colors_manager.dart';
 import '../../../../core/global/resources/font_manager.dart';
@@ -107,9 +109,10 @@ class ChooseModePage extends StatelessWidget {
                     BasicAppButton(
                       title: AppString.continueText,
                       onPressed: () {
+                        Prefs.setBool(BackEndPoints.kISChooseTheme, true);
                         Navigator.of(context).pushReplacement(
                           MaterialPageRoute(
-                            builder: (context) => const HomeView(),
+                            builder: (context) => const SigninView(),
                           ),
                         );
                       },

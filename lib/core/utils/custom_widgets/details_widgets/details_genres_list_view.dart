@@ -1,8 +1,8 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/global/resources/values_manager.dart';
-import 'package:movies_app/core/utils/custom_widgets/details_widgets/details_genres_item.dart';
-import 'package:movies_app/core/utils/entities/genres_entity.dart';
+import 'package:screen_scene/core/global/resources/values_manager.dart';
+import 'package:screen_scene/core/utils/custom_widgets/details_widgets/details_genres_item.dart';
+import 'package:screen_scene/core/utils/entities/genres_entity.dart';
 
 class DetailsGenresListView extends StatelessWidget {
   const DetailsGenresListView({

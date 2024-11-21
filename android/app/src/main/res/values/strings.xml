@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- <string name="app_name">Screen Scene</string> -->
+    <string name="facebook_app_id">558158580290940</string>         
+    <string name="fb_login_protocol_scheme">fb558158580290940</string>
+    <string name="facebook_client_token">3a8fe68eda02bddeb206f4600853496e</string>
+
+</resources>

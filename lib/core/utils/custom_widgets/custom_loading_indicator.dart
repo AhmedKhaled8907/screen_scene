@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/global/resources/colors_manager.dart';
+import 'package:screen_scene/core/global/resources/colors_manager.dart';
 
 class CustomLoadingIndicator extends StatelessWidget {
   const CustomLoadingIndicator({

@@ -1,11 +1,11 @@
 // // import 'package:flutter/material.dart';
 // import 'package:flutter_bloc/flutter_bloc.dart';
 // import 'package:go_router/go_router.dart';
-// import 'package:movies_app/core/services/services_locator.dart';
-// import 'package:movies_app/movies/presentation/controller/movie_details_bloc/movie_details_bloc.dart';
-// import 'package:movies_app/movies/presentation/controller/similar_movies_bloc/similar_movies_bloc.dart';
-// import 'package:movies_app/movies/presentation/views/movie_details_view/movie_details_view.dart';
-// import 'package:movies_app/movies/presentation/views/movie_view/movies_view.dart';
+// import 'package:screen_scene/core/services/services_locator.dart';
+// import 'package:screen_scene/movies/presentation/controller/movie_details_bloc/movie_details_bloc.dart';
+// import 'package:screen_scene/movies/presentation/controller/similar_movies_bloc/similar_movies_bloc.dart';
+// import 'package:screen_scene/movies/presentation/views/movie_details_view/movie_details_view.dart';
+// import 'package:screen_scene/movies/presentation/views/movie_view/movies_view.dart';
 
 // abstract class AppRouter {
 //   static const kMovieView = '/';

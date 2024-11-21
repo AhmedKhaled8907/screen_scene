@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/global/resources/colors_manager.dart';
-import 'package:movies_app/core/global/resources/styles_manager.dart';
-import 'package:movies_app/core/global/resources/values_manager.dart';
+import 'package:screen_scene/core/global/resources/colors_manager.dart';
+import 'package:screen_scene/core/global/resources/styles_manager.dart';
+import 'package:screen_scene/core/global/resources/values_manager.dart';
 
 class SeeMoreTitle extends StatelessWidget {
   const SeeMoreTitle({

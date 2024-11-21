@@ -1,7 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/utils/custom_widgets/details_widgets/details_rating.dart';
-import 'package:movies_app/features/search/presentation/views/widgets/search_results_text.dart';
+import 'package:screen_scene/core/utils/custom_widgets/details_widgets/details_rating.dart';
+import 'package:screen_scene/features/search/presentation/views/widgets/search_results_text.dart';
 
 import '../../../../../core/global/resources/values_manager.dart';
 import '../../../../../core/utils/custom_widgets/details_widgets/details_date_release.dart';

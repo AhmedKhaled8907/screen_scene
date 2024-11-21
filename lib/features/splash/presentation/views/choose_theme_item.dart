@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:movies_app/core/global/resources/styles_manager.dart';
+import 'package:screen_scene/core/global/resources/styles_manager.dart';
 
 import '../../../../core/global/resources/colors_manager.dart';
 import '../../../../core/global/resources/font_manager.dart';

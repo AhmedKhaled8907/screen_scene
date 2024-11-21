@@ -1,13 +1,13 @@
 import 'package:dartz/dartz.dart';
-import 'package:movies_app/core/error/exceptions.dart';
-import 'package:movies_app/core/error/failure.dart';
-import 'package:movies_app/features/tvs/data/data_sources/base_tvs_remote_data_source.dart';
-import 'package:movies_app/features/tvs/domain/entities/similar_tvs_entity.dart';
-import 'package:movies_app/features/tvs/domain/entities/tv_details_entity.dart';
-import 'package:movies_app/features/tvs/domain/entities/tv_entity.dart';
-import 'package:movies_app/features/tvs/domain/repos/base_tv_repo.dart';
-import 'package:movies_app/features/tvs/domain/use_cases/get_similar_tvs_use_case.dart';
-import 'package:movies_app/features/tvs/domain/use_cases/get_tv_details_use_case.dart';
+import 'package:screen_scene/core/error/exceptions.dart';
+import 'package:screen_scene/core/error/failure.dart';
+import 'package:screen_scene/features/tvs/data/data_sources/base_tvs_remote_data_source.dart';
+import 'package:screen_scene/features/tvs/domain/entities/similar_tvs_entity.dart';
+import 'package:screen_scene/features/tvs/domain/entities/tv_details_entity.dart';
+import 'package:screen_scene/features/tvs/domain/entities/tv_entity.dart';
+import 'package:screen_scene/features/tvs/domain/repos/base_tv_repo.dart';
+import 'package:screen_scene/features/tvs/domain/use_cases/get_similar_tvs_use_case.dart';
+import 'package:screen_scene/features/tvs/domain/use_cases/get_tv_details_use_case.dart';
 
 class TvsRepo extends BaseTvsRepo {
   final BaseTvsRemoteDataSource remoteDataSource;

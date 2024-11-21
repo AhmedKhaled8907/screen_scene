@@ -1,15 +1,15 @@
 import 'package:dio/dio.dart';
-import 'package:movies_app/core/error/exceptions.dart';
-import 'package:movies_app/core/global/resources/api_constants_manager.dart';
-import 'package:movies_app/core/global/resources/constants_manager.dart';
-import 'package:movies_app/core/utils/network/error_message_model.dart';
-import 'package:movies_app/features/tvs/data/data_sources/base_tvs_remote_data_source.dart';
-import 'package:movies_app/features/tvs/data/models/similar_tvs_model.dart';
-import 'package:movies_app/features/tvs/data/models/tv_details_model.dart';
-import 'package:movies_app/features/tvs/data/models/tv_model.dart';
-import 'package:movies_app/features/tvs/domain/entities/similar_tvs_entity.dart';
-import 'package:movies_app/features/tvs/domain/use_cases/get_similar_tvs_use_case.dart';
-import 'package:movies_app/features/tvs/domain/use_cases/get_tv_details_use_case.dart';
+import 'package:screen_scene/core/error/exceptions.dart';
+import 'package:screen_scene/core/global/resources/api_constants_manager.dart';
+import 'package:screen_scene/core/global/resources/constants_manager.dart';
+import 'package:screen_scene/core/utils/network/error_message_model.dart';
+import 'package:screen_scene/features/tvs/data/data_sources/base_tvs_remote_data_source.dart';
+import 'package:screen_scene/features/tvs/data/models/similar_tvs_model.dart';
+import 'package:screen_scene/features/tvs/data/models/tv_details_model.dart';
+import 'package:screen_scene/features/tvs/data/models/tv_model.dart';
+import 'package:screen_scene/features/tvs/domain/entities/similar_tvs_entity.dart';
+import 'package:screen_scene/features/tvs/domain/use_cases/get_similar_tvs_use_case.dart';
+import 'package:screen_scene/features/tvs/domain/use_cases/get_tv_details_use_case.dart';
 
 class TvsRemoteDataSource extends BaseTvsRemoteDataSource {
   // get on the air Tvs

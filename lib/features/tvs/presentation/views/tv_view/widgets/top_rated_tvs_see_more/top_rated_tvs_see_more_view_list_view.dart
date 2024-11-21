@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/utils/custom_widgets/see_more_widgets/see_more_view_item.dart';
-import 'package:movies_app/features/tvs/domain/entities/tv_entity.dart';
-import 'package:movies_app/features/tvs/presentation/views/tv_details_view/tv_details_view.dart';
+import 'package:screen_scene/core/utils/custom_widgets/see_more_widgets/see_more_view_item.dart';
+import 'package:screen_scene/features/tvs/domain/entities/tv_entity.dart';
+import 'package:screen_scene/features/tvs/presentation/views/tv_details_view/tv_details_view.dart';
 
 class TopRatedTvsSeeMoreListView extends StatelessWidget {
   const TopRatedTvsSeeMoreListView({

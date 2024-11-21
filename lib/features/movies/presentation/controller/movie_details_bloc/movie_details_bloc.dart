@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_app/core/utils/enums.dart';
-import 'package:movies_app/features/movies/domain/entities/movie_details_entity.dart';
-import 'package:movies_app/features/movies/domain/use_cases/get_movie_details_use_case.dart';
+import 'package:screen_scene/core/utils/enums.dart';
+import 'package:screen_scene/features/movies/domain/entities/movie_details_entity.dart';
+import 'package:screen_scene/features/movies/domain/use_cases/get_movie_details_use_case.dart';
 
 part 'movie_details_event.dart';
 part 'movie_details_state.dart';

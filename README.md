@@ -11,23 +11,23 @@ I used (TMDB) for fetching the data.
 
 | Splash View | Home View | Popular Movies | Top Rated Movies |
 | :-----------: | :---------: | :------------: | :--------------: |
-![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/splah.png?raw=true)|![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/movie.png?raw=true)|![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/popular_movie.png?raw=true)|![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/toprated_movie.png?raw=true)
+![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/splah.png?raw=true)|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/movie.png?raw=true)|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/popular_movie.png?raw=true)|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/toprated_movie.png?raw=true)
 
 | Movie Details View | Similar View | Movie Search Movies | 
 | :-----------: | :---------: | :------------: 
-![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/movie_details.png?raw=true)|![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/similar.png?raw=true)|![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/movie_search.png?raw=true)|![]
+![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/movie_details.png?raw=true)|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/similar.png?raw=true)|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/movie_search.png?raw=true)|![]
 
 | TVs View | Popular TVs | Top Rated TVs | Search TVs |
 | :-----------: | :---------: | :------------: | :--------------: |
-![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/tv.png?raw=true)|![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/popular_tv.png?raw=true)|![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/toprated_tv.png?raw=true)|![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/tv_search.png?raw=true)
+![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/tv.png?raw=true)|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/popular_tv.png?raw=true)|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/toprated_tv.png?raw=true)|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/tv_search.png?raw=true)
 
 | TV Details View | Settings View | Light Settings View | TVs View |
 | :-----------: | :---------: | :------------: | :--------------: |
-![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/tv_details.png?raw=true)|![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/dark_settings.png?raw=true)|![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/light_settings.png?raw=true)|![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/light_tv.png?raw=true)
+![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/tv_details.png?raw=true)|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/dark_settings.png?raw=true)|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/light_settings.png?raw=true)|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/light_tv.png?raw=true)
 
 | Light Movie View | Light Movie Details View | Light Search | 
 | :-----------: | :---------: | :------------: 
-![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/light_movie.png?raw=true)|![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/light_movie_details.png?raw=true)|![](https://github.com/AhmedKhaled8907/movies_app/blob/main/screenshots/light_search.png?raw=true)|![]
+![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/light_movie.png?raw=true)|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/light_movie_details.png?raw=true)|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/light_search.png?raw=true)|![]
 
 ## Dependencies
 ```yaml

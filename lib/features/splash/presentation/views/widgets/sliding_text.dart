@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_app/core/global/resources/colors_manager.dart';
-import 'package:movies_app/core/global/resources/font_manager.dart';
-import 'package:movies_app/core/global/resources/strings_manager.dart';
-import 'package:movies_app/core/global/resources/styles_manager.dart';
+import 'package:screen_scene/core/global/resources/colors_manager.dart';
+import 'package:screen_scene/core/global/resources/font_manager.dart';
+import 'package:screen_scene/core/global/resources/strings_manager.dart';
+import 'package:screen_scene/core/global/resources/styles_manager.dart';
 import '../../../../../core/global/theme/theme_bloc/theme_bloc.dart';
 
 class SlidingText extends StatelessWidget {
@@ -28,7 +28,7 @@ class SlidingText extends StatelessWidget {
                 return Text(
                   AppString.slidingText,
                   style: getRegularStyle(fontSize: FontSize.s14).copyWith(
-                    color: isDarkMode ? AppColors.gold : AppColors.darkGold,
+                    color: isDarkMode ? AppColors.gold : AppColors.gold,
                   ),
                   textAlign: TextAlign.center,
                 );

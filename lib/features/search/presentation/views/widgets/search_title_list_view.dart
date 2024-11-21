@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_app/core/global/resources/strings_manager.dart';
+import 'package:screen_scene/core/global/resources/strings_manager.dart';
 import '../../../../../core/global/resources/colors_manager.dart';
 import '../../../../../core/global/resources/styles_manager.dart';
 import '../../../../../core/global/resources/values_manager.dart';
@@ -52,7 +52,6 @@ class SearchTitleListViewState extends State<SearchTitleListView> {
                       : Colors.transparent,
                 ),
                 padding: const EdgeInsets.symmetric(
-                  vertical: AppPadding.p2,
                   horizontal: AppPadding.p8,
                 ),
                 margin: const EdgeInsets.symmetric(

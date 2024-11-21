@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_app/features/movies/presentation/views/movie_details_view/movie_details_view.dart';
-import 'package:movies_app/features/tvs/presentation/views/tv_details_view/tv_details_view.dart';
+import 'package:screen_scene/features/movies/presentation/views/movie_details_view/movie_details_view.dart';
+import 'package:screen_scene/features/tvs/presentation/views/tv_details_view/tv_details_view.dart';
 
 import '../../../../../core/global/resources/font_manager.dart';
 import '../../../../../core/global/resources/strings_manager.dart';

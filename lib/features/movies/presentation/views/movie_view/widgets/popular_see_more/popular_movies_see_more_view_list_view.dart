@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/features/movies/domain/entities/movie_entity.dart';
-import 'package:movies_app/features/movies/presentation/views/movie_details_view/movie_details_view.dart';
+import 'package:screen_scene/features/movies/domain/entities/movie_entity.dart';
+import 'package:screen_scene/features/movies/presentation/views/movie_details_view/movie_details_view.dart';
 
 import '../../../../../../../core/utils/custom_widgets/see_more_widgets/see_more_items.dart';
 

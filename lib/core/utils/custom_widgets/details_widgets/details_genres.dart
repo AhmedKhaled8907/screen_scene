@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/global/resources/font_manager.dart';
-import 'package:movies_app/core/global/resources/strings_manager.dart';
-import 'package:movies_app/core/global/resources/styles_manager.dart';
-import 'package:movies_app/core/global/resources/values_manager.dart';
-import 'package:movies_app/core/utils/custom_widgets/details_widgets/details_genres_list_view.dart';
-import 'package:movies_app/core/utils/entities/genres_entity.dart';
+import 'package:screen_scene/core/global/resources/font_manager.dart';
+import 'package:screen_scene/core/global/resources/strings_manager.dart';
+import 'package:screen_scene/core/global/resources/styles_manager.dart';
+import 'package:screen_scene/core/global/resources/values_manager.dart';
+import 'package:screen_scene/core/utils/custom_widgets/details_widgets/details_genres_list_view.dart';
+import 'package:screen_scene/core/utils/entities/genres_entity.dart';
 
 class DetailsGenres extends StatelessWidget {
   const DetailsGenres({

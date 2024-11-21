@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/global/resources/strings_manager.dart';
-import 'package:movies_app/core/global/resources/values_manager.dart';
-import 'package:movies_app/features/tvs/presentation/views/tv_view/widgets/on_the_air_tvs/on_the_air_section.dart';
+import 'package:screen_scene/core/global/resources/strings_manager.dart';
+import 'package:screen_scene/core/global/resources/values_manager.dart';
+import 'package:screen_scene/features/tvs/presentation/views/tv_view/widgets/on_the_air_tvs/on_the_air_section.dart';
 
 import 'widgets/popular_tvs/popular_tvs_section.dart';
 import 'widgets/top_rated_tvs/top_rated_tvs_section.dart';

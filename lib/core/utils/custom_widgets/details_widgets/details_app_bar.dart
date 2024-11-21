@@ -1,9 +1,9 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/global/resources/api_constants_manager.dart';
-import 'package:movies_app/core/global/resources/colors_manager.dart';
-import 'package:movies_app/core/global/resources/values_manager.dart';
+import 'package:screen_scene/core/global/resources/api_constants_manager.dart';
+import 'package:screen_scene/core/global/resources/colors_manager.dart';
+import 'package:screen_scene/core/global/resources/values_manager.dart';
 
 class DetailsAppBar extends StatelessWidget {
   const DetailsAppBar({
@@ -26,7 +26,8 @@ class DetailsAppBar extends StatelessWidget {
         ),
         child: IconButton(
           icon: const Icon(
-            Icons.arrow_back,
+            Icons.arrow_back_ios_new_rounded,
+            size: AppSize.s24,
             color: AppColors.white,
           ),
           onPressed: () {
@@ -50,7 +51,12 @@ class DetailsAppBar extends StatelessWidget {
                 ],
                 stops: [AppSize.s0, AppSize.s0_3, AppSize.s1, AppSize.s1],
               ).createShader(
-                Rect.fromLTRB(AppSize.s0, AppSize.s0, rect.width, rect.height),
+                Rect.fromLTRB(
+                  AppSize.s0,
+                  AppSize.s0,
+                  rect.width,
+                  rect.height,
+                ),
               );
             },
             blendMode: BlendMode.dstIn,

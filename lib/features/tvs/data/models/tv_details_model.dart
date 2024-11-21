@@ -1,6 +1,6 @@
-import 'package:movies_app/core/global/resources/api_constants_manager.dart';
-import 'package:movies_app/core/utils/models/genres_model.dart';
-import 'package:movies_app/features/tvs/domain/entities/tv_details_entity.dart';
+import 'package:screen_scene/core/global/resources/api_constants_manager.dart';
+import 'package:screen_scene/core/utils/models/genres_model.dart';
+import 'package:screen_scene/features/tvs/domain/entities/tv_details_entity.dart';
 
 class TvDetailsModel extends TvDetailsEntity {
   const TvDetailsModel({

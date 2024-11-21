@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/global/resources/values_manager.dart';
+import 'package:screen_scene/core/global/resources/values_manager.dart';
 
 class MovieDetailsDuration extends StatelessWidget {
   const MovieDetailsDuration({

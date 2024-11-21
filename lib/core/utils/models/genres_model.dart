@@ -1,4 +1,4 @@
-import 'package:movies_app/core/global/resources/api_constants_manager.dart';
+import 'package:screen_scene/core/global/resources/api_constants_manager.dart';
 
 import '../entities/genres_entity.dart';
 

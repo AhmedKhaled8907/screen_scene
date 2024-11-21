@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/global/resources/colors_manager.dart';
-import 'package:movies_app/core/global/resources/font_manager.dart';
-import 'package:movies_app/core/global/resources/strings_manager.dart';
-import 'package:movies_app/core/global/resources/styles_manager.dart';
-import 'package:movies_app/core/global/resources/values_manager.dart';
-import 'package:movies_app/features/search/presentation/views/widgets/cancel_text_button.dart';
+import 'package:screen_scene/core/global/resources/colors_manager.dart';
+import 'package:screen_scene/core/global/resources/font_manager.dart';
+import 'package:screen_scene/core/global/resources/strings_manager.dart';
+import 'package:screen_scene/core/global/resources/styles_manager.dart';
+import 'package:screen_scene/core/global/resources/values_manager.dart';
+import 'package:screen_scene/features/search/presentation/views/widgets/cancel_text_button.dart';
 
 class SearchBarItems extends StatelessWidget {
   final TextEditingController? controller;
@@ -14,7 +14,8 @@ class SearchBarItems extends StatelessWidget {
   const SearchBarItems({
     required this.controller,
     required this.clearSearch,
-    super.key, required this.focusNode,
+    super.key,
+    required this.focusNode,
   });
 
   @override

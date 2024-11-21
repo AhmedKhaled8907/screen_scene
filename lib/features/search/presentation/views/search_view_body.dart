@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_app/core/global/resources/strings_manager.dart';
-import 'package:movies_app/core/global/resources/styles_manager.dart';
-import 'package:movies_app/core/global/resources/values_manager.dart';
-import 'package:movies_app/features/search/presentation/controller/search_bloc/search_bloc.dart';
-import 'package:movies_app/features/search/presentation/views/widgets/search_results.dart';
+import 'package:screen_scene/core/global/resources/strings_manager.dart';
+import 'package:screen_scene/core/global/resources/styles_manager.dart';
+import 'package:screen_scene/core/global/resources/values_manager.dart';
+import 'package:screen_scene/features/search/presentation/controller/search_bloc/search_bloc.dart';
+import 'package:screen_scene/features/search/presentation/views/widgets/search_results.dart';
 
 import '../../../../core/global/resources/font_manager.dart';
 import 'widgets/search_bar_items.dart';

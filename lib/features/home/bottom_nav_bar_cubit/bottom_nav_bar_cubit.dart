@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_app/features/movies/presentation/views/movie_view/movies_view.dart';
+import 'package:screen_scene/features/movies/presentation/views/movie_view/movies_view.dart';
 
 import '../../../core/global/resources/strings_manager.dart';
 import '../../search/presentation/views/search_view.dart';

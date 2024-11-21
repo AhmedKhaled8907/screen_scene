@@ -1,8 +1,8 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_app/core/global/theme/theme_data/theme_data_dark.dart';
-import 'package:movies_app/core/global/theme/theme_data/theme_data_light.dart';
+import 'package:screen_scene/core/global/theme/theme_data/theme_data_dark.dart';
+import 'package:screen_scene/core/global/theme/theme_data/theme_data_light.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 part 'theme_event.dart';
