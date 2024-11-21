@@ -99,7 +99,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     bool kIsGetStarted = Prefs.getBool(BackEndPoints.kIsGetStarted) ?? false;
     bool kISChooseTheme = Prefs.getBool(BackEndPoints.kISChooseTheme) ?? false;
 
-    Future.delayed(const Duration(seconds: AppDuration.d5), () {
+    Future.delayed(const Duration(seconds: AppDuration.d4), () {
       if (kIsGetStarted && kISChooseTheme && mounted) {
         var isLoggedIn = FirebaseAuthService().isSignedIn();
 
