@@ -12,8 +12,9 @@ class AppColors {
   static const Color gold = Color(0xFFFFD700);
   static const Color darkGold = Color(0xFF875a28);
   static const Color lightGold = Color(0xFFE6963A);
-  static const Color textFieldColor = Color.fromARGB(255, 106, 106, 106);
+  static const Color textFieldColor = Color(0xFF6A6A6A);
   static Color filteredBg = const Color(0x0fffffff).withOpacity(AppSize.s0_03);
+  static const secondBackground = Color(0xffffffff);
 
   // Background colors
   static Color? lightBackground = Colors.grey[AppColorShades.colorShade200];

@@ -26,4 +26,6 @@ abstract class AuthRepo {
   Future<UserEntity> getUserData({required String uId});
 
   Future<void> signOut();
+
+  Future<Either<CustomFailure, UserEntity>> getUser();
 }

@@ -198,4 +198,15 @@ class AuthRepoImpl extends AuthRepo {
   Future<void> signOut() async {
     await firebaseAuthService.signOut();
   }
+
+  @override
+  Future<Either<CustomFailure, UserEntity>> getUser() async {
+    var currentUser = FirebaseAuth.instance.currentUser!;
+    var result = await databaseService.getData(
+      path: BackEndPoints.getUserData,
+      documentId: currentUser.uid,
+    );
+
+    return right(UserModel.fromJson(result));
+  }
 }

@@ -22,6 +22,7 @@ import 'package:screen_scene/features/search/data/repos/search_repo.dart';
 import 'package:screen_scene/features/search/domain/repos/base_search_repo.dart';
 import 'package:screen_scene/features/search/domain/use_cases/get_search_movies_use_case.dart';
 import 'package:screen_scene/features/search/presentation/controller/search_bloc/search_bloc.dart';
+import 'package:screen_scene/features/settings/presentation/display_user_info_cubit/display_user_info_cubit.dart';
 import 'package:screen_scene/features/tvs/data/data_sources/base_tvs_remote_data_source.dart';
 import 'package:screen_scene/features/tvs/data/data_sources/tvs_remote_data_source.dart';
 import 'package:screen_scene/features/tvs/data/repos/tv_repo.dart';
@@ -60,6 +61,7 @@ void setupGetIt() {
   sl.registerFactory(() => MovieDetailsBloc(sl()));
   sl.registerFactory(() => SimilarMoviesBloc(sl()));
   sl.registerFactory(() => BottomNavBarCubit());
+  sl.registerFactory(() => DisplayUserInfoCubit());
 
   /// MOVIES USE CASES
   sl.registerLazySingleton(() => GetNowPlayingMoviesUseCase(sl()));
