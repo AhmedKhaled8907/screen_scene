@@ -21,7 +21,7 @@ class SettingsViewBody extends StatelessWidget {
             child: Column(
               children: [
                 UserInfoPage(),
-                SizedBox(height: 16),
+                SizedBox(height: 8),
                 ThemeSwitchTile(),
                 SizedBox(height: 8),
                 SettingsCardsSection(),

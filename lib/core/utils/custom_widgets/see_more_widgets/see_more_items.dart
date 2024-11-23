@@ -40,7 +40,7 @@ class SeeMoreItems extends StatelessWidget {
             ),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(AppRadius.r8),
-              color: Colors.grey[AppColorShades.colorShade800],
+              color: AppColors.greyWithShade,
             ),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,

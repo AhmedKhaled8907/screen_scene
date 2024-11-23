@@ -22,7 +22,7 @@ class SlidingImage extends StatelessWidget {
       fit: BoxFit.fill,
       placeholder: (context, url) => Shimmer.fromColors(
         baseColor: Colors.grey[AppColorShades.colorShade850]!,
-        highlightColor: Colors.grey[AppColorShades.colorShade800]!,
+        highlightColor: AppColors.greyWithShade,
         child: Container(
           height: size.height * AppSize.s0_5,
           width: double.infinity,

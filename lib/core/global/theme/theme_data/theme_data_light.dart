@@ -7,6 +7,7 @@ import '../../resources/styles_manager.dart';
 
 ThemeData getThemeDataLight() {
   return ThemeData(
+    fontFamily: 'Cairo',
     indicatorColor: AppColors.gold,
     primaryColor: AppColors.gold,
     primaryColorLight: AppColors.gold,

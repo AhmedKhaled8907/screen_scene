@@ -25,18 +25,16 @@ class ThemeSwitchTile extends StatelessWidget {
             vertical: 4,
           ),
           decoration: BoxDecoration(
-            color: context.isDarkMode
-                ? AppColors.gold
-                : AppColors.secondBackground,
+            color: AppColors.greyWithShade,
             borderRadius: BorderRadius.all(Radius.circular(8)),
           ),
           child: SwitchListTile(
-            activeColor: isDarkMode ? AppColors.black : AppColors.gold,
+            activeColor: AppColors.gold,
             contentPadding: EdgeInsets.zero,
             title: Text(
               isDarkMode ? AppString.darkMode : AppString.lightMode,
               style: getRegularStyle(
-                color: AppColors.black,
+                color: AppColors.white,
               ),
             ),
             value: isDarkMode,

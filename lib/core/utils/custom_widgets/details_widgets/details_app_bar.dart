@@ -21,7 +21,7 @@ class DetailsAppBar extends StatelessWidget {
       leading: Container(
         margin: const EdgeInsets.only(left: AppMargin.m8),
         decoration: BoxDecoration(
-          color: Colors.grey[AppColorShades.colorShade800],
+          color: AppColors.greyWithShade,
           shape: BoxShape.circle,
         ),
         child: IconButton(

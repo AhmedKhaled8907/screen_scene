@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:screen_scene/core/global/resources/colors_manager.dart';
 import 'package:screen_scene/core/global/resources/styles_manager.dart';
-import 'package:screen_scene/core/global/theme/theme_bloc/theme_bloc.dart';
 import 'package:screen_scene/features/auth/domain/entities/user_entity.dart';
 import 'package:screen_scene/features/settings/presentation/display_user_info_cubit/display_user_info_cubit.dart';
 import 'package:screen_scene/features/settings/presentation/views/widgets/name_images.dart';
@@ -52,9 +51,7 @@ class UserInfoPage extends StatelessWidget {
             horizontal: 8,
           ),
           decoration: BoxDecoration(
-            color: context.isDarkMode
-                ? AppColors.gold
-                : AppColors.secondBackground,
+            color: AppColors.greyWithShade,
             borderRadius: BorderRadius.all(Radius.circular(8)),
           ),
           child: ListTile(
@@ -68,7 +65,7 @@ class UserInfoPage extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
               style: getBoldStyle(
                 fontSize: 18,
-                color: AppColors.black,
+                color: AppColors.white,
               ),
             ),
             subtitle: Column(
@@ -79,7 +76,7 @@ class UserInfoPage extends StatelessWidget {
                   entity.email,
                   style: TextStyle(
                     fontSize: 16,
-                    color: Colors.grey.shade700,
+                    color: AppColors.grey,
                   ),
                 ),
                 const SizedBox(height: 4),
@@ -94,8 +91,7 @@ class UserInfoPage extends StatelessWidget {
                 'Edit',
                 style: TextStyle(
                   fontSize: 16,
-                  color:
-                      context.isDarkMode ? AppColors.black : AppColors.darkGold,
+                  color: AppColors.gold,
                 ),
               ),
             ),

@@ -30,7 +30,7 @@ class PosterImage extends StatelessWidget {
             imageUrl: ApiConstants.imageUrl(posterPath),
             placeholder: (context, url) => Shimmer.fromColors(
               baseColor: Colors.grey[AppColorShades.colorShade850]!,
-              highlightColor: Colors.grey[AppColorShades.colorShade800]!,
+              highlightColor: AppColors.greyWithShade,
               child: Container(
                 height: AppSize.s170,
                 width: AppSize.s120,

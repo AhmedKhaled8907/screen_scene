@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:screen_scene/core/global/resources/colors_manager.dart';
 import 'package:screen_scene/core/global/resources/styles_manager.dart';
-import 'package:screen_scene/core/global/theme/theme_bloc/theme_bloc.dart';
 import 'package:screen_scene/features/auth/domain/entities/user_entity.dart';
 
 class NameImage extends StatelessWidget {
@@ -22,7 +21,7 @@ class NameImage extends StatelessWidget {
       height: height,
       width: height,
       decoration: BoxDecoration(
-        color: context.isDarkMode ? AppColors.gold : AppColors.secondBackground,
+        color: AppColors.greyWithShade,
         shape: BoxShape.circle,
       ),
       child: Center(
@@ -30,7 +29,7 @@ class NameImage extends StatelessWidget {
           user.name.substring(0, 2).toUpperCase(),
           style: getSemiBoldStyle(
             fontSize: fontSize,
-            color: AppColors.black,
+            color: AppColors.white,
           ),
         ),
       ),

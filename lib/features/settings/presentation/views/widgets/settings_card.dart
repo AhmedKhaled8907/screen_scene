@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:screen_scene/core/global/resources/colors_manager.dart';
 import 'package:screen_scene/core/global/resources/font_manager.dart';
 import 'package:screen_scene/core/global/resources/styles_manager.dart';
-import 'package:screen_scene/core/global/theme/theme_bloc/theme_bloc.dart';
+import 'package:screen_scene/core/global/resources/values_manager.dart';
 
 class SettingsCard extends StatelessWidget {
   final String title;
@@ -21,8 +21,7 @@ class SettingsCard extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 4),
         decoration: BoxDecoration(
-          color:
-              context.isDarkMode ? AppColors.gold : AppColors.secondBackground,
+          color: AppColors.greyWithShade,
           borderRadius: BorderRadius.all(Radius.circular(8)),
         ),
         child: ListTile(
@@ -34,13 +33,13 @@ class SettingsCard extends StatelessWidget {
             title,
             style: getRegularStyle(
               fontSize: FontSize.s16,
-              color: AppColors.black,
+              color: AppColors.white,
             ),
           ),
           trailing: const Icon(
             Icons.chevron_right,
-            size: 36,
-            color: Colors.black,
+            size: AppSize.s36,
+            color: AppColors.white,
           ),
         ),
       ),
