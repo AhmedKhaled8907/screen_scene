@@ -25,7 +25,7 @@ class SettingsViewBody extends StatelessWidget {
                 ThemeSwitchTile(),
                 SizedBox(height: 8),
                 SettingsCardsSection(),
-                SizedBox(height: 16),
+                SizedBox(height: 8),
                 SignoutButton(),
               ],
             ),

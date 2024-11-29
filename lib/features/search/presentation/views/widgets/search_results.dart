@@ -44,13 +44,6 @@ class SearchResults extends StatelessWidget {
             child: Text(state.message),
           );
         }
-        //  else if (state is SearchPersonsSuccess) {
-        //   return _buildPersonsList(state.results);
-        // } else if (state is SearchPersonsError) {
-        //   return Center(
-        //     child: Text(state.message),
-        //   );
-        // }
         return const SizedBox.shrink();
       },
     );
@@ -135,39 +128,4 @@ class SearchResults extends StatelessWidget {
       },
     );
   }
-
-  // Widget _buildPersonsList(List<PersonEntity> results) {
-  //   if (results.isEmpty) {
-  //     return Center(
-  //       child: Text(
-  //         AppString.noResultsFound,
-  //         style: getMediumStyle(fontSize: FontSize.s16),
-  //       ),
-  //     );
-  //   }
-  //   return ListView.builder(
-  //     physics: const BouncingScrollPhysics(),
-  //     itemCount: results.length,
-  //     itemBuilder: (context, index) {
-  //       final searchEntity = results[index];
-  //       return InkWell(
-  //         onTap: () {
-  //           FocusScope.of(context).unfocus();
-  //           Navigator.of(context).push(
-  //             MaterialPageRoute(
-  //               builder: (context) => PersonDetailView(
-  //                 id: searchEntity.id,
-  //               ),
-  //             ),
-  //           );
-  //         },
-  //         child: Column(
-  //           children: [
-  //             SearchResultsItem(item: searchEntity),
-  //           ],
-  //         ),
-  //       );
-  //     },
-  //   );
-  // }
 }
