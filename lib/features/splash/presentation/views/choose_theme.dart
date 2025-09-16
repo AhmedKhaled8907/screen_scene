@@ -107,6 +107,7 @@ class ChooseModePage extends StatelessWidget {
 
                     // get started button
                     BasicAppButton(
+                      color: AppColors.black,
                       title: AppString.continueText,
                       onPressed: () {
                         Prefs.setBool(BackEndPoints.kISChooseTheme, true);

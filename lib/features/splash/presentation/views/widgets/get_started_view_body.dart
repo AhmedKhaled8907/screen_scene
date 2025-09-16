@@ -79,6 +79,7 @@ class GetStartedViewBody extends StatelessWidget {
                   // get started button
                   BasicAppButton(
                     title: AppString.getStarted,
+                    color: AppColors.black,
                     onPressed: () {
                       Prefs.setBool(BackEndPoints.kIsGetStarted, true);
                       Navigator.of(context).pushReplacement(

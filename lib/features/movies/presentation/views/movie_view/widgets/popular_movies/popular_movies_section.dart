@@ -15,9 +15,11 @@ class PopularMoviesSection extends StatelessWidget {
         TitleAndSeeMore(
           title: AppString.popular,
           onTap: () {
-            Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => const PopularMoviesSeeMoreView(),
-            ));
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => const PopularMoviesSeeMoreView(),
+              ),
+            );
           },
         ),
         const PopularMoviesComponents(),

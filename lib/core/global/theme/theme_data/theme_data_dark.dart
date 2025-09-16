@@ -32,7 +32,13 @@ ThemeData getThemeDataDark() {
       ),
     ),
     hintColor: AppColors.white,
-    progressIndicatorTheme:
-        const ProgressIndicatorThemeData(color: AppColors.gold),
+    progressIndicatorTheme: const ProgressIndicatorThemeData(
+      color: AppColors.gold,
+    ),
+    textSelectionTheme: const TextSelectionThemeData(
+      cursorColor: AppColors.gold,
+      selectionColor: AppColors.gold,
+      selectionHandleColor: AppColors.gold,
+    ),
   );
 }

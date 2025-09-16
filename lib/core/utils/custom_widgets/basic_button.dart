@@ -9,11 +9,13 @@ class BasicAppButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String title;
   final double? height;
+  final Color? color;
 
   const BasicAppButton({
     required this.onPressed,
     required this.title,
     this.height,
+    this.color = Colors.white,
     super.key,
   });
 
@@ -28,7 +30,7 @@ class BasicAppButton extends StatelessWidget {
       child: Text(
         title,
         style: getBoldStyle(
-          color: AppColors.white,
+          color:color,
           fontSize: FontSize.s18,
         ),
       ),

@@ -33,11 +33,13 @@ class SimilarMoviesSection extends StatelessWidget {
                   final similarMoviesItem = state.similarMovies[index];
                   return InkWell(
                     onTap: () {
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        builder: (context) => MovieDetailView(
-                          id: similarMoviesItem.movieId,
+                      Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(
+                          builder: (context) => MovieDetailView(
+                            id: similarMoviesItem.movieId,
+                          ),
                         ),
-                      ));
+                      );
                     },
                     child: FadeInUp(
                       from: AppConstants.fromFadeInUp,

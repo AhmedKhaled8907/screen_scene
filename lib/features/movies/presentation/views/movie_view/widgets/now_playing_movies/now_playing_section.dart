@@ -44,11 +44,13 @@ class NowPlayingSection extends StatelessWidget {
                     return GestureDetector(
                       key: const Key(AppString.openMovieMinimalDetailKey),
                       onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => MovieDetailView(
-                            id: item.id,
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => MovieDetailView(
+                              id: item.id,
+                            ),
                           ),
-                        ));
+                        );
                       },
                       child: TitleWithShade(
                         posterPath: item.posterPath,

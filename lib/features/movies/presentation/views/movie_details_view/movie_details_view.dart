@@ -9,7 +9,10 @@ import 'movie_detail_view_body.dart';
 class MovieDetailView extends StatelessWidget {
   final int id;
 
-  const MovieDetailView({super.key, required this.id});
+  const MovieDetailView({
+    super.key,
+    required this.id,
+  });
 
   @override
   Widget build(BuildContext context) {
