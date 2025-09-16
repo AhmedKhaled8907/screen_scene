@@ -9,9 +9,17 @@ I used (TMDB) for fetching the data.
 
 ## Screenshots
 
-| Splash View | Home View | Popular Movies | Top Rated Movies |
+| Splash View | Get Started | Light Mode | Dark Mode |
 | :-----------: | :---------: | :------------: | :--------------: |
-![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/splah.png?raw=true)|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/movie.png?raw=true)|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/popular_movie.png?raw=true)|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/toprated_movie.png?raw=true)
+![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/splash.png?raw=true)|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/get_started.png?raw=true)|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/dark_mode.png?raw=true)|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/light_mode.png?raw=true)
+
+| Sign up View | Sign In View | Forgot Password | 
+| :-----------: | :---------: | :------------: 
+![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/sign_up.png?raw=true)|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/sign_in.png?raw=true)|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/forgot_password.png?raw=true)|![]
+
+| Home View | Popular Movies | Top Rated Movies |
+| :---------: | :------------: | :--------------: |
+|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/movie.png?raw=true)|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/popular_movie.png?raw=true)|![](https://github.com/AhmedKhaled8907/screen_scene/blob/main/screenshots/toprated_movie.png?raw=true)
 
 | Movie Details View | Similar View | Movie Search Movies | 
 | :-----------: | :---------: | :------------: 
