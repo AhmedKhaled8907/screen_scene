@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:screen_scene/core/global/resources/colors_manager.dart';
-import 'package:screen_scene/core/global/resources/styles_manager.dart';
-import 'package:screen_scene/features/auth/domain/entities/user_entity.dart';
+
+import '../../../../../core/global/resources/colors_manager.dart';
+import '../../../../../core/global/resources/styles_manager.dart';
+import '../../../../auth/domain/entities/user_entity.dart';
 
 class NameImage extends StatelessWidget {
   final UserEntity user;

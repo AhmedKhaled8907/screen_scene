@@ -1,14 +1,15 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:screen_scene/core/back_end_points.dart';
-import 'package:screen_scene/core/global/resources/colors_manager.dart';
-import 'package:screen_scene/core/global/resources/font_manager.dart';
-import 'package:screen_scene/core/global/resources/strings_manager.dart';
-import 'package:screen_scene/core/global/resources/styles_manager.dart';
-import 'package:screen_scene/core/global/resources/values_manager.dart';
-import 'package:screen_scene/core/utils/custom_widgets/basic_button.dart';
-import 'package:screen_scene/core/utils/services/shared_preferences_singleton.dart';
-import 'package:screen_scene/features/splash/presentation/views/choose_theme.dart';
+
+import '../../../../../core/back_end_points.dart';
+import '../../../../../core/global/resources/colors_manager.dart';
+import '../../../../../core/global/resources/font_manager.dart';
+import '../../../../../core/global/resources/strings_manager.dart';
+import '../../../../../core/global/resources/styles_manager.dart';
+import '../../../../../core/global/resources/values_manager.dart';
+import '../../../../../core/utils/custom_widgets/basic_button.dart';
+import '../../../../../core/utils/services/shared_preferences_singleton.dart';
+import '../choose_theme.dart';
 
 class GetStartedViewBody extends StatelessWidget {
   const GetStartedViewBody({

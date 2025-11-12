@@ -1,11 +1,11 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:screen_scene/core/utils/custom_widgets/details_widgets/details_rating.dart';
-import 'package:screen_scene/features/search/presentation/views/widgets/search_results_text.dart';
 
 import '../../../../../core/global/resources/values_manager.dart';
 import '../../../../../core/utils/custom_widgets/details_widgets/details_date_release.dart';
+import '../../../../../core/utils/custom_widgets/details_widgets/details_rating.dart';
 import '../../../../../core/utils/custom_widgets/poster_image.dart';
+import 'search_results_text.dart';
 
 class SearchResultsItem extends StatelessWidget {
   const SearchResultsItem({

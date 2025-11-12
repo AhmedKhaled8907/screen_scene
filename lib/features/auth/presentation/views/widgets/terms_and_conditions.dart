@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:screen_scene/core/global/resources/colors_manager.dart';
-import 'package:screen_scene/core/global/resources/font_manager.dart';
-import 'package:screen_scene/core/global/resources/styles_manager.dart';
-import 'package:screen_scene/core/global/theme/theme_bloc/theme_bloc.dart';
-import 'package:screen_scene/features/auth/presentation/views/widgets/custom_check_box.dart';
+
+import '../../../../../core/global/resources/colors_manager.dart';
+import '../../../../../core/global/resources/font_manager.dart';
+import '../../../../../core/global/resources/styles_manager.dart';
+import '../../../../../core/global/theme/theme_bloc/theme_bloc.dart';
+import 'custom_check_box.dart';
 
 class TermsAndConditionsWidget extends StatefulWidget {
   const TermsAndConditionsWidget({

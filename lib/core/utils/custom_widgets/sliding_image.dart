@@ -1,8 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:screen_scene/core/global/resources/colors_manager.dart';
-import 'package:screen_scene/core/global/resources/values_manager.dart';
 import 'package:shimmer/shimmer.dart';
+
+import '../../global/resources/colors_manager.dart';
+import '../../global/resources/values_manager.dart';
 
 class SlidingImage extends StatelessWidget {
   const SlidingImage({

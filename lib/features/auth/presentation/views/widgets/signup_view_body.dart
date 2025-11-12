@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:screen_scene/core/global/resources/values_manager.dart';
-import 'package:screen_scene/features/auth/presentation/views/widgets/have_an_account.dart';
+
+import '../../../../../core/global/resources/values_manager.dart';
+import 'have_an_account.dart';
 import 'signup_form.dart';
 
 class SignupViewBody extends StatelessWidget {

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:screen_scene/core/global/resources/api_constants_manager.dart';
-import 'package:screen_scene/core/global/resources/colors_manager.dart';
-import 'package:screen_scene/core/global/resources/values_manager.dart';
-import 'package:screen_scene/core/utils/custom_widgets/now_playing_and_on_air_text.dart';
 
+import '../../global/resources/api_constants_manager.dart';
+import '../../global/resources/colors_manager.dart';
+import '../../global/resources/values_manager.dart';
+import 'now_playing_and_on_air_text.dart';
 import 'sliding_image.dart';
 
 class TitleWithShade extends StatelessWidget {

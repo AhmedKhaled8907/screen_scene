@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:screen_scene/core/error/custom_failure.dart';
-import 'package:screen_scene/features/auth/domain/entities/user_entity.dart';
+
+import '../../../../core/error/custom_failure.dart';
+import '../entities/user_entity.dart';
 
 abstract class AuthRepo {
   Future<Either<CustomFailure, UserEntity>> createUserWithEmailAndPassword({

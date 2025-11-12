@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:screen_scene/core/global/resources/colors_manager.dart';
-import 'package:screen_scene/core/global/resources/font_manager.dart';
-import 'package:screen_scene/core/global/resources/values_manager.dart';
 
+import '../../resources/colors_manager.dart';
+import '../../resources/font_manager.dart';
 import '../../resources/styles_manager.dart';
+import '../../resources/values_manager.dart';
 
 ThemeData getThemeDataLight() {
   return ThemeData(
     fontFamily: 'Cairo',
-    indicatorColor: AppColors.gold,
     primaryColor: AppColors.gold,
     primaryColorLight: AppColors.gold,
     brightness: Brightness.light,
@@ -37,5 +36,6 @@ ThemeData getThemeDataLight() {
     ),
     progressIndicatorTheme:
         const ProgressIndicatorThemeData(color: AppColors.gold),
+    tabBarTheme: TabBarThemeData(indicatorColor: AppColors.gold),
   );
 }

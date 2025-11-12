@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:screen_scene/core/global/resources/colors_manager.dart';
-import 'package:screen_scene/core/global/resources/font_manager.dart';
-import 'package:screen_scene/core/global/resources/strings_manager.dart';
-import 'package:screen_scene/core/global/resources/styles_manager.dart';
-import 'package:screen_scene/core/global/resources/values_manager.dart';
-import 'package:screen_scene/features/search/presentation/views/widgets/cancel_text_button.dart';
+
+import '../../../../../core/global/resources/colors_manager.dart';
+import '../../../../../core/global/resources/font_manager.dart';
+import '../../../../../core/global/resources/strings_manager.dart';
+import '../../../../../core/global/resources/styles_manager.dart';
+import '../../../../../core/global/resources/values_manager.dart';
+import 'cancel_text_button.dart';
 
 class SearchBarItems extends StatelessWidget {
   final TextEditingController? controller;

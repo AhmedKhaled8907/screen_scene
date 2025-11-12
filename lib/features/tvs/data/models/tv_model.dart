@@ -1,5 +1,5 @@
-import 'package:screen_scene/core/global/resources/api_constants_manager.dart';
-import 'package:screen_scene/features/tvs/domain/entities/tv_entity.dart';
+import '../../../../core/global/resources/api_constants_manager.dart';
+import '../../domain/entities/tv_entity.dart';
 
 class TvModel extends TvEntity {
   const TvModel({

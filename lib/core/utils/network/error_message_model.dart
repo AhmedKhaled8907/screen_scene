@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:screen_scene/core/global/resources/api_constants_manager.dart';
+
+import '../../global/resources/api_constants_manager.dart';
 
 class ErrorMessageModel extends Equatable {
   final int statusCode;

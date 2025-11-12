@@ -1,9 +1,9 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:screen_scene/features/movies/domain/entities/movie_entity.dart';
-import 'package:screen_scene/features/search/domain/use_cases/get_search_movies_use_case.dart';
 
+import '../../../../movies/domain/entities/movie_entity.dart';
 import '../../../../tvs/domain/entities/tv_entity.dart';
+import '../../../domain/use_cases/get_search_movies_use_case.dart';
 import '../../../domain/use_cases/get_search_tvs_use_case.dart';
 
 part 'search_event.dart';

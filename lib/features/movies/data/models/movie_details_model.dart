@@ -1,6 +1,5 @@
-import 'package:screen_scene/core/global/resources/api_constants_manager.dart';
-import 'package:screen_scene/core/utils/models/genres_model.dart';
-
+import '../../../../core/global/resources/api_constants_manager.dart';
+import '../../../../core/utils/models/genres_model.dart';
 import '../../domain/entities/movie_details_entity.dart';
 
 class MovieDetailsModel extends MovieDetailsEntity {

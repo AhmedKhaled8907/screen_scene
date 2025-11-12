@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:screen_scene/core/global/resources/colors_manager.dart';
-import 'package:screen_scene/core/global/resources/font_manager.dart';
-import 'package:screen_scene/core/global/resources/styles_manager.dart';
-import 'package:screen_scene/core/global/resources/values_manager.dart';
-import 'package:screen_scene/core/global/theme/theme_bloc/theme_bloc.dart';
+
+import '../../global/resources/colors_manager.dart';
+import '../../global/resources/font_manager.dart';
+import '../../global/resources/styles_manager.dart';
+import '../../global/resources/values_manager.dart';
+import '../../global/theme/theme_bloc/theme_bloc.dart';
 
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({

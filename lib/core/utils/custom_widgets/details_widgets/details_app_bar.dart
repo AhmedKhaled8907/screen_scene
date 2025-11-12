@@ -1,9 +1,10 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:screen_scene/core/global/resources/api_constants_manager.dart';
-import 'package:screen_scene/core/global/resources/colors_manager.dart';
-import 'package:screen_scene/core/global/resources/values_manager.dart';
+
+import '../../../global/resources/api_constants_manager.dart';
+import '../../../global/resources/colors_manager.dart';
+import '../../../global/resources/values_manager.dart';
 
 class DetailsAppBar extends StatelessWidget {
   const DetailsAppBar({

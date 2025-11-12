@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:screen_scene/core/utils/custom_widgets/build_error_bar.dart';
-import 'package:screen_scene/core/utils/custom_widgets/custom_loading_hud.dart';
+
+import '../../../../../core/utils/custom_widgets/build_error_bar.dart';
+import '../../../../../core/utils/custom_widgets/custom_loading_hud.dart';
 import '../../cubits/signup_cubit/signup_cubit.dart';
 import 'signup_view_body.dart';
 

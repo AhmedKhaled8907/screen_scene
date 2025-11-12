@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:screen_scene/core/utils/custom_widgets/build_error_bar.dart';
-import 'package:screen_scene/core/utils/custom_widgets/custom_loading_hud.dart';
-import 'package:screen_scene/features/home/views/home_view.dart';
 
+import '../../../../../core/utils/custom_widgets/build_error_bar.dart';
+import '../../../../../core/utils/custom_widgets/custom_loading_hud.dart';
+import '../../../../home/views/home_view.dart';
 import '../../cubits/signin_cubit/signin_cubit.dart';
 import 'signin_view_body.dart';
 

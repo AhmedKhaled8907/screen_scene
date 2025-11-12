@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:screen_scene/features/tvs/domain/entities/tv_entity.dart';
-import 'package:screen_scene/features/tvs/presentation/views/tv_details_view/tv_details_view.dart';
 
 import '../../../../../../../core/utils/custom_widgets/see_more_widgets/see_more_items.dart';
+import '../../../../../domain/entities/tv_entity.dart';
+import '../../../tv_details_view/tv_details_view.dart';
 
 class PopularTvsSeeMoreListView extends StatelessWidget {
   const PopularTvsSeeMoreListView({

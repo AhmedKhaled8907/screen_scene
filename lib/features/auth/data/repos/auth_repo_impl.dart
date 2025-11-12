@@ -3,14 +3,15 @@ import 'dart:developer';
 
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:screen_scene/core/back_end_points.dart';
-import 'package:screen_scene/core/error/custom_failure.dart';
-import 'package:screen_scene/core/utils/services/database_service.dart';
-import 'package:screen_scene/core/utils/services/firebase_auth_service.dart';
-import 'package:screen_scene/core/utils/services/shared_preferences_singleton.dart';
-import 'package:screen_scene/features/auth/data/models/user_model.dart';
-import 'package:screen_scene/features/auth/domain/entities/user_entity.dart';
-import 'package:screen_scene/features/auth/domain/repos/auth_repo.dart';
+
+import '../../../../core/back_end_points.dart';
+import '../../../../core/error/custom_failure.dart';
+import '../../../../core/utils/services/database_service.dart';
+import '../../../../core/utils/services/firebase_auth_service.dart';
+import '../../../../core/utils/services/shared_preferences_singleton.dart';
+import '../../domain/entities/user_entity.dart';
+import '../../domain/repos/auth_repo.dart';
+import '../models/user_model.dart';
 
 class AuthRepoImpl extends AuthRepo {
   final FirebaseAuthService firebaseAuthService;

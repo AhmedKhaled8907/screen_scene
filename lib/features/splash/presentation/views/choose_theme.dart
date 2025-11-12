@@ -1,18 +1,18 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:screen_scene/core/back_end_points.dart';
-import 'package:screen_scene/core/global/resources/strings_manager.dart';
-import 'package:screen_scene/core/global/resources/styles_manager.dart';
-import 'package:screen_scene/core/global/theme/theme_bloc/theme_bloc.dart';
-import 'package:screen_scene/core/utils/services/shared_preferences_singleton.dart';
-import 'package:screen_scene/features/auth/presentation/views/signin_view.dart';
-import 'package:screen_scene/features/splash/presentation/views/choose_theme_item.dart';
 
+import '../../../../core/back_end_points.dart';
 import '../../../../core/global/resources/colors_manager.dart';
 import '../../../../core/global/resources/font_manager.dart';
+import '../../../../core/global/resources/strings_manager.dart';
+import '../../../../core/global/resources/styles_manager.dart';
 import '../../../../core/global/resources/values_manager.dart';
+import '../../../../core/global/theme/theme_bloc/theme_bloc.dart';
 import '../../../../core/utils/custom_widgets/basic_button.dart';
+import '../../../../core/utils/services/shared_preferences_singleton.dart';
+import '../../../auth/presentation/views/signin_view.dart';
+import 'choose_theme_item.dart';
 
 class ChooseModePage extends StatelessWidget {
   const ChooseModePage({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:screen_scene/core/global/resources/strings_manager.dart';
-import 'package:screen_scene/core/global/resources/styles_manager.dart';
 
+import '../../../../../core/global/resources/strings_manager.dart';
+import '../../../../../core/global/resources/styles_manager.dart';
 import 'popular_movies_see_more_view_body.dart';
 
 class PopularMoviesSeeMoreView extends StatelessWidget {

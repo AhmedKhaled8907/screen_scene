@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:screen_scene/core/utils/services/services_locator.dart';
-import 'package:screen_scene/features/tvs/presentation/controller/tv_details_bloc/similar_tvs_bloc/similar_tvs_bloc.dart';
-import 'package:screen_scene/features/tvs/presentation/controller/tv_details_bloc/tv_details_bloc.dart';
 
+import '../../../../../core/utils/services/services_locator.dart';
+import '../../controller/tv_details_bloc/similar_tvs_bloc/similar_tvs_bloc.dart';
+import '../../controller/tv_details_bloc/tv_details_bloc.dart';
 import 'tv_details_view_body.dart';
 
 class TvDetailView extends StatelessWidget {

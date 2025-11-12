@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:screen_scene/features/settings/presentation/views/widgets/settings_card.dart';
+
+import 'settings_card.dart';
 
 class SettingsCardsSection extends StatelessWidget {
   const SettingsCardsSection({

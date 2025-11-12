@@ -1,5 +1,5 @@
-import 'package:screen_scene/core/global/resources/api_constants_manager.dart';
-import 'package:screen_scene/features/movies/domain/entities/similar_movies_entity.dart';
+import '../../../../core/global/resources/api_constants_manager.dart';
+import '../../domain/entities/similar_movies_entity.dart';
 
 class SimilarMoviesModel extends SimilarMoviesEntity {
   const SimilarMoviesModel({

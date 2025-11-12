@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:screen_scene/core/global/resources/font_manager.dart';
-import 'package:screen_scene/core/global/resources/styles_manager.dart';
+
+import '../../global/resources/font_manager.dart';
+import '../../global/resources/styles_manager.dart';
 
 class CustomSocialButton extends StatelessWidget {
   const CustomSocialButton({

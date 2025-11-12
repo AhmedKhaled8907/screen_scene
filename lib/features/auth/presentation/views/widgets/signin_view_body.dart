@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:screen_scene/core/global/resources/values_manager.dart';
-import 'package:screen_scene/core/utils/custom_widgets/build_error_bar.dart';
-import 'package:screen_scene/core/utils/custom_widgets/custom_divider.dart';
-import 'package:screen_scene/core/utils/custom_widgets/custom_social_button.dart';
-import 'package:screen_scene/features/auth/presentation/cubits/signin_cubit/signin_cubit.dart';
+
+import '../../../../../core/global/resources/values_manager.dart';
+import '../../../../../core/utils/custom_widgets/build_error_bar.dart';
+import '../../../../../core/utils/custom_widgets/custom_divider.dart';
+import '../../../../../core/utils/custom_widgets/custom_social_button.dart';
+import '../../cubits/signin_cubit/signin_cubit.dart';
 import 'dont_have_an_account.dart';
 import 'signin_form.dart';
 

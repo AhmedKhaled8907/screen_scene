@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:screen_scene/core/global/resources/values_manager.dart';
-import 'package:screen_scene/features/settings/presentation/views/widgets/settings_card_section.dart';
-import 'package:screen_scene/features/settings/presentation/views/widgets/signout_button.dart';
-import 'package:screen_scene/features/settings/presentation/views/widgets/theme_switch_tile.dart';
-import 'package:screen_scene/features/settings/presentation/views/widgets/user_info_page.dart';
+
+import '../../../../../core/global/resources/values_manager.dart';
+import 'settings_card_section.dart';
+import 'signout_button.dart';
+import 'theme_switch_tile.dart';
+import 'user_info_page.dart';
 
 class SettingsViewBody extends StatelessWidget {
   const SettingsViewBody({super.key});

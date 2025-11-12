@@ -1,8 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:screen_scene/core/utils/services/services_locator.dart';
-import 'package:screen_scene/features/auth/domain/entities/user_entity.dart';
-import 'package:screen_scene/features/auth/domain/repos/auth_repo.dart';
+
+import '../../../../core/utils/services/services_locator.dart';
+import '../../../auth/domain/entities/user_entity.dart';
+import '../../../auth/domain/repos/auth_repo.dart';
 
 part 'display_user_info_state.dart';
 

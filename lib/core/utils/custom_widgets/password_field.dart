@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:screen_scene/core/global/theme/theme_bloc/theme_bloc.dart';
 
+import '../../global/theme/theme_bloc/theme_bloc.dart';
 import 'custom_text_form_field.dart';
 
 class PasswordField extends StatefulWidget {

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:screen_scene/core/global/resources/values_manager.dart';
-import 'package:screen_scene/core/utils/custom_widgets/custom_loading_indicator.dart';
-import 'package:screen_scene/core/utils/enums.dart';
-import 'package:screen_scene/features/tvs/presentation/controller/tv_bloc/tv_bloc.dart';
-import 'package:screen_scene/features/tvs/presentation/views/tv_view/widgets/top_rated_tvs_see_more/top_rated_tvs_see_more_view_list_view.dart';
+
+import '../../../../../../../core/global/resources/values_manager.dart';
+import '../../../../../../../core/utils/custom_widgets/custom_loading_indicator.dart';
+import '../../../../../../../core/utils/enums.dart';
+import '../../../../controller/tv_bloc/tv_bloc.dart';
+import 'top_rated_tvs_see_more_view_list_view.dart';
 
 class TopRatedTvsSeeMoreViewBody extends StatelessWidget {
   const TopRatedTvsSeeMoreViewBody({super.key});

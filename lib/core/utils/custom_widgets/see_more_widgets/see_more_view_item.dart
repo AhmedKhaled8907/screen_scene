@@ -1,14 +1,13 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:screen_scene/core/global/resources/colors_manager.dart';
-import 'package:screen_scene/core/utils/custom_widgets/details_widgets/details_date_release.dart';
-import 'package:screen_scene/core/utils/custom_widgets/see_more_widgets/see_more_rating.dart';
-import 'package:screen_scene/core/utils/custom_widgets/see_more_widgets/see_more_title.dart';
-import 'package:screen_scene/core/utils/custom_widgets/poster_image.dart';
 
-import 'package:screen_scene/core/utils/custom_widgets/see_more_widgets/see_more_over_view_text.dart';
-
+import '../../../global/resources/colors_manager.dart';
 import '../../../global/resources/values_manager.dart';
+import '../details_widgets/details_date_release.dart';
+import '../poster_image.dart';
+import 'see_more_over_view_text.dart';
+import 'see_more_rating.dart';
+import 'see_more_title.dart';
 
 class SeeMoreViewItem extends StatelessWidget {
   const SeeMoreViewItem({

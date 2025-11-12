@@ -29,7 +29,7 @@ class ThemeSwitchTile extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(8)),
           ),
           child: SwitchListTile(
-            activeColor: AppColors.gold,
+            activeThumbColor: AppColors.gold,
             contentPadding: EdgeInsets.zero,
             title: Text(
               isDarkMode ? AppString.darkMode : AppString.lightMode,

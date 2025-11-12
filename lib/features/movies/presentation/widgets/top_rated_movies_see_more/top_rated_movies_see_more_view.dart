@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:screen_scene/core/global/resources/strings_manager.dart';
-import 'package:screen_scene/core/global/resources/styles_manager.dart';
-import 'package:screen_scene/features/movies/presentation/views/movie_view/widgets/top_rated_movies_see_more/top_rated_movies_see_more_view_body.dart';
+import '../../../../../core/global/resources/strings_manager.dart';
+import '../../../../../core/global/resources/styles_manager.dart';
+import 'top_rated_movies_see_more_view_body.dart';
 
 class TopRatedMoviesSeeMoreView extends StatelessWidget {
   const TopRatedMoviesSeeMoreView({super.key});

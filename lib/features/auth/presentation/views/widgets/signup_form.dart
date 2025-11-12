@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:screen_scene/core/utils/custom_widgets/app_validators.dart';
-import 'package:screen_scene/core/utils/custom_widgets/build_error_bar.dart';
-import 'package:screen_scene/core/utils/custom_widgets/custom_button.dart';
-import 'package:screen_scene/core/utils/custom_widgets/custom_text_form_field.dart';
-import 'package:screen_scene/core/utils/custom_widgets/password_field.dart';
+
+import '../../../../../core/utils/custom_widgets/app_validators.dart';
+import '../../../../../core/utils/custom_widgets/build_error_bar.dart';
+import '../../../../../core/utils/custom_widgets/custom_button.dart';
+import '../../../../../core/utils/custom_widgets/custom_text_form_field.dart';
+import '../../../../../core/utils/custom_widgets/password_field.dart';
 import '../../cubits/signup_cubit/signup_cubit.dart';
 import 'terms_and_conditions.dart';
 

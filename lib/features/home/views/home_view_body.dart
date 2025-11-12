@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:screen_scene/features/home/bottom_nav_bar_cubit/bottom_nav_bar_cubit.dart';
+
+import '../bottom_nav_bar_cubit/bottom_nav_bar_cubit.dart';
 
 class HomeViewBody extends StatefulWidget {
   const HomeViewBody({super.key});

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:screen_scene/core/global/resources/colors_manager.dart';
-import 'package:screen_scene/core/global/resources/styles_manager.dart';
-import 'package:screen_scene/features/auth/domain/entities/user_entity.dart';
-import 'package:screen_scene/features/settings/presentation/display_user_info_cubit/display_user_info_cubit.dart';
-import 'package:screen_scene/features/settings/presentation/views/widgets/name_images.dart';
+
+import '../../../../../core/global/resources/colors_manager.dart';
+import '../../../../../core/global/resources/styles_manager.dart';
+import '../../../../auth/domain/entities/user_entity.dart';
+import '../../display_user_info_cubit/display_user_info_cubit.dart';
+import 'name_images.dart';
 
 class UserInfoPage extends StatelessWidget {
   const UserInfoPage({super.key});

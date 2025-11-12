@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:screen_scene/core/global/theme/app_colors/app_color_dark.dart';
+import '../app_colors/app_color_dark.dart';
 
 import '../../resources/colors_manager.dart';
 import '../../resources/font_manager.dart';
@@ -10,7 +10,6 @@ ThemeData getThemeDataDark() {
   return ThemeData(
     brightness: Brightness.dark,
     fontFamily: 'Cairo',
-    indicatorColor: AppColors.gold,
     primaryColor: AppColors.gold,
     primaryColorDark: AppColors.gold,
     scaffoldBackgroundColor: AppColorDark.scaffoldBackgroundColor,
@@ -40,5 +39,6 @@ ThemeData getThemeDataDark() {
       selectionColor: AppColors.gold,
       selectionHandleColor: AppColors.gold,
     ),
+    tabBarTheme: TabBarThemeData(indicatorColor: AppColors.gold),
   );
 }

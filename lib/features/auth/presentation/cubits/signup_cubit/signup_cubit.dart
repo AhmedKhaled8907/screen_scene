@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:screen_scene/features/auth/domain/entities/user_entity.dart';
-import 'package:screen_scene/features/auth/domain/repos/auth_repo.dart';
+import '../../../domain/entities/user_entity.dart';
+import '../../../domain/repos/auth_repo.dart';
 
 part 'signup_state.dart';
 

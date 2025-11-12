@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
-import 'package:screen_scene/core/global/resources/colors_manager.dart';
-import 'package:screen_scene/core/global/theme/theme_bloc/theme_bloc.dart';
+
+import '../../global/resources/colors_manager.dart';
+import '../../global/theme/theme_bloc/theme_bloc.dart';
 
 class CustomLoadingHud extends StatelessWidget {
   const CustomLoadingHud({

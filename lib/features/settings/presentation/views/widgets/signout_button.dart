@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:screen_scene/core/global/resources/colors_manager.dart';
-import 'package:screen_scene/core/global/resources/font_manager.dart';
-import 'package:screen_scene/core/global/resources/styles_manager.dart';
-import 'package:screen_scene/core/utils/custom_widgets/build_error_bar.dart';
-import 'package:screen_scene/core/utils/custom_widgets/custom_loading_hud.dart';
 
+import '../../../../../core/global/resources/colors_manager.dart';
+import '../../../../../core/global/resources/font_manager.dart';
+import '../../../../../core/global/resources/styles_manager.dart';
+import '../../../../../core/utils/custom_widgets/build_error_bar.dart';
+import '../../../../../core/utils/custom_widgets/custom_loading_hud.dart';
 import '../../../../auth/presentation/cubits/signin_cubit/signin_cubit.dart';
 import '../../../../auth/presentation/views/signin_view.dart';
 

@@ -1,10 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:screen_scene/core/global/resources/api_constants_manager.dart';
-import 'package:screen_scene/core/global/resources/colors_manager.dart';
-import 'package:screen_scene/core/global/resources/values_manager.dart';
-import 'package:screen_scene/features/movies/presentation/views/movie_details_view/similar_movies/similar_movies_section.dart';
 import 'package:shimmer/shimmer.dart';
+
+import '../../../features/movies/presentation/views/movie_details_view/similar_movies/similar_movies_section.dart';
+import '../../global/resources/api_constants_manager.dart';
+import '../../global/resources/colors_manager.dart';
+import '../../global/resources/values_manager.dart';
 
 class PosterImage extends StatelessWidget {
   const PosterImage({

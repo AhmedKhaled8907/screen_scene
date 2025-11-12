@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:screen_scene/core/global/resources/strings_manager.dart';
-import 'package:screen_scene/core/global/resources/styles_manager.dart';
-import 'package:screen_scene/core/global/resources/values_manager.dart';
-import 'package:screen_scene/features/search/presentation/controller/search_bloc/search_bloc.dart';
-import 'package:screen_scene/features/search/presentation/views/widgets/search_results.dart';
 
 import '../../../../core/global/resources/font_manager.dart';
+import '../../../../core/global/resources/strings_manager.dart';
+import '../../../../core/global/resources/styles_manager.dart';
+import '../../../../core/global/resources/values_manager.dart';
+import '../controller/search_bloc/search_bloc.dart';
 import 'widgets/search_bar_items.dart';
+import 'widgets/search_results.dart';
 import 'widgets/search_title_list_view.dart';
 
 class SearchViewBody extends StatefulWidget {

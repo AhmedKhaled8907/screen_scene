@@ -1,21 +1,21 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:screen_scene/core/global/resources/colors_manager.dart';
-import 'package:screen_scene/core/global/resources/constants_manager.dart';
-import 'package:screen_scene/core/global/resources/strings_manager.dart';
-import 'package:screen_scene/core/global/resources/values_manager.dart';
-import 'package:screen_scene/core/utils/custom_widgets/details_widgets/details_app_bar.dart';
-import 'package:screen_scene/core/utils/custom_widgets/details_widgets/details_date_release.dart';
-import 'package:screen_scene/core/utils/custom_widgets/details_widgets/details_genres.dart';
-import 'package:screen_scene/core/utils/custom_widgets/details_widgets/details_num_of.dart';
-import 'package:screen_scene/core/utils/custom_widgets/details_widgets/details_title.dart';
-import 'package:screen_scene/core/utils/custom_widgets/details_widgets/details_over_view.dart';
-import 'package:screen_scene/core/utils/custom_widgets/details_widgets/details_rating.dart';
-import 'package:screen_scene/core/utils/enums.dart';
-import 'package:screen_scene/core/utils/custom_widgets/details_widgets/more_like_this_text.dart';
-import 'package:screen_scene/features/tvs/presentation/controller/tv_details_bloc/tv_details_bloc.dart';
-import 'package:screen_scene/features/tvs/presentation/views/tv_details_view/similar_tvs/similar_tvs_section.dart';
+import '../../../../../core/global/resources/colors_manager.dart';
+import '../../../../../core/global/resources/constants_manager.dart';
+import '../../../../../core/global/resources/strings_manager.dart';
+import '../../../../../core/global/resources/values_manager.dart';
+import '../../../../../core/utils/custom_widgets/details_widgets/details_app_bar.dart';
+import '../../../../../core/utils/custom_widgets/details_widgets/details_date_release.dart';
+import '../../../../../core/utils/custom_widgets/details_widgets/details_genres.dart';
+import '../../../../../core/utils/custom_widgets/details_widgets/details_num_of.dart';
+import '../../../../../core/utils/custom_widgets/details_widgets/details_title.dart';
+import '../../../../../core/utils/custom_widgets/details_widgets/details_over_view.dart';
+import '../../../../../core/utils/custom_widgets/details_widgets/details_rating.dart';
+import '../../../../../core/utils/enums.dart';
+import '../../../../../core/utils/custom_widgets/details_widgets/more_like_this_text.dart';
+import '../../controller/tv_details_bloc/tv_details_bloc.dart';
+import 'similar_tvs/similar_tvs_section.dart';
 
 class TvDetailsViewBody extends StatelessWidget {
   const TvDetailsViewBody({super.key});

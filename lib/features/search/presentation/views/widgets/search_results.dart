@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:screen_scene/features/movies/presentation/views/movie_details_view/movie_details_view.dart';
-import 'package:screen_scene/features/tvs/presentation/views/tv_details_view/tv_details_view.dart';
 
 import '../../../../../core/global/resources/font_manager.dart';
 import '../../../../../core/global/resources/strings_manager.dart';
@@ -9,7 +7,9 @@ import '../../../../../core/global/resources/styles_manager.dart';
 import '../../../../../core/global/resources/values_manager.dart';
 import '../../../../../core/utils/custom_widgets/custom_loading_indicator.dart';
 import '../../../../movies/domain/entities/movie_entity.dart';
+import '../../../../movies/presentation/views/movie_details_view/movie_details_view.dart';
 import '../../../../tvs/domain/entities/tv_entity.dart';
+import '../../../../tvs/presentation/views/tv_details_view/tv_details_view.dart';
 import '../../controller/search_bloc/search_bloc.dart';
 import 'search_results_item.dart';
 

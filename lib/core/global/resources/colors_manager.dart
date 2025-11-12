@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:screen_scene/core/global/resources/values_manager.dart';
+
+import 'values_manager.dart';
 
 class AppColors {
   static const Color white = Colors.white;
