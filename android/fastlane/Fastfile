@@ -3,7 +3,6 @@ default_platform(:android)
 platform :android do
   desc "Distribute a new app to firebase testers"
   lane :firebase_distribution do
-    sh "flutter pub get"
     sh "flutter clean"
     sh "flutter build apk --release --no-tree-shake-icons"
     firebase_app_distribution(
