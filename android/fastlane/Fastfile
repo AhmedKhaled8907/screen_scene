@@ -3,13 +3,14 @@ default_platform(:android)
 platform :android do
   desc "Distribute a new app to firebase testers"
   lane :firebase_distribution do
+    sh "flutter pub get"
     sh "flutter clean"
     sh "flutter build apk --release --no-tree-shake-icons"
     firebase_app_distribution(
     app: "1:863487650002:android:38728ff0b06225e319e50b",
     firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
     android_artifact_type: "APK",
-    android_artifact_path:"../build/app/outputs/flutter-apk/app-release.apk",
+    android_artifact_path:"build/app/outputs/flutter-apk/app-release.apk",
     testers: "sezarsezar8907@gmail.com, sezarsezar18@gmail.com",
     release_notes: "New Release to test",
   )  
